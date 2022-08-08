@@ -27,11 +27,11 @@
 
 .top-bar-links ul li a {
     text-decoration: none;
-    color: red;
-    font-size: 20px;
+    color: white;
+    font-size: 16px;
     margin: 10px;
     font-family: 'Poppins', sans-serif;
-    font-weight: lighter;
+    font-weight: inherit;
     letter-spacing: 1px;
 }
 
@@ -44,5 +44,5 @@
 }
 
 .top-bar-social ul li a{
-    color: red;
+    color: white;
 }
