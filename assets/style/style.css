@@ -7,9 +7,14 @@
     background-color: #1A1C23;
 }
 
-.top-bar>img{
+.top-bar img{
     width: 40px;
     margin: 30px;
+    float: left;
+}
+
+.top-bar-links ul{
+    float: left;
 }
 
 .top-bar-links ul li {
@@ -18,7 +23,7 @@
 
 .top-bar-links ul li a {
     text-decoration: none;
-    color: white;
+    color: red;
     font-size: 20px;
     margin: 10px;
     font-family: 'Poppins', sans-serif;
@@ -26,10 +31,14 @@
     letter-spacing: 1px;
 }
 
+.top-bar-social ul{
+    float: right;
+}
+
 .top-bar-social ul li{
     display: inline-block;
 }
 
 .top-bar-social ul li a{
-    color: white;
+    color: red;
 }
