@@ -3,12 +3,13 @@
     padding: 0;
 }
 
-header{
+.top-bar {
     background-color: #1A1C23;
 }
 
-header img {
+.top-bar>img{
     width: 40px;
+    margin: 30px;
 }
 
 .top-bar-links ul li {
