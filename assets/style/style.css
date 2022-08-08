@@ -19,4 +19,9 @@
 .top-bar-links ul li a {
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
 }
