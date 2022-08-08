@@ -29,3 +29,7 @@
 .top-bar-social ul li{
     display: inline-block;
 }
+
+.top-bar-social ul li a{
+    color: white;
+}
