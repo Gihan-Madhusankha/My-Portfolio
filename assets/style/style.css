@@ -1,16 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-header img{
+header{
+    background-color: #1A1C23;
+}
+
+header img {
     width: 40px;
 }
 
-.top-bar-links ul li{
+.top-bar-links ul li {
     display: inline-block;
 }
 
-.top-bar-links ul li a{
+.top-bar-links ul li a {
     text-decoration: none;
 }
