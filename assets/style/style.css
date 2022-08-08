@@ -2,3 +2,6 @@ header img{
     width: 40px;
 }
 
+.top-bar-links ul li a{
+    text-decoration: none;
+}
