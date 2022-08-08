@@ -1,5 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 header img{
     width: 40px;
+}
+
+.top-bar-links ul li{
+    display: inline-block;
 }
 
 .top-bar-links ul li a{
