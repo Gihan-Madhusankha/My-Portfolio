@@ -25,3 +25,7 @@
     font-weight: lighter;
     letter-spacing: 1px;
 }
+
+.top-bar-social ul li{
+    display: inline-block;
+}
