@@ -8,17 +8,21 @@
 }
 
 .top-bar {
-    background-color: #1A1C23;
+    /*background-color: #1A1C23;*/
+    background-color: #17191E;
+    width: 100%;
+    height: 60px;
 }
 
 .top-bar img{
     width: 40px;
-    margin: 30px;
+    margin: 10px 0 10px 30px;
     float: left;
 }
 
 .top-bar-links ul{
     float: left;
+    margin: 18px;
 }
 
 .top-bar-links ul li {
@@ -27,12 +31,21 @@
 
 .top-bar-links ul li a {
     text-decoration: none;
-    color: white;
+    /*color: #9599A9;*/
+    color: #A6B0C3;
     font-size: 16px;
-    margin: 10px;
+    margin: 14px;
     font-family: 'Poppins', sans-serif;
     font-weight: inherit;
-    letter-spacing: 1px;
+}
+
+.top-bar-links ul li a:hover{
+    /*color: #AFB3C1;*/
+    color: #A0A5EB;
+}
+
+.top-bar-social{
+    margin: 20px 30px 20px 30px;
 }
 
 .top-bar-social ul{
@@ -45,4 +58,10 @@
 
 .top-bar-social ul li a{
     color: white;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.top-bar-social ul li a:hover{
+    color: #F9004D;
 }
