@@ -62,6 +62,7 @@
             width: 25%;
             height: 100vh;
             background: rebeccapurple;
+            display: inline-block;
         }
 
         .nav-V > ul {
@@ -92,7 +93,7 @@
         }
 
 
-        .dog{
+        .dog {
             display: flex;
         }
 
@@ -103,9 +104,14 @@
             border: 1px solid orange;
         }
 
-
-
-
+        main > section:last-child {
+            border: 1px solid black;
+            width: 74.2%;
+            /*height: 100vh;*/
+            top: 42%;
+            right: 0;
+            position: absolute;
+        }
 
 
     </style>
@@ -141,12 +147,26 @@
     <!--    images-->
     <section>
         <div class="dog">
-            <img src="assets/image/dog.gif" alt="dog.gif">
-            <img src="assets/image/dog.gif" alt="dog.gif">
-            <img src="assets/image/dog.gif" alt="dog.gif">
+            <img alt="dog.gif" src="assets/image/dog.gif">
+            <img alt="dog.gif" src="assets/image/dog.gif">
+            <img alt="dog.gif" src="assets/image/dog.gif">
         </div>
     </section>
-    <section></section>
+    <!--    paragraphs-->
+    <section>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
+                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
+                optio quos, ut veritatis.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
+                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
+                optio quos, ut veritatis.</p>
+
+
+
+        </article>
+    </section>
 </main>
 <footer>
     <h2><!--Developed By IJSE--></h2>
