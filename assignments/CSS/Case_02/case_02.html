@@ -6,21 +6,48 @@
 
     <title>CSS Case_02</title>
 
-    <link rel="stylesheet" href="assets/css/normalize.css">
-
+<!--    remove styles-->
+    <link href="assets/normalize.css" rel="stylesheet">
+<!--    google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <style>
 
-
         header {
-            height: 50px;
-            background: darkgray;
+            background: white;
+            height: 10%;
+            position: relative;
+            box-shadow: 0 1px 2px 2px #191919;
         }
 
-        header h1 {
+        header>div{
+            display: flex;
+        }
+
+        header > div > img {
+            width: 10%;
             position: relative;
-            left: 10px;
-            top: 10px;
+            padding: 10px;
+            /*border: 1px solid red;*/
+        }
+
+        .nav ul {
+            position: absolute;
+            right: 40px;
+            top: 0;
+            bottom: 0;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            padding-left: 10px;
+        }
+
+        .nav ul {
+            font-size: 12px;
         }
 
 
@@ -29,13 +56,18 @@
 <body>
 
 <header>
-    <h1>IJSE</h1>
-    <ul>
-        <li>Home</li>
-        <li>Services</li>
-        <li>Contact Us</li>
-        <li>About Us</li>
-    </ul>
+    <div>
+        <img alt="ijse" src="assets/image/ijse.png">
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
 </header>
 <main>
     <section></section>
