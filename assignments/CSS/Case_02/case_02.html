@@ -6,11 +6,11 @@
 
     <title>CSS Case_02</title>
 
-<!--    remove styles-->
+    <!--    remove styles-->
     <link href="assets/normalize.css" rel="stylesheet">
-<!--    google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--    google fonts-->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <style>
@@ -22,39 +22,56 @@
             box-shadow: 0 1px 4px 0 #191919;
         }
 
-        header>div{
+        header > div {
             display: flex;
-            padding: 10px;
+            padding: 15px;
         }
 
         header > div > img {
             width: 10%;
             position: relative;
-            /*padding: 10px;*/
-            /*border: 1px solid red;*/
         }
 
-        .nav ul {
-            position: absolute;
-            right: 30px;
+        .nav-H ul {
             top: 0;
             bottom: 0;
+            position: absolute;
+            right: 30px;
         }
 
-        .nav ul li {
+        .nav-H ul li {
             display: inline-block;
             font-family: 'Poppins', sans-serif;
-            padding-left: 15px;
+            padding: 5px;
             cursor: pointer;
         }
 
-        .nav ul li:hover{
+        .nav-H ul li:hover {
             color: #F9004D;
         }
 
-        .nav ul {
+        .nav-H ul {
             font-size: 12px;
         }
+
+        main>section:first-child{
+            width: 25%;
+            height: 100vh;
+            background: mediumpurple;
+        }
+
+        .nav-V>ul{
+            margin: 0;
+            padding: 25px;
+        }
+
+        .nav-V ul li{
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            padding-bottom: 10px;
+        }
+
 
 
     </style>
@@ -66,7 +83,7 @@
         <img alt="ijse" src="assets/image/ijse.png">
     </div>
 
-    <nav class="nav">
+    <nav class="nav-H">
         <ul>
             <li>Home</li>
             <li>Services</li>
@@ -76,12 +93,21 @@
     </nav>
 </header>
 <main>
-    <section></section>
+    <section>
+        <nav class="nav-V">
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+    </section>
     <section></section>
     <section></section>
 </main>
 <footer>
-    <h2>Developed By IJSE</h2>
+    <h2><!--Developed By IJSE--></h2>
 </footer>
 
 </body>
