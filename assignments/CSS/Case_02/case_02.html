@@ -7,7 +7,7 @@
     <title>CSS Case_02</title>
 
     <!--    remove styles-->
-    <link href="assets/normalize.css" rel="stylesheet">
+    <link href="assets/style/normalize.css" rel="stylesheet">
     <!--    google fonts-->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
@@ -54,10 +54,14 @@
             font-size: 12px;
         }
 
+        main {
+            position: relative;
+        }
+
         main > section:first-child {
             width: 25%;
             height: 100vh;
-            background: mediumpurple;
+            background: rebeccapurple;
         }
 
         .nav-V > ul {
@@ -73,11 +77,35 @@
             color: whitesmoke;
         }
 
-
         .nav-V > ul li:hover {
-            color: rebeccapurple;
+            color: #A0A5EB;
             cursor: pointer;
         }
+
+        main > section:nth-child(2) {
+            width: 74.2%;
+            right: 0;
+            top: 0;
+            height: 200px;
+            position: absolute;
+            margin: 5px 2px 5px 0;
+        }
+
+
+        .dog{
+            display: flex;
+        }
+
+
+        .dog img {
+            width: 33%;
+            display: inline-block;
+            border: 1px solid orange;
+        }
+
+
+
+
 
 
     </style>
@@ -99,6 +127,7 @@
     </nav>
 </header>
 <main>
+    <!--    nav menu-->
     <section>
         <nav class="nav-V">
             <ul>
@@ -109,7 +138,14 @@
             </ul>
         </nav>
     </section>
-    <section></section>
+    <!--    images-->
+    <section>
+        <div class="dog">
+            <img src="assets/image/dog.gif" alt="dog.gif">
+            <img src="assets/image/dog.gif" alt="dog.gif">
+            <img src="assets/image/dog.gif" alt="dog.gif">
+        </div>
+    </section>
     <section></section>
 </main>
 <footer>
