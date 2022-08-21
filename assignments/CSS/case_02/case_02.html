@@ -13,8 +13,16 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!--    font awesome-->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
 
     <style>
+
+        body {
+            min-height: 100vh;
+        }
 
         header {
             background: white;
@@ -55,82 +63,73 @@
             font-size: 14px;
         }
 
-        main {
-            position: relative;
-            border: 2px solid red;
-            min-height: 80vh;
-        }
-
-        main > section:first-child {
+        main > section > nav {
             width: 25%;
-            height: 80vh;
             background: rebeccapurple;
-            display: inline-block;
+            min-height: 79vh;
         }
 
-        .nav-V > ul {
+        main > section > nav > ul {
             margin: 0;
-            padding: 50px;
+            padding-left: 0;
+            padding-top: 50px;
         }
 
-        .nav-V ul li {
+        main > section > nav > ul > li {
             list-style: none;
+            padding: 15px 0 15px 80px;
+            color: white;
             font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            padding-bottom: 10px;
-            color: whitesmoke;
+            font-size: 14px;
             font-weight: lighter;
-        }
-
-        .nav-V > ul li:hover {
-            color: #A0A5EB;
             cursor: pointer;
         }
 
-        main > section:nth-child(2) {
-            width: 74.2%;
-            right: 0;
-            top: 0;
-            height: 200px;
-            position: absolute;
-            margin: 5px 2px 5px 0;
+        main > section > nav > ul li i {
+            padding-right: 10px;
         }
 
+        main > section > nav > ul > li:hover {
+            background: #A0A5EB;
+        }
 
-        .dog {
+        main > section {
             display: flex;
         }
 
+        main > section > div {
+            width: 75%;
+            padding: 10px;
+            min-height: 79vh;
+        }
 
-        .dog img {
+        main > section > div > img {
             width: 33%;
             display: inline-block;
+            margin-right: -5px;
             border: 1px solid orange;
         }
 
-        main > section:last-child {
-            border: 1px solid black;
-            width: 74.2%;
-            height: 40vh;
-            top: 52%;
-            right: 0;
-            min-height: 40vh;
-            position: absolute;
+        main > section > div > p {
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: normal;
+            color: #333;
         }
 
-        main>section:last-child > article > p {
-            font-size: 16px;
-        }
 
         footer {
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            background: #333333;
-            font-size: 10px;
-            padding: 5px 0;
-            text-align: center;
-            position: absolute;
+            background: #333;
             width: 100%;
+        }
+
+        footer h2 {
+            margin: 0;
+            padding: 20px;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            font-weight: lighter;
         }
 
 
@@ -153,62 +152,39 @@
     </nav>
 </header>
 <main>
-    <!--    nav menu-->
     <section>
-        <nav class="nav-V">
+        <!--menu-->
+        <nav>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contact Us</li>
-                <li>About Us</li>
+                <li><i class="fa-solid fa-house"></i>Home</li>
+                <li><i class="fa-solid fa-chart-simple"></i>Services</li>
+                <li><i class="fa-solid fa-phone"></i>Contact Us</li>
+                <li><i class="fa-solid fa-address-card"></i>About Us</li>
             </ul>
         </nav>
-    </section>
-    <!--    images-->
-    <section>
-        <div class="dog">
+        <div>
             <img alt="dog.gif" src="assets/image/dog.gif">
             <img alt="dog.gif" src="assets/image/dog.gif">
             <img alt="dog.gif" src="assets/image/dog.gif">
+            <br>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate dolore ea ex, id impedit
+                labore laboriosam laborum, nam porro praesentium quibusdam, similique? Architecto, culpa eaque eius
+                labore qui quo?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate dolore ea ex, id impedit
+                labore laboriosam laborum, nam porro praesentium quibusdam, similique? Architecto, culpa eaque eius
+                labore qui quo?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate dolore ea ex, id impedit
+                labore laboriosam laborum, nam porro praesentium quibusdam, similique? Architecto, culpa eaque eius
+                labore qui quo?</p>
+
+
         </div>
+
     </section>
-    <!--    paragraphs-->
-    <section>
-        <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt error exercitationem quam.
-                Accusamus asperiores ducimus ea et exercitationem, fugit incidunt inventore itaque modi molestias nulla
-                optio quos, ut veritatis.</p>
-
-        </article>
-    </section>
 </main>
 <footer>
     <h2><code>Developed By GIHAN</code></h2>
