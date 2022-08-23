@@ -57,35 +57,26 @@
             border: 15px solid red;
         }
 
-        main > section:first-child > div:last-child {
+        .circle {
             width: 220px;
             height: 220px;
-            background: orange;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 110px;
+            text-align: center;
+        }
+
+        main > section:first-child > div:last-child {
+            background: orange;
         }
 
         main > section:nth-child(2) > div {
-            width: 220px;
-            height: 220px;
-            border-radius: 110px;
             background: deepskyblue;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         main > section:last-child > div {
-            width: 220px;
-            height: 220px;
             background: blueviolet;
-            border-radius: 110px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
         }
 
 
@@ -93,22 +84,21 @@
 </head>
 <body>
 
-
 <main>
     <section>
         <div></div>
         <div></div>
-        <div>
+        <div class="circle">
             <h4>Hello</h4>
         </div>
     </section>
     <section>
-        <div>
+        <div class="circle">
             <h4>Welcome</h4>
         </div>
     </section>
     <section>
-        <div>
+        <div class="circle">
             <h4>Institute <br> of <br> Java Software <br> Engineering</h4>
         </div>
     </section>
