@@ -23,10 +23,12 @@ header {
     top: 0;
     left: 0;
     transition: 0.6s;
+    padding: 20px 0;
 }
 
-header.sticky{
+header.sticky {
     background-color: black;
+    padding: 0;
 }
 
 header > section {
@@ -49,7 +51,7 @@ header > section {
 }
 
 .top-bar-links {
-    /*border: 1px solid black;*/
+    /*border: 1px solid red;*/
     width: 70%;
     display: flex;
     align-items: center;
@@ -57,15 +59,19 @@ header > section {
 }
 
 .top-bar-links ul {
+    /*border: 1px solid cyan;*/
     display: flex;
+    height: 100%;
 }
 
 .top-bar-links ul li {
-    list-style: none;
-    display: inline-block;
     /*border: 1px solid greenyellow;*/
-    padding: 1rem;
-    /*position: relative;*/
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    height: 100%;
+    position: relative;
 }
 
 .top-bar-links ul li a {
@@ -78,22 +84,25 @@ header > section {
 
 .top-bar-links ul li a:hover {
     color: #F9004D;
+    font-weight: normal;
 }
 
 .top-bar-links ul li a:after {
     content: "";
-    /*position: absolute;*/
+    position: absolute;
     background-color: #F9004D;
-    /*border-bottom: 3px solid #F9004D;*/
     height: 3px;
     width: 0;
-    left: 0;
     bottom: 0;
-    transition: 0.3s;
+    left: 0;
+    /*margin: auto;*/
+    display: block;
+    transition: 0.4s;
 }
 
-.top-bar-links ul li a:hover:after {
+.top-bar-links ul li a:hover::after{
     width: 100%;
+    /*transition: width 0.3s linear;*/
 }
 
 .top-bar-social {
