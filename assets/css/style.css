@@ -18,8 +18,19 @@ a {
     border-radius: 5px;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.6s;
+}
+
+header.sticky{
+    background-color: black;
+}
+
 header > section {
-    background: black;
+    /*background: black;*/
     display: flex;
     height: 9.7vh;
 }
@@ -52,20 +63,37 @@ header > section {
 .top-bar-links ul li {
     list-style: none;
     display: inline-block;
-    /*border: 1px solid red;*/
+    /*border: 1px solid greenyellow;*/
     padding: 1rem;
+    /*position: relative;*/
 }
 
 .top-bar-links ul li a {
     color: whitesmoke;
 }
 
-.top-bar-links ul li:first-child>a {
-    color: #F9004D;
-}
+/*.top-bar-links ul li:first-child > a {*/
+/*    color: #F9004D;*/
+/*}*/
 
 .top-bar-links ul li a:hover {
     color: #F9004D;
+}
+
+.top-bar-links ul li a:after {
+    content: "";
+    /*position: absolute;*/
+    background-color: #F9004D;
+    /*border-bottom: 3px solid #F9004D;*/
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.top-bar-links ul li a:hover:after {
+    width: 100%;
 }
 
 .top-bar-social {

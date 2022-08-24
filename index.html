@@ -32,7 +32,7 @@
 
 <body>
 
-<header>
+<header class="sticky">
     <section class="top-bar">
         <div class="top-bar-logo">
             <img alt="my_portfolio logo" src="assets/image/portfolio_logo.gif">
@@ -59,6 +59,12 @@
             </ul>
         </nav>
     </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function (){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
 </header>
 
 <main>
