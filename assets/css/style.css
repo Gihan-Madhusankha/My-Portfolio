@@ -90,7 +90,7 @@ header > section {
     transition: 0.4s;
 }
 
-.top-bar-links ul li a:hover::after{
+.top-bar-links ul li a:hover::after {
     width: 100%;
 }
 
@@ -122,11 +122,53 @@ header > section {
 
 /*main*/
 /*landing page*/
-main>section:first-child{
+.dev-content {
     background: url("../image/ex.jpg");
     width: 100%;
     height: 100vh;
     position: sticky;
     top: 0;
     z-index: -1;
+    display: flex;
+    align-items: center;
+}
+
+.dev-content > aside {
+    color: white;
+    /*height: 80vh;*/
+    /*border: 1px solid red;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*margin: auto;*/
+    font-family: 'Poppins', sans-serif;
+    margin-left: 5vw;
+    font-size: 20px;
+}
+
+.dev-content > aside h1 {
+    font-size: 2.8em;
+}
+
+.dev-content > aside > h1 {
+    margin: 20px 0;
+}
+
+.dev-content > aside > h1:nth-child(3) {
+    color: #F9004D;
+}
+
+.dev-content > aside > h1:last-child {
+    font-size: 2em;
+}
+
+.dev-content > aside > h2 {
+    margin: 20px 0;
+}
+
+.dev-content > aside > h6 {
+    font-weight: lighter;
+    color: #A0A5EB;
 }
