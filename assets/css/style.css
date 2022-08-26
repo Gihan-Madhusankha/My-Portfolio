@@ -194,3 +194,25 @@ header > section {
     margin: auto;
 }
 
+.about-me > section {
+    display: flex;
+    justify-content: right;
+}
+
+.about-me > section > article {
+    display: flex;
+    border: 1px solid red;
+    height: 100vh;
+    flex-direction: column;
+    width: 50vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-me > section > article h1 {
+    color: white;
+}
+
+.about-me > section > article p {
+    color: slategray;
+}
+
