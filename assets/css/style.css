@@ -136,14 +136,8 @@ header > section {
 
 .dev-content > aside {
     color: white;
-    /*height: 80vh;*/
-    /*border: 1px solid red;*/
     position: absolute;
-    /*bottom: 0;*/
-    /*left: 0;*/
     top: 40vh;
-    /*right: 0;*/
-    /*margin: auto;*/
     font-family: 'Poppins', sans-serif;
     margin-left: 5vw;
     font-size: 20px;
