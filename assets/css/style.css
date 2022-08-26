@@ -176,3 +176,21 @@ header > section {
     letter-spacing: 3px;
     color: #A0A5EB;
 }
+
+/*about-me*/
+
+.about-me {
+    height: 100vh;
+    /*background: rgba(00,00,00, 0.9);*/
+    background: black;
+    position: relative;
+}
+
+.about-me img {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
