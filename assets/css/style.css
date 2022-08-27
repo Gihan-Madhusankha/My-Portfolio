@@ -294,29 +294,30 @@ header > section {
     align-items: center;
 }
 
-.skills > section:nth-child(2) > div > h3 {
+.language div:first-child > h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: initial;
+    font-size: 16px;
     color: lightblue;
-    padding: 10px;
+    padding: 10px 10px 10px 0;
 }
 
-.line1{
-    width: 70vw;
+.line1 {
+    width: 100vw;
     height: 1px;
-    position: relative;
+    background: lightblue;
+    /*position: relative;*/
     /*border: 1px solid yellow;*/
 }
 
-.line1::after{
-    content: '';
-    position: absolute;
-    margin: auto;
-    height: 2px;
-    background: white;
-    width: 100%;
-
-}
+/*.line1::after{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    height: 2px;*/
+/*    background: lightblue;*/
+/*    width: 100%;*/
+/*}*/
 
 .skills > section:nth-child(2) > aside {
     /*width: 80vw;*/
@@ -403,8 +404,18 @@ header > section {
 
 .tools {
     width: 80vw;
-    height: 50px;
+    height: 200px;
     border: 1px solid blue;
     margin: auto;
+}
+
+.tools > div:first-child{
+    color: lightblue;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid blueviolet;
+}
+
+.tools > div:last-child{
+
 }
 
