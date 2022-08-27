@@ -495,8 +495,19 @@ header > section {
     background: black;
 }
 
+.education > aside{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
 .education > aside > h1:first-child{
     margin: 0;
+    color: white;
+}
+
+.education > aside > h1:last-child{
+    margin: 0;
+    color: #1A1A1A;
 }
 
 
