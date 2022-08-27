@@ -288,3 +288,23 @@ header > section {
     margin: auto;
 }
 
+.skills > section:nth-child(2)> aside{
+    /*width: 80vw;*/
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /*margin: auto;*/
+}
+
+.skills > section:nth-child(2) > aside > div{
+    border: 1px solid white;
+}
+
+.skills > section:nth-child(2) > aside > div:nth-child(5){
+    background: slategray;
+    grid-column: 5/6;
+    grid-row: 1/4;
+    width: 500px;
+}
+
