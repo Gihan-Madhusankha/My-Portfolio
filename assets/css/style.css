@@ -286,7 +286,7 @@ header > section {
     height: 70vh;
     /*border: 1px solid yellow;*/
     margin: auto;
-    background: linear-gradient(black, #282828, black);
+    background: black;
 }
 
 .skills > section:nth-child(2) > div:first-child {
@@ -358,26 +358,26 @@ header > section {
 
 .language > aside > div:nth-child(1) {
     background: url("../image/java.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(2) {
     background: url("../image/python.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .language > aside > div:nth-child(3) {
     background: url("../image/mysql.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .language > aside > div:nth-child(4) {
     background: url("../image/c-sharp.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .language > aside > div:nth-child(5) {
-    background: url("../image/g1.gif");
+    background: url("../image/web-development.gif");
     background-size: cover;
     grid-column: 5/6;
     grid-row: 1/4;
@@ -386,29 +386,29 @@ header > section {
 
 .language > aside > div:nth-child(6) {
     background: url("../image/html.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .language > aside > div:nth-child(7) {
     background: url("../image/css.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .language > aside > div:nth-child(8) {
     background: url("../image/js.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .language > aside > div:nth-child(9) {
     background: url("../image/dart.png") no-repeat center;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools {
     width: 80vw;
     height: 25vh;
     /*border: 1px solid yellow;*/
-    margin: auto;
+    margin: 50px auto;
     background: linear-gradient(black, #282828, black);
 }
 
@@ -449,65 +449,76 @@ header > section {
 
 .tools > div:nth-child(2) > div:nth-child(1) {
     background: url("../image/figma.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(2) {
     background: url("../image/intellij.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(3) {
     background: url("../image/sceneBuilder.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(4) {
     background: url("../image/vs.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(5) {
     background: url("../image/androidStudio.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(6) {
     background: url("../image/flutter.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(7) {
     background: url("../image/hibernate.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(8) {
     background: url("../image/ps.png") center no-repeat;
-    background-size: 40px;
+    background-size: 30px;
 }
 
 
 /*Education*/
 
-.education{
+.education {
     height: 100vh;
     background: black;
 }
 
-.education > aside{
+.education > aside {
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.education > aside > h1:first-child{
+.education > aside > h1:first-child {
     margin: 0;
     color: white;
+    font-size: 2.4em;
+    text-align: center;
+    z-index: 1;
 }
 
-.education > aside > h1:last-child{
+.education > aside > h1:last-child {
     margin: 0;
     color: #1A1A1A;
+    font-size: 5.2em;
+    position: relative;
+    top: -50px;
+    text-align: center;
+    z-index: 0;
 }
 
 
