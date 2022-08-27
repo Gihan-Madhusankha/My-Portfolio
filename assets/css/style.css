@@ -250,8 +250,8 @@ header > section {
 
 .skills {
     background: black;
-    border: 1px solid red;
-    height: 100vh;
+    /*border: 1px solid red;*/
+    height: 150vh;
 }
 
 .skills aside {
@@ -283,9 +283,39 @@ header > section {
 
 .skills > section:nth-child(2) {
     width: 80vw;
-    height: 60vh;
-    border: 1px solid red;
+    height: 70vh;
+    border: 1px solid yellow;
     margin: auto;
+    background: linear-gradient(black, #333333, black);
+}
+
+.skills > section:nth-child(2) > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.skills > section:nth-child(2) > div > h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: initial;
+    color: lightblue;
+    padding: 10px;
+}
+
+.line1{
+    width: 70vw;
+    height: 1px;
+    position: relative;
+    /*border: 1px solid yellow;*/
+}
+
+.line1::after{
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 2px;
+    background: white;
+    width: 100%;
+
 }
 
 .skills > section:nth-child(2) > aside {
@@ -294,20 +324,33 @@ header > section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    border: 1px solid red;
     /*gap: 10px 0;*/
-    /*margin: auto;*/
 }
 
 .skills > .language > aside > div {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skills > .language > aside > div h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: initial;
-    color: white;
+    font-weight: lighter;
+    color: slategray;
     letter-spacing: 1px;
     margin-top: 150px;
+    font-size: 16px;
+    /*border-bottom: 2px solid #F9004D;*/
+}
+
+.skills > .language > aside > div > div {
+    height: 2px;
+    width: 50px;
+    background: #F9004D;
+    /*border: 1px solid red;*/
+    margin: auto;
 }
 
 .language > aside > div:nth-child(1) {
@@ -331,7 +374,8 @@ header > section {
 }
 
 .language > aside > div:nth-child(5) {
-    background: slategray;
+    background: url("../image/g1.gif");
+    background-size: cover;
     grid-column: 5/6;
     grid-row: 1/4;
     width: 500px;
@@ -356,4 +400,6 @@ header > section {
     background: url("../image/dart.png") no-repeat center;
     background-size: 50px;
 }
+
+
 
