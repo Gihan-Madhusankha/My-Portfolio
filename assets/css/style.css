@@ -300,12 +300,14 @@ header > section {
     font-size: 16px;
     color: lightblue;
     padding: 10px 10px 10px 0;
+    flex-basis: 8%;
 }
 
 .line1 {
     width: 100vw;
     height: 1px;
     background: lightblue;
+    flex-basis: 92%;
     /*position: relative;*/
     /*border: 1px solid yellow;*/
 }
@@ -404,18 +406,44 @@ header > section {
 
 .tools {
     width: 80vw;
-    height: 200px;
-    border: 1px solid blue;
+    height: 20vh;
+    border: 1px solid yellow;
     margin: auto;
+    background: linear-gradient(black, #333333, black);
 }
 
-.tools > div:first-child{
-    color: lightblue;
-    font-family: 'Poppins', sans-serif;
+.tools > div:first-child {
     border: 1px solid blueviolet;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.tools > div:last-child{
-
+.tools > div:first-child h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: initial;
+    font-size: 16px;
+    color: lightblue;
+    padding: 10px 10px 10px 0;
+    flex-basis: 15%;
 }
+
+.line2 {
+    flex-basis: 85%;
+    height: 1px;
+    background: lightblue;
+}
+
+.tools > div:nth-child(2) {
+    display: flex;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.tools > div:nth-child(2) > div {
+    border: 1px solid orange;
+    width: 100%;
+    height: 100px;
+}
+
 
