@@ -490,6 +490,9 @@ header > section {
 
 /*Education*/
 
-
+.education{
+    height: 100vh;
+    background: black;
+}
 
 
