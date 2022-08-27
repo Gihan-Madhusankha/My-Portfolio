@@ -286,7 +286,7 @@ header > section {
     height: 70vh;
     /*border: 1px solid yellow;*/
     margin: auto;
-    background: linear-gradient(black, #333333, black);
+    background: linear-gradient(black, #282828, black);
 }
 
 .skills > section:nth-child(2) > div:first-child {
@@ -297,10 +297,11 @@ header > section {
 .language div:first-child > h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: initial;
-    font-size: 16px;
+    font-size: 20px;
     color: lightblue;
     padding: 10px 10px 10px 0;
     flex-basis: 8%;
+    text-align: center;
 }
 
 .line1 {
@@ -406,10 +407,10 @@ header > section {
 
 .tools {
     width: 80vw;
-    height: 20vh;
+    height: 25vh;
     /*border: 1px solid yellow;*/
     margin: auto;
-    background: linear-gradient(black, #333333, black);
+    background: linear-gradient(black, #282828, black);
 }
 
 .tools > div:first-child {
@@ -417,14 +418,16 @@ header > section {
     display: flex;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
 }
 
 .tools > div:first-child h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: initial;
-    font-size: 16px;
+    font-size: 20px;
     color: lightblue;
-    padding: 10px 10px 10px 0;
+    /*padding: 10px;*/
+    text-align: center;
     flex-basis: 15%;
 }
 
@@ -437,6 +440,7 @@ header > section {
 .tools > div:nth-child(2) {
     display: flex;
     width: 100%;
+    margin-top: 15px;
     /*border: 1px solid white;*/
 }
 
@@ -448,42 +452,42 @@ header > section {
 
 .tools > div:nth-child(2) > div:nth-child(1){
     background: url("../image/figma.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(2){
     background: url("../image/intellij.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(3){
     background: url("../image/sceneBuilder.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(4){
     background: url("../image/vs.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(5){
     background: url("../image/androidStudio.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(6){
     background: url("../image/flutter.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(7){
     background: url("../image/hibernate.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools > div:nth-child(2) > div:nth-child(8){
     background: url("../image/ps.png") center no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 
