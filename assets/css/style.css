@@ -284,7 +284,7 @@ header > section {
 .skills > section:nth-child(2) {
     width: 80vw;
     height: 70vh;
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     margin: auto;
     background: linear-gradient(black, #333333, black);
 }
@@ -327,7 +327,7 @@ header > section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     /*gap: 10px 0;*/
 }
 
@@ -358,22 +358,22 @@ header > section {
 
 .language > aside > div:nth-child(1) {
     background: url("../image/java.png") no-repeat center;
-    background-size: 60px;
+    background-size: 50px;
 }
 
 .language > aside > div:nth-child(2) {
     background: url("../image/python.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(3) {
     background: url("../image/mysql.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(4) {
     background: url("../image/c-sharp.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(5) {
@@ -386,34 +386,34 @@ header > section {
 
 .language > aside > div:nth-child(6) {
     background: url("../image/html.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(7) {
     background: url("../image/css.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(8) {
     background: url("../image/js.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .language > aside > div:nth-child(9) {
     background: url("../image/dart.png") no-repeat center;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .tools {
     width: 80vw;
     height: 20vh;
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     margin: auto;
     background: linear-gradient(black, #333333, black);
 }
 
 .tools > div:first-child {
-    border: 1px solid blueviolet;
+    /*border: 1px solid blueviolet;*/
     display: flex;
     align-items: center;
     width: 100%;
@@ -437,13 +437,53 @@ header > section {
 .tools > div:nth-child(2) {
     display: flex;
     width: 100%;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 
 .tools > div:nth-child(2) > div {
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     width: 100%;
     height: 100px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(1){
+    background: url("../image/figma.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(2){
+    background: url("../image/intellij.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(3){
+    background: url("../image/sceneBuilder.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(4){
+    background: url("../image/vs.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(5){
+    background: url("../image/androidStudio.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(6){
+    background: url("../image/flutter.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(7){
+    background: url("../image/hibernate.png") center no-repeat;
+    background-size: 50px;
+}
+
+.tools > div:nth-child(2) > div:nth-child(8){
+    background: url("../image/ps.png") center no-repeat;
+    background-size: 50px;
 }
 
 
