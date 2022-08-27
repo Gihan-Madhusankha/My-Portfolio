@@ -248,13 +248,13 @@ header > section {
 
 /*My Skills*/
 
-.skills{
+.skills {
     background: black;
     border: 1px solid red;
     height: 100vh;
 }
 
-.skills aside{
+.skills aside {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,7 +264,7 @@ header > section {
     font-size: 20px;
 }
 
-.skills aside h1:first-child{
+.skills aside h1:first-child {
     color: white;
     font-size: 2.4em;
     margin: 0;
@@ -272,7 +272,7 @@ header > section {
     z-index: 1;
 }
 
-.skills aside h1:nth-child(2){
+.skills aside h1:nth-child(2) {
     color: #1A1A1A;
     font-size: 5.2em;
     margin: 0;
@@ -281,30 +281,71 @@ header > section {
     z-index: 0;
 }
 
-.skills > section:nth-child(2){
+.skills > section:nth-child(2) {
     width: 80vw;
     height: 60vh;
     border: 1px solid red;
     margin: auto;
 }
 
-.skills > section:nth-child(2)> aside{
+.skills > section:nth-child(2) > aside {
     /*width: 80vw;*/
     height: 60vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    /*gap: 10px 0;*/
     /*margin: auto;*/
 }
 
-.skills > section:nth-child(2) > aside > div{
+.skills > .language > aside > div {
     border: 1px solid white;
 }
 
-.skills > section:nth-child(2) > aside > div:nth-child(5){
+.language > aside > div:nth-child(1) {
+    background: url("../image/java.png") no-repeat center;
+    background-size: 60px;
+}
+
+.language > aside > div:nth-child(2) {
+    background: url("../image/python.png") no-repeat center;
+    background-size: 50px;
+}
+
+.language > aside > div:nth-child(3) {
+    background: url("../image/mysql.png") no-repeat center;
+    background-size: 50px;
+}
+
+.language > aside > div:nth-child(4) {
+    background: url("../image/c-sharp.png") no-repeat center;
+    background-size: 50px;
+}
+
+.language > aside > div:nth-child(5) {
     background: slategray;
     grid-column: 5/6;
     grid-row: 1/4;
     width: 500px;
+}
+
+.language > aside > div:nth-child(6) {
+    background: url("../image/html.png") no-repeat center;
+    background-size: 50px;
+}
+
+.language > aside > div:nth-child(7) {
+    background: url("../image/css.png") no-repeat center;
+    background-size: 50px;
+}
+
+.language > aside > div:nth-child(8) {
+    background: url("../image/js.png") no-repeat center;
+    background-size: 50px;
+}
+
+.language > aside > div:nth-child(9) {
+    background: url("../image/dart.png") no-repeat center;
+    background-size: 50px;
 }
 
