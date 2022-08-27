@@ -249,16 +249,34 @@ header > section {
 /*My Skills*/
 
 .skills{
-    background: #333333;
+    background: black;
+    border: 1px solid red;
 }
 
-.skills h1:first-child{
+.skills aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.skills aside h1:first-child{
     color: white;
     font-size: 2.4em;
     margin: 0;
-    font-weight: bolder;
-    font-family: 'Poppins', sans-serif;
     padding-top: 50px;
-    text-align: center;
+    z-index: 1;
+}
+
+.skills aside h1:nth-child(2){
+    color: #1A1A1A;
+    font-size: 5.2em;
+    margin: 0;
+    position: relative;
+    top: -50px;
+    z-index: 0;
 }
 
