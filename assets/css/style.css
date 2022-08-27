@@ -302,6 +302,14 @@ header > section {
     border: 1px solid white;
 }
 
+.skills > .language > aside > div h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: initial;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 150px;
+}
+
 .language > aside > div:nth-child(1) {
     background: url("../image/java.png") no-repeat center;
     background-size: 60px;
