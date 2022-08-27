@@ -245,3 +245,20 @@ header > section {
     cursor: pointer;
 }
 
+
+/*My Skills*/
+
+.skills{
+    background: #333333;
+}
+
+.skills h1:first-child{
+    color: white;
+    font-size: 2.4em;
+    margin: 0;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 50px;
+    text-align: center;
+}
+
