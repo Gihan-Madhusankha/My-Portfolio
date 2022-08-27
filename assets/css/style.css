@@ -251,6 +251,7 @@ header > section {
 .skills{
     background: black;
     border: 1px solid red;
+    height: 100vh;
 }
 
 .skills aside{
@@ -278,5 +279,12 @@ header > section {
     position: relative;
     top: -50px;
     z-index: 0;
+}
+
+.skills > section:nth-child(2){
+    width: 80vw;
+    height: 60vh;
+    border: 1px solid red;
+    margin: auto;
 }
 
