@@ -491,7 +491,7 @@ header > section {
 /*Education*/
 
 .education {
-    height: 100vh;
+    height: 120vh;
     background: black;
 }
 
@@ -522,8 +522,8 @@ header > section {
 }
 
 .education > aside:nth-child(2){
-    /*width: 80vw;*/
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     border: 2px solid red;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -533,6 +533,11 @@ header > section {
 
 .education > aside:nth-child(2) > div{
     border: 1px solid yellow;
+}
+
+.education > aside:nth-child(2) > div:first-child{
+    grid-column: 1/2;
+    grid-row: 1/4;
 }
 
 
