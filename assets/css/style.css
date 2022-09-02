@@ -536,14 +536,25 @@ header > section {
 }
 
 .education > aside:nth-child(2) > div:first-child {
-    background: url("../image/web-development.gif") no-repeat center;
+    /*background: url("../image/mobile-app-development.gif") no-repeat center;*/
     background-size: 100%;
     grid-column: 1/2;
     grid-row: 1/4;
 }
 
-.education > aside:nth-child(2) > div:nth-child(2){
+.colleges > div:nth-child(2){
     background: blue;
+    display: flex;
+    align-items: center;
+}
+
+.colleges > div:nth-child(2) > div {
+    border: 50px solid red;
+    /*border-right-color: red;*/
+    border-radius: 5px;
+    width: 0;
+    height: 0;
+    margin: 20px;
 }
 
 
