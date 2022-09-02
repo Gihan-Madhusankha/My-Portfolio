@@ -536,28 +536,48 @@ header > section {
 }
 
 .education > aside:nth-child(2) > div:first-child {
-    /*background: url("../image/mobile-app-development.gif") no-repeat center;*/
+    background: url("../image/mobile-app-development.gif") no-repeat center;
     background-size: 100%;
     grid-column: 1/2;
     grid-row: 1/4;
 }
 
-.colleges > div:nth-child(2){
-    background: blue;
+.colleges > div:nth-child(2) {
     display: flex;
     align-items: center;
 }
 
-.colleges > div:nth-child(2) > div {
-    border: 50px solid red;
-    /*border-right-color: red;*/
-    border-radius: 5px;
+.colleges > div:nth-child(2) > div:first-child {
+    border: 60px solid transparent;
+    border-right-color: #101010;
     width: 0;
     height: 0;
-    margin: 20px;
 }
 
+.colleges > div:nth-child(2) > div:nth-child(2) {
+    width: 350px;
+    height: 120px;
+    background: #101010;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
+.colleges > div:nth-child(2) > div:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    background: #F9004D;
+    border-radius: 30px;
+    position: relative;
+    right: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
+.colleges > div:nth-child(2) > div:nth-child(3) > div {
+    background: url("../image/higher.png") center no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 75%;
+    border-radius: 25px;
+}
