@@ -524,15 +524,17 @@ header > section {
 .education > aside:nth-child(2) {
     width: 80vw;
     height: 80vh;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
 }
 
+
 .education > aside:nth-child(2) > div {
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
+    padding-left: 80px;
 }
 
 .education > aside:nth-child(2) > div:first-child {
@@ -679,5 +681,9 @@ header > section {
     background: white;
     position: absolute;
     top: 120%;
+}
+
+.colleges > div:nth-child(2), .colleges > div:nth-child(3), .colleges > div:nth-child(4) {
+    /*padding-left: 100px;*/
 }
 
