@@ -574,18 +574,27 @@ header > section {
     justify-content: center;
 }
 
-.colleges > div:nth-child(2) > div:nth-child(3) > div {
+.colleges > div:nth-child(2) > div:nth-child(3) > div:first-child {
     background: url("../image/higher.png") center no-repeat;
     width: 50px;
     height: 50px;
-    background-size: 75%;
+    background-size: 70%;
     border-radius: 25px;
+}
+
+.lineOne {
+    width: 1px;
+    height: 80px;
+    background: white;
+    position: absolute;
+    top: 120%;
 }
 
 
 .colleges > div:nth-child(4) {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .colleges > div:nth-child(4) > div:first-child {
@@ -619,7 +628,7 @@ header > section {
     background: url("../image/primary.png") center no-repeat;
     width: 50px;
     height: 50px;
-    background-size: 75%;
+    background-size: 70%;
     border-radius: 25px;
 }
 
@@ -656,11 +665,19 @@ header > section {
     justify-content: center;
 }
 
-.colleges > div:nth-child(3) > div:nth-child(3) > div {
+.colleges > div:nth-child(3) > div:nth-child(3) > div:first-child {
     background: url("../image/secondary.png") center no-repeat;
     width: 50px;
     height: 50px;
-    background-size: 75%;
+    background-size: 70%;
     border-radius: 25px;
+}
+
+.lineTwo {
+    width: 1px;
+    height: 80px;
+    background: white;
+    position: absolute;
+    top: 120%;
 }
 
