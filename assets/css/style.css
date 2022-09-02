@@ -622,3 +622,45 @@ header > section {
     background-size: 75%;
     border-radius: 25px;
 }
+
+
+.colleges > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+}
+
+.colleges > div:nth-child(3) > div:first-child {
+    border: 60px solid transparent;
+    border-right-color: #101010;
+    width: 0;
+    height: 0;
+}
+
+.colleges > div:nth-child(3) > div:nth-child(2) {
+    width: 350px;
+    height: 120px;
+    background: #101010;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.colleges > div:nth-child(3) > div:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    background: #F9004D;
+    border-radius: 30px;
+    position: relative;
+    right: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colleges > div:nth-child(3) > div:nth-child(3) > div {
+    background: url("../image/secondary.png") center no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 75%;
+    border-radius: 25px;
+}
+
