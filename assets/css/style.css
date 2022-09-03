@@ -703,3 +703,36 @@ header > section {
     line-height: 25px;
 }
 
+.my-projects {
+    height: 100vh;
+    background: violet;
+}
+
+
+.my-projects > aside {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-projects > aside > h1:first-child {
+    margin: 0;
+    color: white;
+    font-size: 2.4em;
+    text-align: center;
+    z-index: 1;
+}
+
+.my-projects > aside > h1:last-child {
+    margin: 0;
+    color: #1A1A1A;
+    font-size: 5.2em;
+    position: relative;
+    top: -50px;
+    text-align: center;
+    z-index: 0;
+}
+
+
