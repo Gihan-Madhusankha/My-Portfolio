@@ -697,9 +697,9 @@ header > section {
 .higher > p, .secondary > p, .primary > p {
     color: slategray;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-weight: initial;
     padding: 0 20px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 25px;
 }
 
