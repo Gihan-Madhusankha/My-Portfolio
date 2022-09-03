@@ -564,22 +564,6 @@ header > section {
     border-bottom-right-radius: 5px;
 }
 
-.higher > h5 {
-    color: #F17E7E;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-    padding: 20px;
-}
-
-.higher > p {
-    color: slategray;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-    padding: 0 20px;
-    font-size: 14px;
-    line-height: 20px;
-}
-
 .colleges > div:nth-child(2) > div:nth-child(3) {
     width: 60px;
     height: 60px;
@@ -701,5 +685,21 @@ header > section {
 
 .colleges > div:nth-child(2), .colleges > div:nth-child(3), .colleges > div:nth-child(4) {
     /*padding-left: 100px;*/
+}
+
+.higher > h5, .secondary > h5 {
+    color: #F17E7E;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.higher > p, .secondary > p {
+    color: slategray;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
