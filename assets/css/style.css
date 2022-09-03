@@ -687,14 +687,14 @@ header > section {
     /*padding-left: 100px;*/
 }
 
-.higher > h5, .secondary > h5 {
+.higher > h5, .secondary > h5, .primary > h5 {
     color: #F17E7E;
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
     padding: 20px;
 }
 
-.higher > p, .secondary > p {
+.higher > p, .secondary > p, .primary > p {
     color: slategray;
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
