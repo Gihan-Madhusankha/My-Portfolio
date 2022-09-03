@@ -703,6 +703,9 @@ header > section {
     line-height: 25px;
 }
 
+
+/*my-projects*/
+
 .my-projects {
     height: 100vh;
     background: violet;
@@ -734,8 +737,11 @@ header > section {
     z-index: 0;
 }
 
+
+/*Services*/
+
 .services {
-    height: 100vh;
+    height: 120vh;
     background: black;
 }
 
@@ -765,4 +771,16 @@ header > section {
     z-index: 0;
 }
 
+.services > section {
+    background: #101010;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
 
+.services > section > aside {
+    border: 1px solid red;
+    width: calc(100% / 3.3);
+}
