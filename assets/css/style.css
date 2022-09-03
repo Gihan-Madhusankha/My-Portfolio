@@ -564,6 +564,13 @@ header > section {
     border-bottom-right-radius: 5px;
 }
 
+.higher > h5 {
+    color: #F17E7E;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    padding: 20px;
+}
+
 .colleges > div:nth-child(2) > div:nth-child(3) {
     width: 60px;
     height: 60px;
@@ -580,7 +587,7 @@ header > section {
     background: url("../image/higher.png") center no-repeat;
     width: 50px;
     height: 50px;
-    background-size: 70%;
+    background-size: 60%;
     border-radius: 25px;
 }
 
@@ -630,7 +637,7 @@ header > section {
     background: url("../image/primary.png") center no-repeat;
     width: 50px;
     height: 50px;
-    background-size: 70%;
+    background-size: 60%;
     border-radius: 25px;
 }
 
@@ -671,7 +678,7 @@ header > section {
     background: url("../image/secondary.png") center no-repeat;
     width: 50px;
     height: 50px;
-    background-size: 70%;
+    background-size: 60%;
     border-radius: 25px;
 }
 
