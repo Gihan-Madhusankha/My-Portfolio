@@ -791,7 +791,7 @@ header > section {
     /*background-size: 240%;*/
 }
 
-.services > section > aside:first-child > article {
+.services > section > aside > article {
     /*background: rgba(25, 25, 25, 0.5);*/
     background: rgba(225, 225, 225, 0.2);
     height: 250px;
@@ -801,7 +801,7 @@ header > section {
     box-shadow: 0 1px 2px 1px white;
 }
 
-.services > section > aside:first-child > article > h2 {
+.services > section > aside > article > h2 {
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -810,7 +810,7 @@ header > section {
     filter: drop-shadow(1px 1px 1px black);
 }
 
-.services > section > aside:first-child > article > p {
+.services > section > aside > article > p {
     color: white;
     font-weight: initial;
     font-size: 14px;
