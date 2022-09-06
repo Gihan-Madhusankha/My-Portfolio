@@ -922,7 +922,7 @@ header > section {
 /*contact-me*/
 
 .contact-me {
-    height: 100vh;
+    height: 150vh;
     background: black;
 }
 
@@ -953,9 +953,7 @@ header > section {
 }
 
 .contact-me > section {
-    height: 500px;
-    width: 80vw;
-    margin: auto;
+    height: 800px;
     border: 1px solid red;
     display: flex;
 }
@@ -963,4 +961,8 @@ header > section {
 .contact-me > section > aside {
     border: 1px solid yellow;
     width: 100%;
+}
+
+.contact-me > section > aside:last-child {
+    background: url("../image/contactMe.webp") no-repeat center;
 }
