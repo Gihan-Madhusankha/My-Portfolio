@@ -917,3 +917,12 @@ header > section {
     grid-column: 2/4;
     grid-row: 4/6;
 }
+
+
+/*contact-me*/
+
+.contact-me {
+    height: 100vh;
+    background: black;
+}
+
