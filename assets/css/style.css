@@ -837,7 +837,7 @@ header > section {
 
 
 .my-design {
-    height: 100vh;
+    height: 150vh;
     background: black;
 }
 
@@ -865,5 +865,19 @@ header > section {
     top: -50px;
     text-align: center;
     z-index: 0;
+}
+
+.my-design > section {
+    width: 80vw;
+    height: 500px;
+    border: 1px solid red;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.my-design > section > div{
+    border: 1px solid yellow;
 }
 
