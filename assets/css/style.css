@@ -841,5 +841,20 @@ header > section {
     background: black;
 }
 
+.my-design > aside {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-design > aside > h1:first-child {
+    margin: 0;
+    color: white;
+    font-size: 2.4em;
+    text-align: center;
+    z-index: 1;
+}
 
 
