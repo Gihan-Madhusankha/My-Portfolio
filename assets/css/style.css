@@ -857,4 +857,13 @@ header > section {
     z-index: 1;
 }
 
+.my-design > aside > h1:last-child {
+    margin: 0;
+    color: #1A1A1A;
+    font-size: 5.2em;
+    position: relative;
+    top: -50px;
+    text-align: center;
+    z-index: 0;
+}
 
