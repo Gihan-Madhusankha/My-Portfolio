@@ -968,16 +968,30 @@ header > section {
 }
 
 .contact-me > section > aside:first-child > address {
-    height: 300px;
-    background: #F17E7E;
-    border: 2px solid cyan;
+    height: 150px;
+    /*background: #F17E7E;*/
+    /*border: 2px solid cyan;*/
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.75fr 3fr;
     grid-template-rows: repeat(4, 20px);
-    row-gap: 10px;
+    row-gap: 15px;
     margin-left: 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-style: normal;
 }
 
-.contact-me > section > aside:first-child > address > div{
-    border: 1px solid purple;
+.contact-me > section > aside:first-child > address > div:nth-child(odd) > h3{
+    /*border: 1px solid purple;*/
+    border-right: 2px solid #F9004D;
+    font-weight: bold;
+    color: #F9004D;
+}
+
+.contact-me > section > aside:first-child > address > div:nth-child(even) > h3{
+    /*border: 1px solid purple;*/
+    color: slategray;
+    padding-left: 50px;
+    font-weight: initial;
+    letter-spacing: 1px;
 }
