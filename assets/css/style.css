@@ -1072,7 +1072,25 @@ header > section {
 /*footer*/
 
 .footer {
-    height: 200px;
+    height: 150px;
     background: #282828;
     z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer > div {
+    width: 100px;
+    height: 100px;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+}
+
+.footer > div > img {
+    width: 25%;
+}
+
+.footer > nav > ul > li {
+    list-style: none;
 }
