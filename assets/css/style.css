@@ -870,7 +870,7 @@ header > section {
 .my-design > section {
     width: 80vw;
     height: 650px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin: auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -879,7 +879,7 @@ header > section {
 }
 
 .my-design > section > div {
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
 }
 
 .my-design > section > div:first-child {
@@ -910,6 +910,16 @@ header > section {
     /*background: url("../image/Typography.png") no-repeat center;*/
     /*background-size: cover;*/
 }
+
+.my-design > section > div:nth-child(7) {
+    grid-row: 4/6;
+}
+
+.my-design > section > div:nth-child(8) {
+    grid-column: 2/4;
+    grid-row: 4/6;
+}
+
 
 .card {
     background: #fff;
@@ -965,22 +975,13 @@ header > section {
     background: linear-gradient(to left, orange, yellow, orange);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    text-align: center;
 }
 
 .card:hover .info > h4 {
     transform: translate(-50%, -50%);
     text-align: center;
     opacity: 1;
-}
-
-.my-design > section > div:nth-child(7) {
-    grid-row: 4/6;
-}
-
-.my-design > section > div:nth-child(8) {
-    grid-column: 2/4;
-    grid-row: 4/6;
-
 }
 
 
