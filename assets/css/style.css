@@ -1072,7 +1072,7 @@ header > section {
 /*footer*/
 
 .footer {
-    height: 150px;
+    height: 100px;
     background: #282828;
     z-index: 1;
     display: flex;
@@ -1095,10 +1095,15 @@ header > section {
     position: absolute;
     width: 90%;
     height: 100px;
-    border: 1px solid red;
     margin: auto;
     left: 0;
     right: 0;
+}
+
+.footer > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer > nav > ul > li {
@@ -1108,4 +1113,13 @@ header > section {
 
 .footer > nav > ul > li > a {
     color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.footer > nav > ul > li > a:hover {
+    background: #F9004D;
+    border: none;
 }
