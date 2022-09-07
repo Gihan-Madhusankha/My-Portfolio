@@ -953,25 +953,26 @@ header > section {
 }
 
 .contact-me > section {
-    height: 800px;
-    border: 1px solid red;
+    height: 700px;
+    /*border: 1px solid red;*/
     margin-top: 50px;
     display: flex;
 }
 
 .contact-me > section > aside {
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     width: 100%;
 }
 
 .contact-me > section > aside:last-child {
     background: url("../image/contactMe.webp") no-repeat center;
+    background-size: 200%;
 }
 
 .contact-me > section > aside:first-child > address {
     height: 150px;
     /*background: #F17E7E;*/
-    border: 2px solid cyan;
+    /*border: 2px solid cyan;*/
     display: grid;
     grid-template-columns: 0.75fr 3fr;
     grid-template-rows: repeat(4, 20px);
@@ -998,14 +999,20 @@ header > section {
 }
 
 .contact-me > section > aside:first-child > section {
-    height: 500px;
-    border: 1px solid orangered;
+    height: 550px;
+    /*border: 1px solid orangered;*/
     margin-left: 70px;
+}
+
+.contact-form {
+    display: flex;
+    align-items: flex-end;
 }
 
 .contact-form > form > fieldset {
     padding: 0;
     margin-top: 50px;
+    border:none;
 }
 
 .contact-form > form > fieldset > input {
@@ -1022,8 +1029,10 @@ header > section {
 }
 
 .contact-form > form > fieldset > textarea {
-    width: 490px;
-    height: 200px;
+    min-width: 490px;
+    max-width: 490px;
+    min-height: 200px;
+    max-height: 200px;
     background: none;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
