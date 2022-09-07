@@ -955,6 +955,7 @@ header > section {
 .contact-me > section {
     height: 800px;
     border: 1px solid red;
+    margin-top: 50px;
     display: flex;
 }
 
@@ -970,7 +971,7 @@ header > section {
 .contact-me > section > aside:first-child > address {
     height: 150px;
     /*background: #F17E7E;*/
-    /*border: 2px solid cyan;*/
+    border: 2px solid cyan;
     display: grid;
     grid-template-columns: 0.75fr 3fr;
     grid-template-rows: repeat(4, 20px);
@@ -994,4 +995,10 @@ header > section {
     padding-left: 50px;
     font-weight: initial;
     letter-spacing: 1px;
+}
+
+.contact-me > section > aside:first-child > section {
+    height: 300px;
+    border: 1px solid orangered;
+    margin-left: 70px;
 }
