@@ -82,13 +82,53 @@
     <!--    landing page-->
     <section class="dev-content">
         <!--        <img alt="main image 1" src="assets/image/ex.jpg">-->
-        <aside>
+        <aside class="home-text">
             <h6>WELCOME TO MY WORLD</h6>
             <h1>Hi, I'm Gihan</h1>
-            <h1>UI~UX Designer.</h1>
+            <p class="animate-text">
+                <span>UI~UX Designer.</span>
+                <span>Content Writer.</span>
+                <span>JS Developer.</span>
+            </p>
             <h1>Based in SL.</h1>
         </aside>
     </section>
+
+
+    <script>
+        const txts=document.querySelector(".animate-text").children,
+            txtsLen=txts.length;
+        let index=0;
+        const textInTimer=3000,
+            textOutTimer=2800;
+
+        function animateText() {
+            for(let i=0; i<txtsLen; i++){
+                txts[i].classList.remove("text-in","text-out");
+            }
+            txts[index].classList.add("text-in");
+
+            setTimeout(function(){
+                txts[index].classList.add("text-out");
+            },textOutTimer)
+
+            setTimeout(function(){
+
+                if(index == txtsLen-1){
+                    index=0;
+                }
+                else{
+                    index++;
+                }
+                animateText();
+            },textInTimer);
+        }
+
+        window.onload=animateText;
+
+    </script>
+
+
     <!--    about me-->
     <section class="about-me">
         <img alt="author img" src="assets/image/my-pic.png">
@@ -282,6 +322,22 @@
             <h1>My Projects</h1>
             <h1>Projects</h1>
         </aside>
+
+<!--        <div class="slide">-->
+<!--            <div class="prev"></div>-->
+<!--            <div class="next"></div>-->
+<!--            <ul>-->
+<!--                <li><img src="assets/image/face.webp" alt=""></li>-->
+<!--                <li><img src="assets/image/head.jpg" alt=""></li>-->
+<!--                <li><img src="assets/image/headphone.jpg" alt=""></li>-->
+<!--                <li><img src="assets/image/VRman.webp" alt=""></li>-->
+<!--                <li><img src="assets/image/childWithHeadphone.webp" alt=""></li>-->
+<!--                <li><img src="assets/image/VRman2.webp" alt=""></li>-->
+<!--                <li><img src="assets/image/VRman3.webp" alt=""></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+
     </section>
     <!--    services-->
     <section class="services">
@@ -327,56 +383,42 @@
                     <h4>Flyer Design</h4>
                 </div>
             </div>
-
             <div class="card">
                 <img alt="" src="assets/image/brochure.jpg">
                 <div class="info">
                     <h4>Brochure Design</h4>
                 </div>
             </div>
-
             <div class="card">
                 <img alt="" src="assets/image/business-card.jpg">
                 <div class="info">
                     <h4>Business card</h4>
                 </div>
             </div>
-
             <div class="card">
                 <img alt="" src="assets/image/roll-up-banner.jpg">
                 <div class="info">
                     <h4>Roll <br>Up <br> Banner</h4>
                 </div>
             </div>
-
             <div class="card">
                 <img alt="" src="assets/image/pattern.png">
                 <div class="info">
                     <h4>Pattern Design</h4>
                 </div>
             </div>
-
             <div class="card">
                 <img alt="" src="assets/image/Typography.png">
                 <div class="info">
                     <h4>Typography</h4>
                 </div>
             </div>
-
-            <div class="card">
-                <img alt="" src="assets/image/logo.jpg">
-                <div class="info">
-                    <h4>Logo Design</h4>
-                </div>
-            </div>
-
             <div class="card">
                 <img alt="" src="assets/image/tag.jpg">
                 <div class="info">
                     <h4>Tag Design</h4>
                 </div>
             </div>
-
         </section>
     </section>
     <!--    contact me-->
