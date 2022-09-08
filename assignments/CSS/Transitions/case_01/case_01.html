@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Case_01</title>
+    <title>Transitions_Case_01</title>
+
+<!--    font-awesome-->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 80px;
+            height: 80px;
+            background: mediumpurple;
+            border-radius: 3px;
+            margin-top: 25px;
+            transition-duration: 2s;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        i {
+            color: white;
+            font-size: 40px;
+            padding-right: 15px;
+        }
+
+        div:hover{
+            cursor: pointer;
+            width: 400px;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+
+    </style>
+
 </head>
 <body>
+
+    <div><i class="fa-solid fa-truck-fast"></i></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
 
 </body>
 </html>
