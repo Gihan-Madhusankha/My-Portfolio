@@ -145,7 +145,7 @@ header > section {
 }
 
 .dev-content > aside h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 10px 0;
 }
 
@@ -178,11 +178,10 @@ header > section {
 }
 
 .home-text p span{
-    font-size: 40px;
+    font-size: 60px;
     color:#ff2c45;
     font-weight: 700;
-    display: inline-block;
-    line-height: 46px;
+    line-height: 80px;
     display: none;
 }
 
