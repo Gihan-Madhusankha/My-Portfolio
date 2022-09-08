@@ -17,14 +17,25 @@
         }
 
         section > div {
-            width: 200px;
-            height: 200px;
-            border: 15px solid white;
-            border-top: 15px solid crimson;
-            border-radius: 100%;
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        section > div > div {
+            width: 200px;
+            height: 200px;
+            border: 10px solid white;
+            border-top: 10px solid crimson;
+            border-radius: 100%;
             position: absolute;
             left: 0;
             right: 0;
@@ -33,19 +44,25 @@
             margin: auto;
             background: #333333;
             color: white;
+            z-index: 0;
         }
 
 
-
-        section > div:hover {
+        section > div >div:hover {
             transform: rotate(360deg);
             transition: all 2s;
             cursor: pointer;
         }
 
-        section > div:hover > h1 {
-            transform: rotate(-360deg);
-            transition: all 2s;
+        /*section > div:hover > h1 {*/
+        /*    transform: rotate(-360deg);*/
+        /*    transition: all 2s;*/
+        /*}*/
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            z-index: 2;
+            color: white;
         }
 
     </style>
@@ -55,6 +72,7 @@
 
 <section>
     <div>
+        <div></div>
         <h1>RWAD</h1>
     </div>
 </section>
