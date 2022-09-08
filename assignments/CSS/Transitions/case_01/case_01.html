@@ -12,16 +12,16 @@
 
     <style>
 
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
 
-        div{
+        .slide {
             width: 80px;
             height: 80px;
-            background: mediumpurple;
-            border-radius: 3px;
+            background: rebeccapurple;
+            border-radius: 5px;
             margin-top: 25px;
             transition-duration: 2s;
             display: flex;
@@ -29,10 +29,41 @@
             justify-content: right;
         }
 
+        .slide div {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide div:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding-left: 10px;
+            padding-right: 20px;
+            flex-basis: 300px;
+        }
+
+        .slide div:nth-child(2){
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            flex-basis: 100px;
+        }
+
         i {
             color: white;
             font-size: 40px;
-            padding-right: 15px;
+            padding-right: 20px;
+        }
+
+        pre {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            right: 100px;
+            transition-duration: 2s;
         }
 
         div:hover{
@@ -42,16 +73,40 @@
             transition-duration: 2s;
         }
 
+        div:hover > pre {
+            right: 0;
+            transition-duration: 2s;
+        }
+
     </style>
 
 </head>
 <body>
 
-    <div><i class="fa-solid fa-truck-fast"></i></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="slide">
+        <div><pre>Menu One</pre></div>
+        <div><i class="fa-solid fa-truck-fast"></i></div>
+    </div>
+
+    <div class="slide">
+        <div><pre>Menu Two</pre></div>
+        <div><i class="fa-solid fa-gear"></i></div>
+    </div>
+
+    <div class="slide">
+        <div><pre>Menu Three</pre></div>
+        <div><i class="fa-solid fa-gift"></i></div>
+    </div>
+
+    <div class="slide">
+        <div><pre>Menu Four</pre></div>
+        <div><i class="fa-solid fa-camera"></i></div>
+    </div>
+
+    <div class="slide">
+        <div><pre>Menu Five</pre></div>
+        <div><i class="fa-solid fa-layer-group"></i></div>
+    </div>
 
 
 </body>
