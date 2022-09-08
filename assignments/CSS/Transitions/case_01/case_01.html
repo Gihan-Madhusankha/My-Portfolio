@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Transitions_Case_01</title>
 
-<!--    font-awesome-->
+    <!--    font-awesome-->
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
           integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
@@ -17,102 +17,83 @@
             padding: 0;
         }
 
-        body {
-            margin-top: 150px;
+        section {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            right: 167px;
         }
 
-        .slide {
-            width: 50px;
-            height: 50px;
-            background: rebeccapurple;
+        section > div {
+            left: 0;
+            height: 30px;
+            position: relative;
+            background: #45008b;
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
-            margin-top: 20px;
+            cursor: pointer;
+            transition-property: all;
             transition-duration: 2s;
-            display: flex;
-            align-items: center;
-            justify-content: right;
         }
 
-        .slide div {
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide div:nth-child(1){
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            padding-left: 10px;
-            padding-right: 20px;
-            flex-basis: 200px;
-        }
-
-        .slide div:nth-child(2){
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            flex-basis: 100px;
-        }
-
-        i {
+        section > div > i {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
             color: white;
-            font-size: 20px;
-            padding-right: 15px;
         }
 
-        pre {
+        section > div > h3 {
+            position: absolute;
             font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            top: 50%;
+            left: 0;
+            transform: translate(10%, -50%);
             color: white;
             font-weight: bold;
-            font-size: 16px;
-            position: relative;
-            right: 100px;
+        }
+
+        section > div:hover {
+            left: 167px;
+            background: #F9004D;
+            transition-property: all;
             transition-duration: 2s;
         }
 
-        div:hover{
-            cursor: pointer;
-            background: deeppink;
-            width: 300px;
-            transition-property: width, background-color;
-            transition-duration: 2s;
-        }
-
-        div:hover > pre {
-            right: 0;
-            transition-duration: 2s;
-        }
 
     </style>
 
 </head>
 <body>
 
-    <div class="slide">
-        <div><pre>Menu One</pre></div>
-        <div><i class="fa-solid fa-truck-fast"></i></div>
+<section>
+    <div>
+        <h3>Menu One</h3>
+        <i class="fa-solid fa-address-book"></i>
     </div>
-
-    <div class="slide">
-        <div><pre>Menu Two</pre></div>
-        <div><i class="fa-solid fa-gear"></i></div>
+    <div>
+        <h3>Menu Two</h3>
+        <i class="fa-solid fa-pen-nib"></i>
     </div>
-
-    <div class="slide">
-        <div><pre>Menu Three</pre></div>
-        <div><i class="fa-solid fa-gift"></i></div>
+    <div>
+        <h3>Menu Three</h3>
+        <i class="fa-solid fa-globe"></i>
     </div>
-
-    <div class="slide">
-        <div><pre>Menu Four</pre></div>
-        <div><i class="fa-solid fa-camera"></i></div>
+    <div>
+        <h3>Menu Four</h3>
+        <i class="fa-solid fa-layer-group"></i>
     </div>
-
-    <div class="slide">
-        <div><pre>Menu Five</pre></div>
-        <div><i class="fa-solid fa-layer-group"></i></div>
+    <div>
+        <h3>Menu Five</h3>
+        <i class="fa-solid fa-cart-shopping"></i>
     </div>
+</section>
 
 
 </body>
