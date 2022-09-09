@@ -11,58 +11,52 @@
             padding: 0;
         }
 
-        section {
+        body {
             height: 100vh;
             background: radial-gradient(deepskyblue, darkblue);
         }
 
-        section > div {
-            width: 220px;
-            height: 220px;
+        div {
+            width: 250px;
+            height: 250px;
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        section > div > div {
-            width: 200px;
-            height: 200px;
+        div > h1 {
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            color: white;
+        }
+
+        div::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #333333;
             border: 10px solid white;
             border-top: 10px solid crimson;
             border-radius: 100%;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            background: #333333;
-            color: white;
-            z-index: 0;
         }
 
-
-        section > div >div:hover {
+        div:hover::before {
             transform: rotate(360deg);
             transition: all 2s;
             cursor: pointer;
-        }
-
-        /*section > div:hover > h1 {*/
-        /*    transform: rotate(-360deg);*/
-        /*    transition: all 2s;*/
-        /*}*/
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            z-index: 2;
-            color: white;
         }
 
     </style>
@@ -70,12 +64,10 @@
 </head>
 <body>
 
-<section>
-    <div>
-        <div></div>
-        <h1>RWAD</h1>
-    </div>
-</section>
+
+<div>
+    <h1>RWAD</h1>
+</div>
 
 </body>
 </html>
