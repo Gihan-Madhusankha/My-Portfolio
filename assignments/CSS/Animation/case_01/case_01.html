@@ -3,11 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Animations_Case_01</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <style>
+
+        div {
+            width: 200px;
+            height: 100px;
+            border-radius: 20px;
+            border: 2px solid black;
+            background: yellow;
+            position: relative;
+            animation-name: my-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes my-animation {
+            0% {
+                background: blue;
+                left: 0;
+                top: 0;
+                transform: rotate(20deg);
+            }
+            10% {
+                background: yellow;
+                left: 400px;
+                top: 0;
+                transform: rotate(50deg);
+            }
+            20% {
+                background: orange;
+                left: 800px;
+                top: 0;
+                transform: rotate(300deg);
+            }
+            30% {
+                background: cyan;
+                left: 1100px;
+                top: 0;
+                transform: rotate(45deg);
+            }
+            40% {
+                background: magenta;
+                left: 1100px;
+                top: 200px;
+                transform: rotate(90deg);
+            }
+            50% {
+                background: #20c997;
+                left: 1100px;
+                top: 500px;
+                transform: rotate(160deg);
+            }
+            60% {
+                background: deepskyblue;
+                left: 800px;
+                top: 500px;
+                transform: rotate(220deg);
+            }
+            70% {
+                background: violet;
+                left: 400px;
+                top: 500px;
+                transform: rotate(310deg);
+            }
+            80% {
+                background: darkred;
+                left: 100px;
+                top: 500px;
+                transform: rotate(105deg);
+            }
+            90% {
+                background: greenyellow;
+                left: 0;
+                top: 400px;
+                transform: rotate(60deg);
+            }
+            100% {
+                background: slategray;
+                left: 0;
+                top: 0;
+                transform: rotate(330deg);
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-
-
+<div></div>
 
 </body>
 </html>
