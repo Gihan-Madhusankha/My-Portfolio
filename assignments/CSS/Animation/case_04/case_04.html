@@ -29,7 +29,7 @@
             display: flex;
             width: 300%;
             height: 100%;
-            animation-name: img-city;
+            animation-name: img-city, road;
             animation-duration: 2s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-out;
@@ -38,6 +38,7 @@
 
         section > div > div {
             width: 100%;
+            height: auto;
         }
 
         .city1 {
@@ -46,8 +47,8 @@
         }
 
         .road {
-            height: 50vh;
             background: url("assets/image/road.jpg");
+            background-size: cover;
         }
 
         .car {
@@ -90,6 +91,15 @@
             }
         }
 
+        @keyframes road {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
         @keyframes wheel {
             0% {
                 transform: rotate(0deg);
@@ -112,7 +122,15 @@
             <div class="city1"></div>
         </div>
     </section>
-    <section class="road"></section>
+
+    <section>
+        <div>
+            <div class="road"></div>
+            <div class="road"></div>
+            <div class="road"></div>
+        </div>
+    </section>
+
     <img alt="car" class="car" src="assets/image/car.png">
     <img alt="wheel" class="wheel" src="assets/image/wheel.png">
     <img alt="wheel" class="wheel" src="assets/image/wheel.png">
