@@ -29,12 +29,13 @@
         section > div {
             display: flex;
             /*border: 2px solid blue;*/
-            width: 200%;
+            width: 300%;
             height: 100%;
             animation-name: img-city;
-            animation-duration: 50s;
+            animation-duration: 2s;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            animation-timing-function: ease-out;
+            /*animation-timing-function: cubic-bezier(0.68,-0.02, 0.43, 0.99);*/
         }
 
         section > div > div {
@@ -52,12 +53,53 @@
             background: url("assets/image/road.jpg");
         }
 
+        .car {
+            position: absolute;
+            top: 10%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 40%;
+        }
+
+        .wheel {
+            position: absolute;
+            top: 28%;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 7%;
+            animation-name: wheel;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+
+        main > img:nth-child(4) {
+            left: -26%;
+        }
+
+        main > img:nth-child(5) {
+            left: 23%;
+        }
+
+
         @keyframes img-city {
             0% {
                 transform: translateX(0);
             }
             100% {
                 transform: translateX(-50%);
+            }
+        }
+
+        @keyframes wheel {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(720deg);
             }
         }
 
@@ -71,11 +113,13 @@
         <div>
             <div class="city1"></div>
             <div class="city1"></div>
+            <div class="city1"></div>
         </div>
     </section>
-
-    <section class="road">
-    </section>
+    <section class="road"></section>
+    <img alt="car" class="car" src="assets/image/car.png">
+    <img alt="wheel" class="wheel" src="assets/image/wheel.png">
+    <img alt="wheel" class="wheel" src="assets/image/wheel.png">
 </main>
 
 </body>
