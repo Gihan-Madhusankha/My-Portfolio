@@ -32,7 +32,8 @@
             margin: auto;
             animation-name: my-animation;
             animation-duration: 12s;
-            animation-iteration-count: 2;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
         }
 
         section > section > div {
@@ -64,23 +65,24 @@
             background-size: cover;
         }
 
-        @keyframes my-animation {
-            0% {
-                transform: translateX(0%);
-            }
-            25% {
-                transform: translateX(-20%);
-            }
-            50% {
-                transform: translateX(-40%);
-            }
-            75% {
-                transform: translateX(-60%);
-            }
-            100% {
-                transform: translateX(-80%);
-            }
+    @keyframes my-animation {
+        0% {
+            transform: translateX(0%);
         }
+        25% {
+            transform: translateX(-20%);
+        }
+        50% {
+            transform: translateX(-40%);
+        }
+        75% {
+            transform: translateX(-60%);
+        }
+        100% {
+            transform: translateX(-80%);
+        }
+    }
+
 
     </style>
 </head>
