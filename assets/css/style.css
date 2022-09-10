@@ -218,7 +218,8 @@ header > section {
 .about-me {
     height: calc(100vh - 9.7vh);
     /*background: rgba(00,00,00, 0.9);*/
-    background: rgba(0,0,100,0.4);
+    /*background: rgba(0,0,100,0.4);*/
+    background: black;
     position: relative;
 }
 
