@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations_Case_03</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <style>
+
+        section {
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        section > section {
+            width: 500%;
+            display: flex;
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 2px solid cyan;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: 2;
+        }
+
+        section > section > div {
+            width: 100%;
+        }
+
+        section > section > div:first-child {
+            background: url("../../../../assets/image/neongirl.jpg");
+            background-size: cover;
+        }
+
+        section > section > div:nth-child(2) {
+            background: url("../../../../assets/image/portfolio10.jpg");
+            background-size: cover;
+        }
+
+        section > section > div:nth-child(3) {
+            background: url("../../../../assets/image/portfolio18.jpg");
+            background-size: cover;
+        }
+
+        section > section > div:nth-child(4) {
+            background: url("../../../../assets/image/portfolio19.jpg");
+            background-size: cover;
+        }
+
+        section > section > div:nth-child(5) {
+            background: url("../../../../assets/image/portfolio16.jpg");
+            background-size: cover;
+        }
+
+        @keyframes my-animation {
+            0% {
+                transform: translateX(0%);
+            }
+            25% {
+                transform: translateX(-20%);
+            }
+            50% {
+                transform: translateX(-40%);
+            }
+            75% {
+                transform: translateX(-60%);
+            }
+            100% {
+                transform: translateX(-80%);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<section>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</section>
+
+</body>
+</html>
