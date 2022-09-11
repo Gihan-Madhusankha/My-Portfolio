@@ -96,44 +96,43 @@
 
 
     <script>
-        const txts=document.querySelector(".animate-text").children,
-            txtsLen=txts.length;
-        let index=0;
-        const textInTimer=3000,
-            textOutTimer=2800;
+        const txts = document.querySelector(".animate-text").children,
+            txtsLen = txts.length;
+        let index = 0;
+        const textInTimer = 3000,
+            textOutTimer = 2800;
 
         function animateText() {
-            for(let i=0; i<txtsLen; i++){
-                txts[i].classList.remove("text-in","text-out");
+            for (let i = 0; i < txtsLen; i++) {
+                txts[i].classList.remove("text-in", "text-out");
             }
             txts[index].classList.add("text-in");
 
-            setTimeout(function(){
+            setTimeout(function () {
                 txts[index].classList.add("text-out");
-            },textOutTimer)
+            }, textOutTimer)
 
-            setTimeout(function(){
+            setTimeout(function () {
 
-                if(index == txtsLen-1){
-                    index=0;
-                }
-                else{
+                if (index == txtsLen - 1) {
+                    index = 0;
+                } else {
                     index++;
                 }
                 animateText();
-            },textInTimer);
+            }, textInTimer);
         }
 
-        window.onload=animateText;
+        window.onload = animateText;
 
     </script>
 
 
     <!--    about me-->
     <section class="about-me">
-<!--        <video class="bg" autoplay loop muted playsinline style="width: 100%; z-index: -1">-->
-<!--            <source src="assets/video/2160p.mp4">-->
-<!--        </video>-->
+        <!--        <video class="bg" autoplay loop muted playsinline style="width: 100%; z-index: -1">-->
+        <!--            <source src="assets/video/2160p.mp4">-->
+        <!--        </video>-->
         <img alt="author img" src="assets/image/my-pic.png">
         <section style="z-index: 1">
             <article>
@@ -308,19 +307,19 @@
             <h1>Projects</h1>
         </aside>
 
-<!--        <div class="slide">-->
-<!--            <div class="prev"></div>-->
-<!--            <div class="next"></div>-->
-<!--            <ul>-->
-<!--                <li><img src="assets/image/face.webp" alt=""></li>-->
-<!--                <li><img src="assets/image/head.jpg" alt=""></li>-->
-<!--                <li><img src="assets/image/headphone.jpg" alt=""></li>-->
-<!--                <li><img src="assets/image/VRman.webp" alt=""></li>-->
-<!--                <li><img src="assets/image/childWithHeadphone.webp" alt=""></li>-->
-<!--                <li><img src="assets/image/VRman2.webp" alt=""></li>-->
-<!--                <li><img src="assets/image/VRman3.webp" alt=""></li>-->
-<!--            </ul>-->
-<!--        </div>-->
+        <!--        <div class="slide">-->
+        <!--            <div class="prev"></div>-->
+        <!--            <div class="next"></div>-->
+        <!--            <ul>-->
+        <!--                <li><img src="assets/image/face.webp" alt=""></li>-->
+        <!--                <li><img src="assets/image/head.jpg" alt=""></li>-->
+        <!--                <li><img src="assets/image/headphone.jpg" alt=""></li>-->
+        <!--                <li><img src="assets/image/VRman.webp" alt=""></li>-->
+        <!--                <li><img src="assets/image/childWithHeadphone.webp" alt=""></li>-->
+        <!--                <li><img src="assets/image/VRman2.webp" alt=""></li>-->
+        <!--                <li><img src="assets/image/VRman3.webp" alt=""></li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
 
 
     </section>

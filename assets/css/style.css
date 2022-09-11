@@ -118,6 +118,9 @@ header > section {
 
 .top-bar-social ul li i:hover {
     color: #F9004D;
+    position: relative;
+    top: -20%;
+    transition: 0.5s;
 }
 
 
@@ -284,8 +287,8 @@ header > section {
 .about-me > section > article button {
     width: 150px;
     margin-top: 10vh;
-    font-size: 14px;
-    font-weight: initial;
+    font-size: 16px;
+    font-weight: 400;
     background: #F9004D;
     color: white;
     height: 50px;
@@ -293,6 +296,9 @@ header > section {
     cursor: pointer;
 }
 
+.about-me > section > article button:hover {
+    background: #a10032;
+}
 
 /*My Skills*/
 
@@ -346,9 +352,11 @@ header > section {
     font-family: 'Poppins', sans-serif;
     font-weight: initial;
     font-size: 16px;
-    color: lightblue;
-    padding: 10px 10px 10px 0;
+    color: white;
+    padding: 10px 20px;
     flex-basis: 8%;
+    background: orange;
+    border: 3px;
 }
 
 .line1 {
@@ -404,10 +412,34 @@ header > section {
     margin: auto;
 }
 
+.language > aside {
+    gap: 10px;
+}
+
 .language > aside > div:nth-child(1) {
     background: url("../image/java.png") no-repeat center;
     background-size: 40px;
 }
+
+.language > aside > div:hover {
+    border-radius: 10px;
+    position: relative;
+    top: -10%;
+    transition: 0.2s;
+    filter: drop-shadow(5px 5px 5px gray);
+    cursor: pointer;
+}
+
+/*.language > aside > div:nth-child(1):before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: -2px;*/
+/*    left: -2px;*/
+/*    right: -2px;*/
+/*    bottom: -2px;*/
+/*    background: #fff;*/
+/*    transform: skew(2deg, 2deg);*/
+/*}*/
 
 .language > aside > div:nth-child(2) {
     background: url("../image/python.png") no-repeat center;
@@ -430,6 +462,9 @@ header > section {
     grid-column: 5/6;
     grid-row: 1/4;
     width: 500px;
+    top: 0;
+    filter: drop-shadow(0 0 0);
+    cursor: auto;
 }
 
 .language > aside > div:nth-child(6) {
@@ -461,7 +496,6 @@ header > section {
 }
 
 .tools > div:first-child {
-    /*border: 1px solid blueviolet;*/
     display: flex;
     align-items: center;
     width: 100%;
@@ -472,8 +506,11 @@ header > section {
     font-family: 'Poppins', sans-serif;
     font-weight: initial;
     font-size: 16px;
-    color: lightblue;
+    color: white;
     flex-basis: 15%;
+    background: orange;
+    padding: 10px 20px;
+    border: 3px;
 }
 
 .line2 {
@@ -486,11 +523,9 @@ header > section {
     display: flex;
     width: 100%;
     margin-top: 10px;
-    /*border: 1px solid white;*/
 }
 
 .tools > div:nth-child(2) > div {
-    /*border: 1px solid orange;*/
     width: 100%;
     height: 100px;
 }
