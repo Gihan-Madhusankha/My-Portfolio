@@ -885,6 +885,9 @@ header > section {
     font-weight: 500;
     color: darkblue;
 }
+.assignment > div ul li a::before{
+    content: '›› ';
+}
 .assignment > div ul li a:hover{
     color: white;
     cursor: pointer;
