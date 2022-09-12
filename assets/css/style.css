@@ -123,6 +123,10 @@ header > section {
     transition: 0.5s;
 }
 
+@media all and (max-width: 320px) {
+
+}
+
 
 /*main*/
 /*landing page*/
@@ -801,7 +805,7 @@ header > section {
 /*my-projects*/
 
 .my-projects {
-    height: 110vh;
+    height: 170vh;
     background: black;
     /*border: 1px solid red;*/
 }
@@ -832,21 +836,67 @@ header > section {
     z-index: 0;
 }
 
-/*.my-projects > section {*/
-/*    position: relative;*/
-/*    margin: auto;*/
-/*    width: 80vw;*/
-/*    height: 80vh;*/
-/*    !*border: 1px solid red;*!*/
-/*}*/
-
 .my-projects > section {
+    /*position: relative;*/
+    /*margin: auto;*/
+    /*width: 80vw;*/
+    /*height: 80vh;*/
+    /*border: 1px solid red;*/
+}
+
+.my-projects > .d {
+    margin-top: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    background: orange;
+    text-align: center;
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+.d > h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.my-projects > section:first-child {
     height: 70vh;
     width: 80%;
     margin: auto;
     /*border: 1px solid cyan;*/
     position: relative;
     top: 50px;
+}
+
+.assignment-section {
+    height: 40vh;
+    width: 80%;
+    margin: auto;
+    /*border: 1px solid cyan;*/
+    position: relative;
+    top: 50px;
+    display: flex;
+}
+
+.assignment-section .assignment {
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid orangered;*/
+}
+
+.assignment-section .assignment:first-child {
+    background: url("../image/basic.gif");
+    background-size: cover;
+}
+
+.assignment-section .assignment:nth-child(2) {
+    background: url("../image/transition.gif");
+    background-size: cover;
+}
+
+.assignment-section .assignment:nth-child(3) {
+    background: url("../image/animation.gif");
+    background-size: cover;
 }
 
 .slide-container {
