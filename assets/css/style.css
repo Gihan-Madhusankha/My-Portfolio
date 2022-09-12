@@ -801,8 +801,9 @@ header > section {
 /*my-projects*/
 
 .my-projects {
-    height: 100vh;
+    height: 110vh;
     background: black;
+    /*border: 1px solid red;*/
 }
 
 .my-projects > aside {
@@ -841,10 +842,12 @@ header > section {
 
 .my-projects > section {
     height: 70vh;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     /*border: 1px solid cyan;*/
+    position: relative;
+    top: 50px;
 }
-
 
 .slide-container {
     min-height: 70vh;
@@ -854,12 +857,12 @@ header > section {
     background: black;
 }
 
-.slide-container{
+.slide-container {
     display: flex;
 }
 
 .slide-content {
-    margin: 0 40px;
+    margin: 0 30px;
 }
 
 .crd {
@@ -909,9 +912,9 @@ header > section {
 .card-image {
     border: 5px solid white;
     position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
     background: #FFF;
     padding: 3px;
 }
@@ -957,7 +960,6 @@ header > section {
 }
 
 
-
 /*Services*/
 
 .services {
@@ -995,9 +997,10 @@ header > section {
     /*background: #101010;*/
     height: 75vh;
     width: 80vw;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
+    /*border: 1px solid red;*/
 }
 
 .services > section > aside {
@@ -1091,7 +1094,7 @@ header > section {
     width: 80vw;
     height: 650px;
     /*border: 1px solid red;*/
-    margin: auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
