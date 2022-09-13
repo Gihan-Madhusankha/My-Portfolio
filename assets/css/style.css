@@ -123,10 +123,6 @@ header > section {
     transition: 0.5s;
 }
 
-@media all and (max-width: 320px) {
-
-}
-
 
 /*main*/
 /*landing page*/
@@ -185,10 +181,10 @@ header > section {
 }
 
 .home-text p span {
-    font-size: 60px;
+    font-size: 70px;
     color: #ff2c45;
     font-weight: 700;
-    line-height: 80px;
+    line-height: 90px;
     display: none;
 }
 
@@ -304,6 +300,7 @@ header > section {
     background: #a10032;
 }
 
+
 /*My Skills*/
 
 .skills {
@@ -350,6 +347,7 @@ header > section {
 .skills > section:nth-child(2) > div:first-child {
     display: flex;
     align-items: center;
+    /*border: 1px solid red;*/
 }
 
 .language div:first-child > h3 {
@@ -393,6 +391,7 @@ header > section {
 
 .skills > .language > aside > div {
     /*border: 1px solid white;*/
+    /*height: 80%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -403,7 +402,7 @@ header > section {
     font-weight: normal;
     color: slategray;
     letter-spacing: 1px;
-    margin-top: 150px;
+    margin-top: 130px;
     font-size: 14px;
     /*border-bottom: 2px solid #F9004D;*/
 }
@@ -515,6 +514,7 @@ header > section {
     align-items: center;
     width: 100%;
     margin-top: 10px;
+    /*border: 1px solid cyan;*/
 }
 
 .tools > div:first-child h3 {
@@ -537,12 +537,13 @@ header > section {
 .tools > div:nth-child(2) {
     display: flex;
     width: 100%;
-    margin-top: 10px;
+    /*border: 1px solid white;*/
 }
 
 .tools > div:nth-child(2) > div {
     width: 100%;
     height: 100px;
+    /*border: 1px solid red;*/
 }
 
 .tools > div:nth-child(2) > div:nth-child(1) {
@@ -631,12 +632,11 @@ header > section {
 
 
 .education > aside:nth-child(2) > div {
-    /*border: 1px solid yellow;*/
     padding-left: 80px;
 }
 
 .education > aside:nth-child(2) > div:first-child {
-    background: url("../image/mobile-app-development.gif") no-repeat center;
+    background: url("../image/full-stack-developer.gif") no-repeat center;
     background-size: 100%;
     grid-column: 1/2;
     grid-row: 1/4;
@@ -807,7 +807,6 @@ header > section {
 .my-projects {
     height: 170vh;
     background: black;
-    /*border: 1px solid red;*/
 }
 
 .my-projects > aside {
@@ -836,13 +835,129 @@ header > section {
     z-index: 0;
 }
 
-.my-projects > section {
-    /*position: relative;*/
-    /*margin: auto;*/
-    /*width: 80vw;*/
-    /*height: 80vh;*/
+.slide-container {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    background: #F17E7E;
+}
+
+.slide-content {
+    margin: 0 30px;
+    /*border: 1px solid blue;*/
+}
+
+.card-wrapper {
+    /*border: 2px solid red;*/
+}
+
+.crd {
+    width: 320px;
+    border-radius: 25px;
+    background: white;
+    /*border: 2px solid orange;*/
+}
+
+.card-content, .image-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    /*border: 2px solid black;*/
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #0d6efd;
+    border-radius: 25px 25px 0 25px;
+    z-index: 0;
     /*border: 1px solid red;*/
 }
+
+/*right bottom radius blue curve*/
+.overlay::before, .overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background: #0d6efd;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background: white;
+}
+
+.card-image {
+    border: 5px solid white;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0c63e4;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    z-index: 1;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.btn {
+    border: none;
+    font-size: 12px;
+    color: white;
+    padding: 10px 20px;
+    background: #0c63e4;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+    background: #0a53be;
+}
+
 
 .my-projects > .d {
     margin: 30px auto;
@@ -873,7 +988,7 @@ header > section {
     height: 70%;
 }
 
-.assignment > div ul{
+.assignment > div ul {
     margin-left: 20px;
 }
 
@@ -881,14 +996,17 @@ header > section {
     list-style: none;
     padding: 5px;
 }
-.assignment > div ul li a{
+
+.assignment > div ul li a {
     font-weight: 500;
     color: darkblue;
 }
-.assignment > div ul li a::before{
+
+.assignment > div ul li a::before {
     content: '›› ';
 }
-.assignment > div ul li a:hover{
+
+.assignment > div ul li a:hover {
     color: white;
     cursor: pointer;
 }
@@ -933,115 +1051,114 @@ header > section {
     background-size: cover;
 }
 
-.slide-container {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: black;
+
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    /*header*/
+    .top-bar-links ul li {
+        margin: 0 0.8rem;
+    }
+
+    /*landing page*/
+    .dev-content {
+        background: url("../image/ex.jpg") no-repeat right;
+        background-size: 115%;
+        width: 100%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+    }
+
+    .dev-content > aside h1 {
+        font-size: 2.5em;
+        margin: 10px 0;
+    }
+
+    .dev-content > aside > h6 {
+        font-size: 0.6em;
+        font-weight: lighter;
+        letter-spacing: 3px;
+        color: #A0A5EB;
+    }
+
+    .home-text p span {
+        font-size: 60px;
+        color: #ff2c45;
+        font-weight: 700;
+        line-height: 80px;
+        display: none;
+    }
+
+    /*about-me*/
+    .about-me > section > article h1:first-child {
+        font-size: 2em;
+    }
+
+    .about-me > section > article h1:nth-child(2) {
+        font-size: 4.8em;
+    }
+
+    /*skills*/
+    .skills aside h1:first-child {
+        font-size: 2em;
+    }
+
+    .skills aside h1:nth-child(2) {
+        font-size: 4.8em;
+    }
+
+    .skills > .language > aside > div h6 {
+        margin-top: 110px;
+    }
+
+    .language > aside > div:nth-child(5) {
+        width: 400px;
+        background-position: center;
+    }
+
+    .tools > div:first-child {
+        width: 130%;
+        margin-top: -10px;
+    }
+
+    .tools > div:nth-child(2) {
+        margin-top: -10px;
+    }
+
+
+    /*education*/
+    .education aside h1:first-child {
+        font-size: 2em;
+    }
+
+    .education aside h1:nth-child(2) {
+        font-size: 4.8em;
+    }
+
+    .education > aside:nth-child(2) > div {
+        padding-left: 0;
+    }
+
+    .lineOne {
+        height: 60px;
+    }
+
+    .lineTwo {
+        height: 60px;
+    }
+
+
+    /*my-projects*/
+
+
+
+
 }
 
-.slide-container {
-    display: flex;
-}
 
-.slide-content {
-    margin: 0 30px;
-}
-
-.crd {
-    width: 320px;
-    border-radius: 25px;
-    background: #FFF;
-}
-
-.card-content, .image-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-}
-
-.image-content {
-    position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #0d6efd;
-    border-radius: 25px 25px 0 25px;
-}
-
-.overlay::before, .overlay::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background: #0d6efd;
-}
-
-.overlay::after {
-    border-radius: 0 25px 0 0;
-    background: white;
-}
-
-.card-image {
-    border: 5px solid white;
-    position: relative;
-    height: 180px;
-    width: 180px;
-    border-radius: 100%;
-    background: #FFF;
-    padding: 3px;
-}
-
-.card-image .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #0c63e4;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.name {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-}
-
-.description {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    text-align: center;
-    font-size: 14px;
-}
-
-.btn {
-    border: none;
-    font-size: 14px;
-    color: white;
-    padding: 10px 20px;
-    background: #0c63e4;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-
-.btn:hover {
-    background: #0a53be;
-}
 
 
 /*Services*/
