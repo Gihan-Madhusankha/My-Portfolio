@@ -2144,6 +2144,91 @@ header > section {
         margin-top: 20px;
     }
 
+    .services > section {
+        height: 350px;
+    }
+
+    .services > section > aside {
+        width: 200px;
+    }
+
+    .services > section > aside article {
+        margin-top: 80px;
+    }
+
+    .services > section > aside article h2 {
+        font-size: 16px;
+    }
+
+    .services > section > aside article p {
+        margin-top: -20px;
+        font-size: 12px;
+    }
+
+
+
+    /*my-design*/
+    .my-design {
+        height: 110vh;
+    }
+
+    .my-design > aside > h1:first-child {
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .my-design > aside > h1:nth-child(2) {
+        font-size: 3.5em;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .my-design > section {
+        height: 400px;
+    }
+
+
+    /*contact-me*/
+    .contact-me > aside {
+        padding-top: 80px;
+    }
+
+    .contact-me > aside > h1:first-child {
+        font-size: 1.5em;
+    }
+
+    .contact-me > aside > h1:nth-child(2) {
+        font-size: 3.5em;
+        margin-top: 20px;
+    }
+
+    .contact-me > section {
+        /*border: 1px solid red;*/
+    }
+
+    .contact-form {
+        width: 300px;
+        /*border: 1px solid yellow;*/
+    }
+
+    .contact-form > form > fieldset > input {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .contact-form > form > fieldset > textarea {
+        min-width: 290px;
+        max-width: 290px;
+        min-height: 200px;
+        max-height: 200px;
+        font-size: 14px;
+    }
+
+    .footer {
+        margin-top: 170px;
+    }
+
+
 
 
 }
