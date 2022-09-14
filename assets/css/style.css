@@ -18,6 +18,10 @@ a {
     border-radius: 5px;
 }
 
+.social-media {
+    display: none;
+}
+
 /*header*/
 header {
     position: fixed;
@@ -127,7 +131,7 @@ header > section {
 /*main*/
 /*landing page*/
 .dev-content {
-    background: url("../image/ex.jpg");
+    background: url("../image/ex.jpg") no-repeat;
     background-size: 100%;
     width: 100%;
     height: 100vh;
@@ -1729,7 +1733,6 @@ header > section {
     }
 
     /*contact-me*/
-
     .contact-me > aside {
         padding-top: 250px;
     }
@@ -1764,7 +1767,7 @@ header > section {
 
 }
 
-@media all and (min-width: 1024px) and (max-width: 1440px){
+@media all and (min-width: 1024px) and (max-width: 1440px) {
 
     .services > section > aside article {
         margin-top: 170px;
@@ -1778,5 +1781,234 @@ header > section {
     .contact-me > aside {
         padding-top: 100px;
     }
+
+}
+
+@media all and (min-width: 425px) and (max-width: 768px) {
+
+    header {
+        /*display: none;*/
+    }
+
+    .top-bar-logo {
+        width: 6%;
+    }
+
+    .top-bar-logo img {
+        width: 28%;
+        /*margin-left: 5vw;*/
+    }
+
+    .top-bar-links {
+        margin-left: 30px;
+        width: 70%;
+    }
+
+    .top-bar-links ul li a {
+        font-size: 12px;
+    }
+
+    .top-bar-social ul {
+        display: none;
+    }
+
+    /*landing page*/
+    .dev-content {
+        /*margin-top: 100px;*/
+        /*border: 1px solid red;*/
+        height: 65vh;
+        background: url("../image/ex.jpg") no-repeat;
+        background-size: 100%;
+    }
+
+    .dev-content > aside {
+        color: white;
+        position: absolute;
+        top: 20vh;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 5vw;
+        font-size: 20px;
+    }
+
+    .dev-content > aside h1 {
+        font-size: 1.8em;
+        margin: 0;
+    }
+
+    .dev-content > aside > h1:nth-child(2) {
+        margin-top: 20px;
+    }
+
+    /*.dev-content > aside > h1:last-child {*/
+    /*    font-size: 2em;*/
+    /*}*/
+    .dev-content > aside > h2 {
+        margin: 5px 0;
+    }
+
+    .dev-content > aside > h6 {
+        font-size: 0.5em;
+        font-weight: lighter;
+        letter-spacing: 3px;
+        color: #A0A5EB;
+    }
+
+    .home-text p span {
+        font-size: 45px;
+    }
+
+    .social-media {
+        display: block;
+    }
+
+    .social-media > ul {
+        margin-top: 120px;
+    }
+
+    .social-media > ul > li {
+        list-style: none;
+    }
+
+    .social-media > ul > li > a i {
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+        margin-left: 720px;
+    }
+
+    .social-media > ul > li > a i:hover {
+        color: #F9004D;
+    }
+
+    /*about-me*/
+    .about-me > section > article {
+        margin-left: 420px;
+    }
+
+
+    .about-me > section > article h1:first-child {
+        font-size: 1.5em;
+    }
+
+    .about-me > section > article h1:nth-child(2) {
+        font-size: 3.5em;
+    }
+
+    .about-me > section > article > p {
+        font-size: 14px;
+    }
+
+    .about-me > section > article button {
+        width: 120px;
+        margin-top: 8vh;
+        font-size: 14px;
+        font-weight: 400;
+        background: #F9004D;
+        color: white;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+
+    /*skill*/
+    .skills > aside > h1:first-child {
+        font-size: 1.5em;
+    }
+
+    .skills > aside > h1:nth-child(2) {
+        font-size: 3.5em;
+        margin-top: 20px;
+    }
+
+    .language div:first-child > h3 {
+        font-size: 14px;
+    }
+
+    .language > aside > div:nth-child(5) {
+        background: url("../image/web-development.gif") no-repeat center;
+        background-size: 120%;
+        grid-column: 5/6;
+        grid-row: 1/4;
+        width: 300px;
+        top: 0;
+        filter: drop-shadow(0 0 0);
+        cursor: auto;
+        animation: none;
+    }
+
+    .skills > .language > aside > div h6 {
+        font-size: 12px;
+    }
+
+
+    .tools > div:first-child h3 {
+        font-size: 14px;
+        flex-basis: 20%;
+    }
+
+    /*education*/
+    .education > aside > h1:first-child {
+        font-size: 1.5em;
+    }
+
+    .education > aside > h1:nth-child(2) {
+        font-size: 3.5em;
+        margin-top: 20px;
+    }
+
+    .colleges {
+        /*border: 1px solid red;*/
+        background: url("../image/full-stack-developer.gif");
+    }
+
+    .education > aside:nth-child(2) > div:first-child {
+        background: none;
+    }
+
+    .colleges > div:nth-child(2) > div:first-child, .colleges > div:nth-child(3) > div:first-child,
+    .colleges > div:nth-child(4) > div:first-child{
+        border: 60px solid transparent;
+        border-right-color: #333333;
+        width: 0;
+        height: 0;
+    }
+
+    .colleges > div:nth-child(2) > div:nth-child(2), .colleges > div:nth-child(3) > div:nth-child(2),
+    .colleges > div:nth-child(4) > div:nth-child(2) {
+        width: 350px;
+        height: 120px;
+        background: #333333;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .higher > h5, .secondary > h5, .primary > h5 {
+        color: #F9004D;
+        font-weight: 900;
+    }
+
+    .higher > p, .secondary > p, .primary > p {
+        color: navajowhite;
+    }
+
+
+    /*my-projects*/
+
+    .my-projects > aside > h1:first-child {
+        font-size: 1.5em;
+    }
+
+    .my-projects > aside > h1:nth-child(2) {
+        font-size: 3.5em;
+        margin-top: 20px;
+    }
+
+    .my-projects > section:nth-child(2) {
+        border: 1px solid red;
+    }
+
+
+    /*////////////////////*/
 
 }
