@@ -2129,6 +2129,21 @@ header > section {
         font-size: 16px;
     }
 
+    .assignment div ul li a {
+        font-size: 14px;
+    }
+
+
+    /*service*/
+    .services > aside > h1:first-child {
+        font-size: 1.5em;
+    }
+
+    .services > aside > h1:nth-child(2) {
+        font-size: 3.5em;
+        margin-top: 20px;
+    }
+
 
 
 }
