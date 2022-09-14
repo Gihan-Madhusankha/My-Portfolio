@@ -1511,7 +1511,7 @@ header > section {
 }
 
 /*media*/
-@media all and (min-width: 1024px) and (max-width: 1440px) {
+@media all and (max-width: 1440px) {
 
     .services > section > aside article {
         margin-top: 170px;
@@ -1528,7 +1528,7 @@ header > section {
 
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     /*header*/
     .top-bar-links ul li {
         margin: 0 0.8rem;
@@ -1752,7 +1752,7 @@ header > section {
 
     /*contact-me*/
     .contact-me > aside {
-        padding-top: 250px;
+        padding-top: 200px;
     }
 
     .contact-me > section {
@@ -1780,12 +1780,12 @@ header > section {
     }
 
     .footer {
-        margin-top: 200px;
+        margin-top: 150px;
     }
 
 }
 
-@media all and (min-width: 425px) and (max-width: 768px) {
+@media all and (max-width: 768px) {
 
     header {
         /*display: none;*/
@@ -2166,7 +2166,6 @@ header > section {
     }
 
 
-
     /*my-design*/
     .my-design {
         height: 110vh;
@@ -2206,6 +2205,24 @@ header > section {
         /*border: 1px solid red;*/
     }
 
+    .contact-me > section > aside {
+        /*border: 1px solid yellow;*/
+    }
+
+    .contact-me > section > aside:first-child > address > div:nth-child(odd) > h3{
+        font-size: 14px;
+        padding-right: 10px;
+    }
+
+    .contact-me > section > aside:first-child > address > div:nth-child(even) > h3{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+
+    .contact-me > section > aside:nth-child(2) {
+        background-size: 350%;
+    }
+
     .contact-form {
         width: 300px;
         /*border: 1px solid yellow;*/
@@ -2213,7 +2230,7 @@ header > section {
 
     .contact-form > form > fieldset > input {
         width: 300px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .contact-form > form > fieldset > textarea {
@@ -2221,14 +2238,12 @@ header > section {
         max-width: 290px;
         min-height: 200px;
         max-height: 200px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .footer {
-        margin-top: 170px;
+        margin-top: 8px;
     }
-
-
 
 
 }
