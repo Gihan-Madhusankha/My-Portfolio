@@ -2268,11 +2268,6 @@ header > section {
     }
 
     .top-bar-logo > img {
-        /*width: 40%;*/
-        /*padding: 5px;*/
-        /*position: absolute;*/
-        /*top: 53px;*/
-        /*right: 42px;*/
         display: none;
     }
 
@@ -2384,6 +2379,280 @@ header > section {
 
 
     /*skill*/
+    .skills > aside {
+        padding-top: 50px;
+    }
+
+    .skills > aside > h1:first-child {
+        font-size: 1.2em;
+    }
+
+    .skills > aside > h1:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    .skills .language > div > h3 {
+        font-size: 12px;
+    }
+
+    .skills .language > aside {
+        margin-top: 40px;
+
+    }
+
+    .skills .language > aside > div {
+        /*border: 1px solid yellow;*/
+        height: 60px;
+        width: 60px;
+    }
+
+    .skills .language > aside > div:nth-child(5) {
+        display: none;
+    }
+
+    .skills .tools > div {
+        width: 600px;
+    }
+
+    .skills .tools > div > h3{
+        font-size: 12px;
+        margin-left: 50px;
+    }
+
+    .skills .tools > div:nth-child(2) {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .skills .tools > div:nth-child(2) > div {
+        width: 100%;
+        height: 50px;
+    }
+
+    .tools {
+        width: 100vw;
+        height: 25vh;
+        /*border: 1px solid yellow;*/
+        margin: 50px auto;
+        background: linear-gradient(black, #282828, black);
+    }
+
+    .tools > div {
+        width: 100%;
+    }
+
+
+
+    /*education*/
+    .education > aside > h1:first-child {
+        font-size: 1.2em;
+    }
+
+    .education > aside > h1:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    .education > aside:nth-child(2) > div:first-child {
+        background: url("../image/full-stack-developer.gif") no-repeat center;
+        background-size: 100%;
+        margin: 0;
+    }
+
+
+    /*/////////////////////////////*/
+
+    .colleges > div:nth-child(2) {
+        display: flex;
+        align-items: center;
+    }
+
+    .colleges > div:nth-child(2) > div:first-child {
+        /*border: 60px solid transparent;
+        border-right-color: #101010;
+        width: 0;
+        height: 0;*/
+        position: relative;
+        left: -30px;
+    }
+
+    /*rectangle*/
+    .colleges > div:nth-child(2) > div:nth-child(2) {
+        width: 270px;
+        position: relative;
+        left: -30px;
+        /*height: 120px;
+        background: #101010;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 1px solid red;*/
+    }
+
+    .colleges > div:nth-child(2) > div:nth-child(3) {
+        right: 88%;
+       /* width: 60px;
+        height: 60px;
+        background: #F9004D;
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;*/
+    }
+
+    .colleges > div:nth-child(2) > div:nth-child(3) > div:first-child {
+        background: url("../image/higher.png") center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: 60%;
+        border-radius: 25px;
+    }
+
+    .lineOne {
+        width: 1px;
+        height: 80px;
+        background: white;
+        position: absolute;
+        top: 120%;
+    }
+
+
+    .colleges > div:nth-child(4) {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .colleges > div:nth-child(4) > div:first-child {
+        /*border: 60px solid transparent;
+        border-right-color: #101010;
+        width: 0;
+        height: 0;*/
+        position: relative;
+        left: -30px;
+    }
+
+    .colleges > div:nth-child(4) > div:nth-child(2) {
+        width: 270px;
+        position: relative;
+        left: -30px;
+        /*height: 120px;
+        background: #101010;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;*/
+    }
+
+    .colleges > div:nth-child(4) > div:nth-child(3) {
+        right: 88%;
+        /*width: 60px;
+        height: 60px;
+        background: #F9004D;
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;*/
+    }
+
+    .colleges > div:nth-child(4) > div:nth-child(3) > div {
+        background: url("../image/primary.png") center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: 60%;
+        border-radius: 25px;
+    }
+
+    .colleges > div:nth-child(3) {
+        display: flex;
+        align-items: center;
+    }
+
+    .colleges > div:nth-child(3) > div:first-child {
+        /*border: 60px solid transparent;
+        border-right-color: #101010;
+        width: 0;
+        height: 0;*/
+        position: relative;
+        left: -30px;
+    }
+
+    .colleges > div:nth-child(3) > div:nth-child(2) {
+        width: 270px;
+        position: relative;
+        left: -30px;
+        /*height: 120px;
+        background: #101010;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;*/
+    }
+
+    .colleges > div:nth-child(3) > div:nth-child(3) {
+        right: 88%;
+        /*width: 60px;
+        height: 60px;
+        background: #F9004D;
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;*/
+    }
+
+    .colleges > div:nth-child(3) > div:nth-child(3) > div:first-child {
+        background: url("../image/secondary.png") center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: 60%;
+        border-radius: 25px;
+    }
+
+    .lineTwo {
+        width: 1px;
+        height: 80px;
+        background: white;
+        position: absolute;
+        top: 120%;
+    }
+
+    .colleges > div:nth-child(2), .colleges > div:nth-child(3), .colleges > div:nth-child(4) {
+        /*padding-left: 100px;*/
+    }
+
+    .higher > h5, .secondary > h5, .primary > h5 {
+        color: #F17E7E;
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        padding: 20px;
+    }
+
+    .higher > p, .secondary > p, .primary > p {
+        color: slategray;
+        font-family: 'Poppins', sans-serif;
+        font-weight: initial;
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /*my-projects*/
+    .my-projects > aside > h1:first-child {
+        font-size: 1.2em;
+    }
+
+    .my-projects > aside > h1:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    .my-projects > section:nth-child(2) > div:first-child {
+        display: none;
+    }
+
+    .my-projects > section:nth-child(2) > div:last-child {
+        display: none;
+    }
+
+
+
+
 
 
 }
