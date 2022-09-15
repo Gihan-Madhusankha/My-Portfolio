@@ -2651,6 +2651,32 @@ header > section {
     }
 
 
+    /*service*/
+    .services > aside > h1:first-child {
+        font-size: 1.2em;
+    }
+
+    .services > aside > h1:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    .services > section > aside:first-child {
+        width: 0;
+    }
+
+    .services > section > aside:last-child {
+        width: 0;
+    }
+
+    .services > section > aside:first-child > article {
+        display: none;
+    }
+
+    .services > section > aside:nth-child(3) > article {
+        display: none;
+    }
+
+
 
 
 
