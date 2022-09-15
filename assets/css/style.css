@@ -3066,4 +3066,25 @@ header > section {
         line-height: 50px;
     }
 
+    .contact-form > form > fieldset > input {
+        width: 258px;
+        margin-bottom: 12px;
+    }
+
+    .contact-form > form > fieldset > textarea {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .footer > div > img {
+        width: 50%;
+    }
+
+    .footer > nav > ul > li > a {
+        color: white;
+        padding: 3px 4px;
+        margin: 5px;
+        border-radius: 100%;
+    }
+
 }
