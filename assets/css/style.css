@@ -2647,6 +2647,14 @@ header > section {
         display: none;
     }
 
+    .assignment > h6 {
+        font-size: 14px;
+    }
+
+    .assignment > div > ul > li > a {
+        font-size: 12px;
+    }
+
 
     /*my-design*/
     .my-design > aside > h1:first-child {
@@ -2740,11 +2748,11 @@ header > section {
         min-height: 60px;
     }
 
-    .contact-me > section > aside:first-child > address > div:nth-child(odd) > h3{
+    .contact-me > section > aside:first-child > address > div:nth-child(odd) > h3 {
         font-size: 10px;
     }
 
-    .contact-me > section > aside:first-child > address > div:nth-child(even) > h3{
+    .contact-me > section > aside:first-child > address > div:nth-child(even) > h3 {
         font-size: 10px;
     }
 
@@ -2785,7 +2793,7 @@ header > section {
         z-index: 1;
     }
 
-    .about-me > section > article > p{
+    .about-me > section > article > p {
         color: #d9d9d9;
     }
 
@@ -2819,7 +2827,6 @@ header > section {
     }
 
 
-
     /*education*/
     .education > aside > h1:first-child {
         font-size: 1em;
@@ -2837,7 +2844,7 @@ header > section {
 
     .colleges > div:nth-child(2) > div:nth-child(2),
     .colleges > div:nth-child(3) > div:nth-child(2),
-    .colleges > div:nth-child(4) > div:nth-child(2){
+    .colleges > div:nth-child(4) > div:nth-child(2) {
         width: 215px;
         height: 90px;
     }
@@ -2883,10 +2890,16 @@ header > section {
         top: 6px;
     }
 
+    .assignment > h6 {
+        font-size: 14px;
+    }
+
+    .assignment > div > ul > li > a {
+        font-size: 12px;
+    }
+
 
     /*service*/
-
-
     /*my-design*/
     .my-design {
         height: 60vh;
@@ -2945,4 +2958,50 @@ header > section {
     }
 
 
+}
+
+@media all and (max-width: 320px) {
+    .top-bar-links {
+        margin-left: 54px;
+        margin-top: -70px;
+    }
+
+    header section {
+        transform: rotate(90deg);
+        position: relative;
+        left: -168px;
+        top: -327px;
+        margin: 315px auto;
+        background: rgba(0, 0, 0, 0.8);
+        height: 31vh;
+        width: 89vw;
+        box-shadow: none;
+        z-index: 0;
+    }
+
+    .dev-content {
+        height: 60vh;
+    }
+
+    .dev-content > aside {
+        color: white;
+        position: absolute;
+        top: 19vh;
+        left: -10vw;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 5vw;
+        font-size: 14px;
+    }
+
+    .home-text p span {
+        font-size: 16px;
+        color: #ff2c45;
+        font-weight: 700;
+        line-height: 16px;
+        display: none;
+    }
+
+    .dev-content > .home-text > h6 {
+        font-size: 6px;
+    }
 }
