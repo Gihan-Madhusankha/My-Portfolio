@@ -2648,6 +2648,20 @@ header > section {
     }
 
 
+    /*my-design*/
+    .my-design > aside > h1:first-child {
+        font-size: 1.2em;
+    }
+
+    .my-design > aside > h1:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    .my-design > section {
+        height: 350px;
+    }
+
+
     /*service*/
     .services > aside > h1:first-child {
         font-size: 1.2em;
@@ -2802,6 +2816,132 @@ header > section {
     .skills .tools > div:nth-child(2) > div {
         height: 42px;
         background-size: 40%;
+    }
+
+
+
+    /*education*/
+    .education > aside > h1:first-child {
+        font-size: 1em;
+        margin-top: 30px;
+        padding: 5px;
+    }
+
+    .education > aside > h1:nth-child(2) {
+        font-size: 2em;
+    }
+
+    .education > aside > h1:first-child {
+        margin-top: -140px;
+    }
+
+    .colleges > div:nth-child(2) > div:nth-child(2),
+    .colleges > div:nth-child(3) > div:nth-child(2),
+    .colleges > div:nth-child(4) > div:nth-child(2){
+        width: 215px;
+        height: 90px;
+    }
+
+    .higher > h5, .secondary > h5, .primary > h5 {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .higher > p, .secondary > p, .primary > p {
+        padding: 0;
+        margin: -8px;
+        font-size: 12px;
+    }
+
+
+    /*my-projects*/
+    .my-projects {
+        height: 120vh;
+    }
+
+    .slide-content {
+        position: relative;
+        top: -50px;
+        height: 120vh;
+    }
+
+    .my-projects > aside > h1:first-child {
+        font-size: 1em;
+        margin-top: -132px;
+        padding: 5px;
+    }
+
+    .my-projects > aside > h1:nth-child(2) {
+        font-size: 2em;
+    }
+
+    .my-projects > .d {
+        margin-top: -300px;
+    }
+
+    .assignment-section {
+        top: 6px;
+    }
+
+
+    /*service*/
+
+
+    /*my-design*/
+    .my-design {
+        height: 60vh;
+    }
+
+    .my-design > aside > h1:first-child {
+        font-size: 1em;
+        margin-top: -70px;
+        padding: 5px;
+    }
+
+    .my-design > aside > h1:nth-child(2) {
+        font-size: 2em;
+    }
+
+    .my-design > section {
+        height: 300px;
+        position: relative;
+        top: -40px;
+    }
+
+
+    /*contact-me*/
+    .contact-me {
+        height: 150vh;
+    }
+
+    .contact-me > section {
+        height: 500px;
+    }
+
+    .contact-me > section > aside:first-child > address {
+        row-gap: 0;
+        margin-left: 36px;
+        margin-top: -72px;
+        height: 150px;
+        width: 350px;
+    }
+
+    .contact-me > section > aside:first-child > section {
+        margin-left: 25px;
+        height: 288px;
+    }
+
+    .contact-form > form > fieldset > button {
+        font-size: 12px;
+        width: 101px;
+        height: 35px;
+        margin-top: 14px;
+    }
+
+
+    /*footer*/
+    .footer {
+        margin-top: -98px;
     }
 
 
