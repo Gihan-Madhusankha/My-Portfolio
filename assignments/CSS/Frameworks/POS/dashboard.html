@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <title>Dashboard form</title>
 
+<!--    font-awesome-->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
     <!--    viewport-->
     <meta content="width=device-width initial-scale=1" name="viewport">
 
     <!--    bootstrap-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
 
@@ -31,18 +38,53 @@
     </style>
 
 </head>
-<body class="container-fluid">
+<body >
 
-<main class="d-flex row align-content-center justify-content-center">
 
-<!--    <section class="d-flex full-height flex-column h-50 col-md-10 bg-dark shadow-lg rounded-5 align-items-center justify-content-between">-->
-<!--    </section>-->
+<main class="d-flex align-items-center justify-content-center">
 
-    <section class="d-flex bg-dark h-75 col-md-10 rounded-5"></section>
+    <section class="d-flex full-height flex-column h-75 col-md-10 bg-white shadow-lg <!--align-items-center justify-content-between-->">
 
-    <section ></section>
+
+        <header >
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+<!--                    <img src="" alt="Bootstrap" width="30" height="24">-->
+                    <a class="navbar-brand" href="#">POS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Customer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Item</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Place Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+
+    </section>
 
 </main>
+
+
 
 </body>
 </html>
