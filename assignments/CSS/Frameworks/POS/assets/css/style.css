@@ -3,8 +3,8 @@ body {
     background: linear-gradient(#3F2FEF, #9134EC);
 }
 
-header {
-    border: 1px solid red;
+main > section {
+    background: #1D1F32;
 }
 
 .navbar {
@@ -19,4 +19,26 @@ header {
     color: white;
 }
 
+.homepage {
+    background: red;
+}
 
+.home-section {
+    padding: 60px;
+}
+
+.card {
+    width: 80%;
+    background: #313151;
+}
+
+.card-img-top {
+    width: 40%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.card-title {
+    color: white;
+    margin-bottom: 30px;
+}
