@@ -11,8 +11,20 @@ main > section {
     background: #313151;
 }
 
+.navbar-brand img {
+    color: #F9004D;
+}
+
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #313151;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active:hover {
+    color: #313151;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
+    color: white;
 }
 
 .nav-link {
