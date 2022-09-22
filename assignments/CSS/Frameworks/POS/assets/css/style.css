@@ -1,56 +1,35 @@
-body {
-    height: 100vh;
-    background: linear-gradient(#3F2FEF, #9134EC);
-}
-
-main > section {
-    background: #1D1F32;
-}
-
-.navbar {
-    background: #313151;
-}
-
-.navbar-brand img {
-    color: #F9004D;
-}
-
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #313151;
-}
-
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active:hover {
-    color: #313151;
-}
-
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
-    color: white;
-}
-
 .nav-link {
+    color: #c4d6f1;
+}
+
+section:nth-child(2) {
+    height: 400px;
+    /*border: 1px solid red;*/
+}
+
+section:nth-child(2) > div {
+    /*border: 1px solid blue;*/
+    background: #131420;
+}
+
+section:nth-child(2) > div:hover {
+    background: #131420;
+}
+
+.btn-outline-success {
+    color: #c4d6f1;
+    border: 1px solid #c4d6f1;
+}
+
+.btn:first-child:hover, :not(.btn-check)+.btn:hover {
+    background-color: #131420;
+}
+
+section:nth-child(2) > div > div:hover{
+    background: #4e4eff !important;
+    cursor: pointer;
+}
+
+.nav-link:hover {
     color: white;
-}
-
-.homepage {
-    background: red;
-}
-
-.home-section {
-    padding: 60px;
-}
-
-.card {
-    width: 80%;
-    background: #313151;
-}
-
-.card-img-top {
-    width: 40%;
-    margin-top: 25px;
-    margin-bottom: 50px;
-}
-
-.card-title {
-    color: white;
-    margin-bottom: 30px;
 }

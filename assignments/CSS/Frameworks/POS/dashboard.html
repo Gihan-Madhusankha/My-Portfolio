@@ -17,137 +17,84 @@
 
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <style>
-
-        main {
-            height: 100vh;
-            background: linear-gradient(#3F2FEF, #9134EC);
-        }
-
-        /*.navbar {*/
-        /*    border-top-right-radius: 50px;*/
-        /*    border-top-left-radius: 50px*/
-        /*}*/
-
-        /*.homepage {*/
-        /*    height: 500px;*/
-        /*    background: #1D1F32;*/
-        /*}*/
-
-
-    </style>
+    <style></style>
 
 </head>
-<body>
 
 
-<main class="d-flex align-items-center justify-content-center">
-
-    <section
-            class="d-flex full-height flex-column h-75 col-md-10 shadow-lg <!--align-items-center justify-content-between-->">
+<body class="container-fluid">
 
 
-        <header>
+<!--header-->
+<section class="row">
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../POS/assets/img/user.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                        POS
-                    </a>
-                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                            class="navbar-toggler" data-bs-target="#navbarSupportedContent"
-                            data-bs-toggle="collapse" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a aria-current="page" class="nav-link active" href="#">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Customer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Item</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Order</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Place Order</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-        </header>
-
-        <section class="home-section">
-
-            <div class="d-flex justify-content-center row g-1">
-                <div class="d-flex justify-content-center col">
-                    <div class="card rounded-5 d-flex align-items-center justify-content-center">
-                        <img src="../../Frameworks/POS/assets/img/customer.png" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Customer</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center col">
-                    <div class="card rounded-5 d-flex align-items-center justify-content-center">
-                        <img src="../../Frameworks/POS/assets/img/shopping-bag.png" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Item</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center col">
-                    <div class="card rounded-5 d-flex align-items-center justify-content-center">
-                        <img src="../../Frameworks/POS/assets/img/checkout.png" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Order</h3>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg " style="background-color: #4e4eff">
+        <div class="container-fluid">
+<!--            <a class="navbar-brand" href="#">Navbar</a>-->
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/user.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Place Order</a>
+                    </li>
+                </ul>
             </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
-            <!--<div class="card bg-danger">
-                <div class="card-body d-flex align-items-center justify-content-center gap-5">
+</section>
 
-                    <div class="card rounded-5" style="width: 18rem;">
-                        <img src="../../../../assets/image/neongirl.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3>Customer</h3>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../../../assets/image/neongirl.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3>Item</h3>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../../../assets/image/neongirl.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h3>Order</h3>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>-->
-
-        </section>
-
-
-    </section>
-
-</main>
+<!--dashboard-->
+<section class="row" style="height: 90vh">
+    <div class="col d-flex align-items-center justify-content-center">
+<!--        dashboard content-->
+        <div class="d-flex align-items-center card" style="width: 18rem;background-color: #313151; padding-top: 50px; margin: 50px;">
+            <img alt="customer" class="card-img-top" src="assets/img/customer.png" style="width: 25%;">
+            <div class="card-body">
+                <h4 style="color: white; text-align: center; padding-bottom: 25px">Customer</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center card" style="width: 18rem;background-color: #313151; padding-top: 50px; margin: 50px;">
+            <img alt="customer" class="card-img-top" src="assets/img/customer.png" style="width: 25%;">
+            <div class="card-body">
+                <h4 style="color: white; text-align: center; padding-bottom: 25px">Customer</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center card" style="width: 18rem;background-color: #313151; padding-top: 50px; margin: 50px;">
+            <img alt="customer" class="card-img-top" src="assets/img/customer.png" style="width: 25%;">
+            <div class="card-body">
+                <h4 style="color: white; text-align: center; padding-bottom: 25px">Customer</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
 
+<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
