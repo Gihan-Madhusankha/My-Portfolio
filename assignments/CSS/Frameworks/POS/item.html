@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item form</title>
+
+    <!--    font-awesome-->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
+    <!--    viewport-->
+    <meta content="width=device-width initial-scale=1" name="viewport">
+
+    <!--    bootstrap-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style></style>
+
+</head>
+
+
+<body class="container-fluid">
+
+
+<!--header-->
+<section class="row">
+
+    <nav class="navbar navbar-expand-lg " style="background-color: #4e4eff">
+        <div class="container-fluid">
+            <!--            <a class="navbar-brand" href="#">Navbar</a>-->
+            <a class="navbar-brand" href="#">
+                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="assets/img/user.png" width="30">
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Place Order</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex" role="search">
+                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+</section>
+
+<!--content-->
+<section class="row bg-light">
+    <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
+
+        <div class="w-75">
+            <div style="background: darkgoldenrod; height: 50px; margin-bottom: 30px">
+                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">Add New Customer</h5>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer ID</label>
+                <input class="form-control" id="exampleFormControlInput1" placeholder="C001" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer Name</label>
+                <input class="form-control" id="exampleFormControlInput2" placeholder="Nimal Perera" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer Address</label>
+                <input class="form-control" id="exampleFormControlInput3" placeholder="22/6 Kandy RD, Negombo"
+                       type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer Salary</label>
+                <input class="form-control" id="exampleFormControlInput4" placeholder="25000.00" type="number">
+            </div>
+
+            <div style="display: flex; align-items: flex-end; justify-content: right">
+                <button class="btn btn-warning w-25" style="margin: 5px" type="button">Clear</button>
+                <button class="btn btn-success w-25" style="margin: 5px" type="button">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="col-12 col-lg-8">
+
+        <form class="row g-3">
+            <div class="col-auto w-50" style="margin-top: 50px">
+                <label for="inputPassword2" class="visually-hidden">Password</label>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="search">
+            </div>
+            <div class="col-auto" style="margin-top: 50px">
+                <button type="submit" class="btn btn-primary mb-3">Search</button>
+            </div>
+        </form>
+
+        <aside class="scrollable">
+
+        <table class="table table-hover table-striped" style="margin-top: 10px;">
+            <thead class="table table-dark">
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Operate</th>
+            </tr>
+            </thead>
+            <tbody class="table table-hover table-striped">
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>C001</td>
+                <td>Amila</td>
+                <td>Panadura</td>
+                <td>25000</td>
+                <td>
+                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        </aside>
+
+    </section>
+</section>
+
+
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
