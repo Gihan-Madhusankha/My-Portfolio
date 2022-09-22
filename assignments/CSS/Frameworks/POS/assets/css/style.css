@@ -33,3 +33,8 @@ section:nth-child(2) > div > div:hover{
 .nav-link:hover {
     color: white;
 }
+
+.scrollable {
+    height: 380px;
+    overflow: auto;
+}
