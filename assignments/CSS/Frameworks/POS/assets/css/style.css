@@ -3,7 +3,7 @@
 }
 
 section:nth-child(2) {
-    height: 400px;
+    /*height: 400px;*/
     /*border: 1px solid red;*/
 }
 
@@ -12,18 +12,18 @@ section:nth-child(2) > div {
     background: #131420;
 }
 
-section:nth-child(2) > div:hover {
-    background: #131420;
-}
+/*section:nth-child(2) > div:hover {*/
+/*    background: #131420;*/
+/*}*/
 
 .btn-outline-success {
     color: #c4d6f1;
     border: 1px solid #c4d6f1;
 }
 
-.btn:first-child:hover, :not(.btn-check)+.btn:hover {
-    background-color: #131420;
-}
+/*.btn:first-child:hover, :not(.btn-check)+.btn:hover {*/
+/*    background-color: #131420;*/
+/*}*/
 
 section:nth-child(2) > div > div:hover{
     background: #4e4eff !important;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard form</title>
+    <title>Customer form</title>
 
     <!--    font-awesome-->
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -30,17 +30,19 @@
 
     <nav class="navbar navbar-expand-lg " style="background-color: #4e4eff">
         <div class="container-fluid">
-<!--            <a class="navbar-brand" href="#">Navbar</a>-->
+            <!--            <a class="navbar-brand" href="#">Navbar</a>-->
             <a class="navbar-brand" href="#">
-                <img src="assets/img/user.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="assets/img/user.png" width="30">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+                        <a aria-current="page" class="nav-link" href="#">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Customer</a>
@@ -57,7 +59,7 @@
                 </ul>
             </div>
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
@@ -70,35 +72,67 @@
     <section class=" col-4 d-flex align-items-center justify-content-center" style="border: 1px solid black">
 
         <div class="w-75">
-        <h4 style="text-align: center; padding-bottom: 25px">Add New Customer</h4>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Customer ID</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="C001">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Customer Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Nimal Perera">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Customer Address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="22/6 Kandy RD, Negombo">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Customer Salary</label>
-            <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="25000.00">
-        </div>
-
-            <div style="display: flex; align-items: flex-end; justify-content: right">
-                <button style="margin: 10px" type="button" class="btn btn-warning w-25">Clear</button>
-                <button style="margin: 10px" type="button" class="btn btn-success w-25">Save</button>
+            <h4 style="text-align: center; padding-bottom: 25px">Add New Customer</h4>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer ID</label>
+                <input class="form-control" id="exampleFormControlInput1" placeholder="C001" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer Name</label>
+                <input class="form-control" id="exampleFormControlInput2" placeholder="Nimal Perera" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer Address</label>
+                <input class="form-control" id="exampleFormControlInput3" placeholder="22/6 Kandy RD, Negombo"
+                       type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlInput1">Customer Salary</label>
+                <input class="form-control" id="exampleFormControlInput4" placeholder="25000.00" type="number">
             </div>
 
-
+            <div style="display: flex; align-items: flex-end; justify-content: right">
+                <button class="btn btn-warning w-25" style="margin: 10px" type="button">Clear</button>
+                <button class="btn btn-success w-25" style="margin: 10px" type="button">Save</button>
+            </div>
         </div>
     </section>
-    <section class="col-8"></section>
-</section>
 
+    <section class="col-8" style="border: 1px solid black">
+
+
+        <input type="text">
+
+        <table class="table table-hover" style="margin-top: 100px">
+            <thead class="table table-dark">
+            <tr>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Operate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </section>
+</section>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
