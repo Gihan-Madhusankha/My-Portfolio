@@ -65,10 +65,10 @@
 </section>
 
 <!--content-->
-<section class="row">
+<section class="row gap-3">
     <!--    invoice-->
 
-    <section class="col bg-light">
+    <section class="col-4 bg-light">
 
         <section style="padding: 20px">
             <!--        title-->
@@ -113,48 +113,52 @@
 
     </section>
 
-    <section class="col">
-        <div style="height: 40px; background: darkblue; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 20px 0">
-            <h5 style="color: white">Item Details</h5>
-        </div>
+    <section class="col-5 bg-light">
+
+        <section style="padding: 20px">
+
+            <div style="height: 40px; background: darkblue; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 20px 0">
+                <h5 style="color: white">Item Details</h5>
+            </div>
 
 
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="inputItem" class="form-label">Item:</label>
-                <input type="text" class="form-control" id="inputItem">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCode" class="form-label">Item Code:</label>
-                <input type="text" class="form-control" id="inputCode">
-            </div>
-            <div class="col-md-6">
-                <label for="inputName" class="form-label">Item Name:</label>
-                <input type="text" class="form-control" id="inputName">
-            </div>
-            <div class="col-md-4">
-                <label for="inputPrice" class="form-label">Price</label>
-                <input type="text" class="form-control" id="inputPrice">
-            </div>
-            <div class="col-md-2">
-                <label for="inputQty" class="form-label">QtyonH:</label>
-                <input type="text" class="form-control" id="inputQty">
-            </div>
-            <div class="col-12">
-                <label class="form-label" for="orderQty">Order Qty:</label>
-                <input class="form-control" id="orderQty" type="number">
-            </div>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="inputItem">Item:</label>
+                    <input class="form-control" id="inputItem" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inputCode">Item Code:</label>
+                    <input class="form-control" id="inputCode" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inputName">Item Name:</label>
+                    <input class="form-control" id="inputName" type="text">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="inputPrice">Price</label>
+                    <input class="form-control" id="inputPrice" type="text">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label" for="inputQty">QtyonH:</label>
+                    <input class="form-control" id="inputQty" type="text">
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="orderQty">Order Qty:</label>
+                    <input class="form-control" id="orderQty" type="number">
+                </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn bg-warning">Add to Cart</button>
-            </div>
-        </form>
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn bg-warning" type="submit" style="font-weight: bold; margin-top: 30px;
+                    ">Add to Cart</button>
+                </div>
+            </form>
 
-
+        </section>
 
     </section>
 
-    <section class="col"></section>
+    <section class="col-3"></section>
 </section>
 
 
