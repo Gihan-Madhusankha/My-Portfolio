@@ -70,7 +70,8 @@
 
         <div class="w-75">
             <div style="background: darkgoldenrod; height: 50px; margin-bottom: 30px">
-                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">Add New Item</h5>
+                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">
+                    Add New Item</h5>
             </div>
 
             <div class="mb-3">
@@ -100,47 +101,47 @@
 
     <section class="col-12 col-lg-8">
 
+<!--        search model-->
         <form class="row g-3">
-            <div class="col-auto w-50" style="margin-top: 70px">
-                <label for="inputPassword2" class="visually-hidden">Password</label>
-                <input type="text" class="form-control" id="inputPassword2" placeholder="search">
+            <div class="col-auto w-50" style="margin-top: 70px;">
+                <label class="visually-hidden" for="inputPassword2">Password</label>
+                <input class="form-control" id="inputPassword2" placeholder="search" type="text">
             </div>
-            <div class="col-auto" style="margin-top: 70px">
-                <button type="submit" class="btn btn-primary mb-3">Search</button>
+            <div class="col-auto" style="margin-top: 70px;">
+                <button class="btn btn-primary mb-3" type="submit">Search</button>
             </div>
         </form>
 
+<!--        table-->
         <aside class="scrollable">
-
-        <table class="table table-hover table-striped">
-            <thead class="table-dark sticky-top">
-            <tr>
-                <th scope="col">Item Code</th>
-                <th scope="col">Item Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Qty on Hand</th>
-                <th scope="col">Operate</th>
-            </tr>
-            </thead>
-            <tbody class="table table-hover table-striped sticky">
-            <tr>
-                <td>I001</td>
-                <td>Brand-T</td>
-                <td>1590</td>
-                <td>90</td>
-                <td>
-                    <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" style="padding: 0">
-                            <button type="button" class="btn btn-warning">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty on Hand</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky">
+                <tr>
+                    <td>I001</td>
+                    <td>Brand-T</td>
+                    <td>1590</td>
+                    <td>90</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-
-
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </aside>
 
     </section>
