@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Order form</title>
+
+    <!--    font-awesome-->
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
+    <!--    viewport-->
+    <meta content="width=device-width initial-scale=1" name="viewport">
+
+    <!--    bootstrap-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <style></style>
+
+</head>
+
+
+<body class="container-fluid">
+
+
+<!--header-->
+<section class="row">
+
+    <nav class="navbar navbar-expand-lg " style="background-color: #4e4eff">
+        <div class="container-fluid">
+            <!--            <a class="navbar-brand" href="#">Navbar</a>-->
+            <a class="navbar-brand" href="#">
+                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="../assets/img/user.png" width="30">
+                POS SYSTEM
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav justify-content-center nav-tabs">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="../dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer.html">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="item.html">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="placeOrder.html">Place Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+<!--content-->
+<section class="row">
+    <!--    invoice-->
+
+    <section class="col-12 col-lg-4 bg-light">
+
+        <section style="padding: 20px">
+            <!--        title-->
+            <div style="height: 40px; background: #212529; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 20px 0">
+                <h5 style="color: white">Invoice Details</h5>
+            </div>
+
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="inputOrderID">Order ID:</label>
+                    <input class="form-control" id="inputOrderID" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inputDate">Date:</label>
+                    <input class="form-control" id="inputDate" type="date">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Customer:</label>
+                    <select class="form-select">
+                        <option selected></option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="customerID">Customer ID:</label>
+                    <input class="form-control" id="customerID" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="customerName">Name:</label>
+                    <input class="form-control" id="customerName" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="customerSalary">Salary:</label>
+                    <input class="form-control" id="customerSalary" type="text">
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="inputAddress">Address</label>
+                    <input class="form-control" id="inputAddress" type="text">
+                </div>
+            </form>
+        </section>
+
+    </section>
+    <section class="col-12 col-lg-5 bg-light">
+
+        <section style="padding: 20px">
+
+            <div style="height: 40px; background: #212529; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 20px 0">
+                <h5 style="color: white">Item Details</h5>
+            </div>
+
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Item:</label>
+                    <select class="form-select">
+                        <option selected></option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inputCode">Item Code:</label>
+                    <input class="form-control" id="inputCode" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inputName">Item Name:</label>
+                    <input class="form-control" id="inputName" type="text">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="inputPrice">Price</label>
+                    <input class="form-control" id="inputPrice" type="text">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label" for="inputQty">QtyonH:</label>
+                    <input class="form-control" id="inputQty" type="text">
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="orderQty">Order Qty:</label>
+                    <input class="form-control" id="orderQty" type="number">
+                </div>
+
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn bg-warning" style="font-weight: bold; margin-top: 30px;
+                    " type="submit">Add to Cart
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+    </section>
+    <section class="col-12 col-lg-3 bg-light">
+
+        <section style="padding: 20px; margin-top: 30px">
+
+            <form class="row g-3">
+                <div class="row">
+                    <div class="col-12">
+                        <span id="total" style="color: orangered">Total : </span>
+                    </div>
+                    <div class="col-12">
+                        <span id="total-val" style="font-size: 30px; color: red; font-weight: bold;">00.0</span> Rs/=
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span id="subTotal" style="color: deepskyblue">Sub Total : </span>
+                    </div>
+                    <div class="col-12">
+                        <span id="subtotal-val" style="font-size: 30px; color: #0b5ed7; font-weight: bold;">00.0</span>
+                        Rs/=
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <label class="form-label" for="cash">Cash (Rs)</label>
+                    <input class="form-control" id="cash" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="discount">Discount (Rs)</label>
+                    <input class="form-control" id="discount" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="balance">Balance (Rs)</label>
+                    <input class="form-control" id="balance" type="text">
+                </div>
+
+                <div class="col-12">
+                    <button class="btn w-100" style="font-weight: bold; margin-top: 30px; background: forestgreen; color: white;
+                    " type="submit">Purchase
+                    </button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+</section>
+<section class="row">
+    <!--    table-->
+    <section class="col-12">
+        <aside class="scrollable" style="padding: 10px">
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky">
+                <tr>
+                    <td>I001</td>
+                    <td>Brand-T</td>
+                    <td>1590</td>
+                    <td>90</td>
+                    <td>143100</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-danger" type="button">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </aside>
+    </section>
+
+
+</section>
+
+<script src="../assets/js/bootstrap.min.js"></script>
+</body>
+</html>
