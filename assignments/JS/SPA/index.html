@@ -64,7 +64,7 @@
 </section>
 
 <!--dashboard-->
-<section class="row" style="height: 90vh">
+<section class="row dashboard" style="height: 90vh">
     <div class="col d-flex align-items-center justify-content-center">
         <!--        dashboard content-->
         <div class="d-flex align-items-center card"
@@ -95,8 +95,260 @@
     </div>
 </section>
 
+<!--customer content-->
+<section class="customer row bg-light">
+    <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
+
+        <div class="w-75">
+            <div style="background: darkgoldenrod; height: 50px; margin-bottom: 30px">
+                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">
+                    Add New Customer</h5>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="customerId">Customer ID</label>
+                <input class="form-control" id="customerId" placeholder="C001" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="customerName">Customer Name</label>
+                <input class="form-control" id="customerName" placeholder="Nimal Perera" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="customerAddress">Customer Address</label>
+                <input class="form-control" id="customerAddress" placeholder="22/6 Kandy RD, Negombo"
+                       type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="customerSalary">Customer Salary</label>
+                <input class="form-control" id="customerSalary" placeholder="25000.00" type="number">
+            </div>
+
+            <div style="display: flex; align-items: flex-end; justify-content: right">
+                <button class="btn btn-warning w-25" style="margin: 5px" type="button">Clear</button>
+                <button class="btn btn-success w-25" style="margin: 5px" type="button">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="col-12 col-lg-8">
+
+        <form class="row g-3">
+            <div class="col-auto w-50" style="margin-top: 70px">
+                <input class="form-control" id="searchCustomer" placeholder="search" type="text">
+            </div>
+            <div class="col-auto" style="margin-top: 70px">
+                <button class="btn btn-primary mb-3" type="submit">Search</button>
+            </div>
+        </form>
+
+        <aside class="scrollable">
+
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky">
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C001</td>
+                    <td>Amila</td>
+                    <td>Panadura</td>
+                    <td>25000</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
 
+        </aside>
+
+    </section>
+</section>
+
+<!--item content-->
+<section class="row bg-light">
+    <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
+
+        <div class="w-75">
+            <div style="background: darkgoldenrod; height: 50px; margin-bottom: 30px">
+                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">
+                    Add New Item</h5>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="itemCode">Item Code</label>
+                <input class="form-control" id="itemCode" placeholder="I001" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="itemName">Item Name</label>
+                <input class="form-control" id="itemName" placeholder="item-name" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="itemPrice">Price</label>
+                <input class="form-control" id="itemPrice" placeholder="100.00"
+                       type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="itemQtyonHand">Qty on Hand</label>
+                <input class="form-control" id="itemQtyonHand" placeholder="650" type="number">
+            </div>
+
+            <div style="display: flex; align-items: flex-end; justify-content: right">
+                <button class="btn btn-warning w-25" style="margin: 5px" type="button">Clear</button>
+                <button class="btn btn-success w-25" style="margin: 5px" type="button">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="col-12 col-lg-8">
+
+        <!--        search model-->
+        <form class="row g-3">
+            <div class="col-auto w-50" style="margin-top: 70px;">
+                <input class="form-control" id="searchItem" placeholder="search" type="text">
+            </div>
+            <div class="col-auto" style="margin-top: 70px;">
+                <button class="btn btn-primary mb-3" type="submit">Search</button>
+            </div>
+        </form>
+
+        <!--        table-->
+        <aside class="scrollable">
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty on Hand</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky">
+                <tr>
+                    <td>I001</td>
+                    <td>Brand-T</td>
+                    <td>1590</td>
+                    <td>90</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-warning" type="button">Edit</button>
+                                <button class="btn btn-danger" type="button">Delete</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </aside>
+
+    </section>
+</section>
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
