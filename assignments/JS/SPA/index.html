@@ -269,7 +269,7 @@
 </section>
 
 <!--item content-->
-<section class="row bg-light">
+<section class="item row bg-light">
     <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
 
         <div class="w-75">
@@ -349,6 +349,187 @@
 
     </section>
 </section>
+
+<!--place_ordercontent-->
+<section class="placeOrder row">
+    <!--    invoice-->
+
+    <section class="col-12 col-lg-4 bg-light">
+
+        <section style="padding: 20px">
+            <!--        title-->
+            <div style="height: 40px; background: #212529; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 20px 0">
+                <h5 style="color: white">Invoice Details</h5>
+            </div>
+
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="inputOrderID">Order ID:</label>
+                    <input class="form-control" id="inputOrderID" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="inputDate">Date:</label>
+                    <input class="form-control" id="inputDate" type="date">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Customer:</label>
+                    <select class="form-select">
+                        <option selected></option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="cusID">Customer ID:</label>
+                    <input class="form-control" id="cusID" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="cusName">Name:</label>
+                    <input class="form-control" id="cusName" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="cusSalary">Salary:</label>
+                    <input class="form-control" id="cusSalary" type="text">
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="cusAddress">Address</label>
+                    <input class="form-control" id="cusAddress" type="text">
+                </div>
+            </form>
+        </section>
+
+    </section>
+    <section class="col-12 col-lg-5 bg-light">
+
+        <section style="padding: 20px">
+
+            <div style="height: 40px; background: #212529; display: flex; align-items: center; justify-content: center; border-radius: 5px; margin: 20px 0">
+                <h5 style="color: white">Item Details</h5>
+            </div>
+
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Item:</label>
+                    <select class="form-select">
+                        <option selected></option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="itmCode">Item Code:</label>
+                    <input class="form-control" id="itmCode" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="itmName">Item Name:</label>
+                    <input class="form-control" id="itmName" type="text">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="itmPrice">Price</label>
+                    <input class="form-control" id="itmPrice" type="text">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label" for="itmQty">QtyonH:</label>
+                    <input class="form-control" id="itmQty" type="text">
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="orderQty">Order Qty:</label>
+                    <input class="form-control" id="orderQty" type="number">
+                </div>
+
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn bg-warning" style="font-weight: bold; margin-top: 30px;
+                    " type="submit">Add to Cart
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+    </section>
+    <section class="col-12 col-lg-3 bg-light">
+
+        <section style="padding: 20px; margin-top: 30px">
+
+            <form class="row g-3">
+                <div class="row">
+                    <div class="col-12">
+                        <span id="total" style="color: orangered">Total : </span>
+                    </div>
+                    <div class="col-12">
+                        <span id="total-val" style="font-size: 30px; color: red; font-weight: bold;">00.0</span> Rs/=
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span id="subTotal" style="color: deepskyblue">Sub Total : </span>
+                    </div>
+                    <div class="col-12">
+                        <span id="subtotal-val" style="font-size: 30px; color: #0b5ed7; font-weight: bold;">00.0</span>
+                        Rs/=
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <label class="form-label" for="cash">Cash (Rs)</label>
+                    <input class="form-control" id="cash" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="discount">Discount (Rs)</label>
+                    <input class="form-control" id="discount" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="balance">Balance (Rs)</label>
+                    <input class="form-control" id="balance" type="text">
+                </div>
+
+                <div class="col-12">
+                    <button class="btn w-100" style="font-weight: bold; margin-top: 30px; background: forestgreen; color: white;
+                    " type="submit">Purchase
+                    </button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+</section>
+<section class="placeOrder row">
+    <!--    table-->
+    <section class="col-12">
+        <aside class="scrollable" style="padding: 10px">
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky">
+                <tr>
+                    <td>I001</td>
+                    <td>Brand-T</td>
+                    <td>1590</td>
+                    <td>90</td>
+                    <td>143100</td>
+                    <td>
+                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
+                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
+                                 style="padding: 0">
+                                <button class="btn btn-danger" type="button">Remove</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </aside>
+    </section>
+
+
+</section>
+
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
