@@ -40,23 +40,84 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav justify-content-center nav-tabs">
+
+                <!--                dashUL-->
+                <ul class="dashUL nav justify-content-center nav-tabs">
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link active" href="index.html">Dashboard</a>
+                        <a aria-current="page" class="nav-link active dashboard" href="#" id="dash">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/customer.html" id="btnCustomer">Customer</a>
+                        <a class="nav-link customer" href="#" id="btnCustomer">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/item.html" id="item">Item</a>
+                        <a class="nav-link item" href="#" id="item">Item</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="order">Order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/placeOrder.html" id="placeOrder">Place Order</a>
+                        <a class="nav-link placeOrder" href="#" id="placeOrder">Place Order</a>
                     </li>
                 </ul>
+
+                <!--                customerUL-->
+                <ul class="customerUL nav justify-content-center nav-tabs">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link dashboard" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active customer" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link item" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link placeOrder" href="#">Place Order</a>
+                    </li>
+                </ul>
+
+                <!--                itemUL-->
+                <ul class="itemUL nav justify-content-center nav-tabs">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link dashboard" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link customer" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active item" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link placeOrder" href="#">Place Order</a>
+                    </li>
+                </ul>
+
+                <!--                placeOrderUL-->
+                <ul class="placeOrderUL nav justify-content-center nav-tabs">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link dashboard" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link customer" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link item" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item placeOrder">
+                        <a class="nav-link active" href="#">Place Order</a>
+                    </li>
+                </ul>
+
+
             </div>
         </div>
     </nav>
@@ -64,7 +125,7 @@
 </section>
 
 <!--dashboard-->
-<section class="row dashboard" style="height: 90vh">
+<section class="row dashboardContent" style="height: 90vh">
     <div class="col d-flex align-items-center justify-content-center">
         <!--        dashboard content-->
         <div class="d-flex align-items-center card"
@@ -96,7 +157,7 @@
 </section>
 
 <!--customer content-->
-<section class="customer row bg-light">
+<section class="customerContent row bg-light">
     <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
 
         <div class="w-75">
@@ -269,7 +330,7 @@
 </section>
 
 <!--item content-->
-<section class="item row bg-light">
+<section class="itemContent row bg-light">
     <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
 
         <div class="w-75">
@@ -350,8 +411,8 @@
     </section>
 </section>
 
-<!--place_ordercontent-->
-<section class="placeOrder row">
+<!--place_order content-->
+<section class="placeOrderContent row">
     <!--    invoice-->
 
     <section class="col-12 col-lg-4 bg-light">
@@ -491,7 +552,7 @@
     </section>
 
 </section>
-<section class="placeOrder row">
+<section class="placeOrderContent row">
     <!--    table-->
     <section class="col-12">
         <aside class="scrollable" style="padding: 10px">
@@ -536,8 +597,82 @@
 
 <script>
 
+    /*$("#btnCustomer").click(function () {
+        // $('#btnCustomer').classList.add('active');
+        this.classList.add('active');
+        $('#dash').classList.remove('active');
+    });*/
+
+    $('.customerUL').css('display', 'none');
+    $('.itemUL').css('display', 'none');
+    $('.placeOrderUL').css('display', 'none');
+
+
+    $('.customerContent').css('display', 'none');
+    $('.itemContent').css('display', 'none');
+    $('.placeOrderContent').css('display', 'none');
+
+
+    $('.customer').click(function () {
+        $('.dashUL').css('display', 'none');
+        $('.itemUL').css('display', 'none');
+        $('.placeOrderUL').css('display', 'none');
+        $('.customerUL').css('display', 'flex');
+
+
+        $('.dashboardContent').css('display', 'none');
+        $('.customerContent').css('display', 'flex');
+        $('.itemContent').css('display', 'none');
+        $('.placeOrderContent').css('display', 'none');
+
+    });
+
+    $('.item').click(function () {
+        $('.dashUL').css('display', 'none');
+        $('.itemUL').css('display', 'flex');
+        $('.placeOrderUL').css('display', 'none');
+        $('.customerUL').css('display', 'none');
+
+
+        $('.dashboardContent').css('display', 'none');
+        $('.customerContent').css('display', 'none');
+        $('.itemContent').css('display', 'flex');
+        $('.placeOrderContent').css('display', 'none');
+
+    });
+
+    $('.placeOrder').click(function () {
+        $('.dashUL').css('display', 'none');
+        $('.itemUL').css('display', 'none');
+        $('.placeOrderUL').css('display', 'flex');
+        $('.customerUL').css('display', 'none');
+
+
+        $('.dashboardContent').css('display', 'none');
+        $('.customerContent').css('display', 'none');
+        $('.itemContent').css('display', 'none');
+        $('.placeOrderContent').css('display', 'flex');
+
+    });
+
+    $('.dashboard').click(function () {
+        $('.dashUL').css('display', 'flex');
+        $('.itemUL').css('display', 'none');
+        $('.placeOrderUL').css('display', 'none');
+        $('.customerUL').css('display', 'none');
+
+
+        $('.dashboardContent').css('display', 'flex');
+        $('.customerContent').css('display', 'none');
+        $('.itemContent').css('display', 'none');
+        $('.placeOrderContent').css('display', 'none');
+    });
+
+
+
 
 </script>
+
 
 </body>
 </html>
