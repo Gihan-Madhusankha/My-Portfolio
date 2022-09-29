@@ -2,12 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+
     <title>Calculator</title>
+
+    <style>
+
+        * {
+            font-weight: bold;
+        }
+
+        .cal {
+            border: 1px solid red;
+            height: 500px;
+            width: 800px;
+        }
+
+        .content {
+            border: 1px solid black;
+            height: 50px;
+            display: flex;
+        }
+
+        .content aside {
+            border: 1px solid #0b5ed7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content aside:first-child div {
+            font-size: 30px;
+            color: #0b5ed7;
+        }
+
+        .content aside:first-child {
+            flex-basis: 50px;
+        }
+
+        .content aside:nth-child(2) {
+            flex-basis: 750px;
+        }
+
+        .value {
+            text-align: right;
+            font-size: 40px;
+            background: #A0A5EB;
+            width: 100%;
+            padding-right: 10px;
+        }
+
+
+        .keys {
+            border: 1px solid greenyellow;
+            height: 450px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+        }
+
+        .keys aside {
+            border: 1px solid red;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+    </style>
+
 </head>
 <body>
 
 <main>
 
+    <section class="cal">
+        <section class="content">
+            <aside>
+                <div>C</div>
+            </aside>
+            <aside>
+                <div class="value">0</div>
+            </aside>
+        </section>
+
+        <section class="keys">
+            <aside>
+                <div>7</div>
+            </aside>
+            <aside>
+                <div>8</div>
+            </aside>
+            <aside>
+                <div>9</div>
+            </aside>
+            <aside>
+                <div>+</div>
+            </aside>
+            <aside>
+                <div>4</div>
+            </aside>
+            <aside>
+                <div>5</div>
+            </aside>
+            <aside>
+                <div>6</div>
+            </aside>
+            <aside>
+                <div>-</div>
+            </aside>
+            <aside>
+                <div>1</div>
+            </aside>
+            <aside>
+                <div>2</div>
+            </aside>
+            <aside>
+                <div>3</div>
+            </aside>
+            <aside>
+                <div>/</div>
+            </aside>
+            <aside>
+                <div>0</div>
+            </aside>
+            <aside>
+                <div>.</div>
+            </aside>
+            <aside>
+                <div>=</div>
+            </aside>
+            <aside>
+                <div>*</div>
+            </aside>
+        </section>
+
+    </section>
 
 </main>
 
