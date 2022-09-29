@@ -12,6 +12,10 @@
             font-weight: bold;
         }
 
+        main > section {
+            margin: 0 auto;
+        }
+
         .cal {
             border: 1px solid red;
             height: 500px;
@@ -19,23 +23,28 @@
         }
 
         .content {
-            border: 1px solid black;
             height: 50px;
             display: flex;
             gap: 10px;
             padding: 10px;
+            background: #191919;
         }
 
-        .content aside {
-            border: 1px solid #0b5ed7;
+        .content aside:first-child {
+            background: red;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 3px;
+        }
+
+        .content aside:nth-child(2) {
+            margin-right: 10px;
         }
 
         .content aside:first-child div {
             font-size: 30px;
-            color: #0b5ed7;
+            color: white;
         }
 
         .content aside:first-child {
@@ -46,10 +55,10 @@
             flex-basis: 750px;
         }
 
-        .value {
+        .content aside:nth-child(2) div {
             text-align: right;
             font-size: 40px;
-            background: #A0A5EB;
+            background: white;
             width: 100%;
             padding-right: 10px;
         }
@@ -63,14 +72,16 @@
             grid-template-rows: repeat(4,1fr);
             gap: 10px;
             padding: 10px;
+            background: #191919;
         }
 
         .keys aside {
-            border: 1px solid red;
             font-size: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: white;
+            border-radius: 3px;
         }
 
 
