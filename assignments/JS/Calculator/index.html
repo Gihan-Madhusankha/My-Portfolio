@@ -12,12 +12,15 @@
             font-weight: bold;
         }
 
+        body{
+            background: lightcoral;
+        }
+
         main > section {
             margin: 0 auto;
         }
 
         .cal {
-            border: 1px solid red;
             height: 500px;
             width: 800px;
         }
@@ -36,6 +39,11 @@
             align-items: center;
             justify-content: center;
             border-radius: 3px;
+        }
+
+        .content aside:first-child:hover {
+            background: darkred;
+            cursor: pointer;
         }
 
         .content aside:nth-child(2) {
@@ -82,6 +90,12 @@
             justify-content: center;
             background: white;
             border-radius: 3px;
+        }
+
+        .keys aside:hover, .keys aside div:hover {
+            background: deepskyblue;
+            cursor: pointer;
+            color: white;
         }
 
 
