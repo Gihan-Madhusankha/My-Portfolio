@@ -12,7 +12,7 @@
             font-weight: bold;
         }
 
-        body{
+        body {
             background: lightcoral;
         }
 
@@ -76,8 +76,8 @@
             border: 1px solid greenyellow;
             height: 450px;
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             gap: 10px;
             padding: 10px;
             background: #191919;
@@ -98,6 +98,12 @@
             color: white;
         }
 
+        input {
+            width: 100%;
+            height: 88%;
+            font-size: 30px;
+            text-align: right;
+        }
 
 
     </style>
@@ -113,7 +119,7 @@
                 <div>C</div>
             </aside>
             <aside>
-                <div class="value">0</div>
+                <input type="text" class="value">
             </aside>
         </section>
 
@@ -154,7 +160,7 @@
             <aside>
                 <div>/</div>
             </aside>
-            <aside>
+            <aside class="zero">
                 <div>0</div>
             </aside>
             <aside>
@@ -171,6 +177,16 @@
     </section>
 
 </main>
+
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+    $('.zero').click(function(){
+
+    });
+
+</script>
 
 </body>
 </html>
