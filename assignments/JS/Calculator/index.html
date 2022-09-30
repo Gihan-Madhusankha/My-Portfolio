@@ -146,13 +146,14 @@
 
 </main>
 
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
     var val = $('.value').val('0');
 
     // clear line
-    $('.clear').click(function (){
+    $('.clear').click(function () {
         val = $('.value').val("0");
     });
 
@@ -203,29 +204,50 @@
     });
 
     // symbol
-    let lastValue = "";
+    let lastValue = 0;
+    let symbol = "";
+
     $('.plus').click(function () {
-        lastValue = (+lastValue) + (+$('.value').val());
-        $('.value').val("0");
-        console.log(lastValue);
+        lastValue = +($('.value').val());
+        +($('.value').val(0));
+        symbol = "+";
+
     });
 
     $('.min').click(function () {
-        lastValue = (+lastValue) + (+$('.value').val());
-        $('.value').val("0");
+        lastValue = ($('.value').val());
+        +($('.value').val(0));
+        symbol = "-";
     });
 
     $('.division').click(function () {
-        lastValue = (+lastValue) + (+$('.value').val());
-        $('.value').val("0");
+        lastValue = ($('.value').val());
+        +($('.value').val(0));
+        symbol = "/";
     });
 
     $('.multiply').click(function () {
-        lastValue = (+lastValue) + (+$('.value').val());
-        $('.value').val("0");
+        lastValue = ($('.value').val());
+        +($('.value').val(0));
+        symbol = "/";
     });
 
 
+    $('.equal').click(function () {
+        if (symbol === "+") {
+            lastValue += +($('.value').val());
+        } else if (symbol === "-") {
+            lastValue -= +($('.value').val());
+        } else if (symbol === "/") {
+            lastValue /= +($('.value').val());
+        } else {
+            lastValue *= +($('.value').val());
+        }
+
+        $('.value').val(lastValue);
+        console.log(lastValue);
+
+    });
 
 
 </script>
