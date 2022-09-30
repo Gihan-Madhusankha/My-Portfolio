@@ -115,7 +115,7 @@
 
     <section class="cal">
         <section class="content">
-            <aside>
+            <aside class="clear">
                 <div>C</div>
             </aside>
             <aside>
@@ -148,6 +148,14 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
+
+    var val = $('.value').val('0');
+
+    // clear line
+    $('.clear').click(function (){
+        val = $('.value').val("0");
+    });
+
 
     // keys
     $('.zero').click(function () {
@@ -189,6 +197,35 @@
     $('.nine').click(function () {
         $('.value').val($('.value').val() + $('.nine').text());
     });
+
+    $('.dot').click(function () {
+        $('.value').val($('.value').val() + $('.dot').text());
+    });
+
+    // symbol
+    let lastValue = "";
+    $('.plus').click(function () {
+        lastValue = (+lastValue) + (+$('.value').val());
+        $('.value').val("0");
+        console.log(lastValue);
+    });
+
+    $('.min').click(function () {
+        lastValue = (+lastValue) + (+$('.value').val());
+        $('.value').val("0");
+    });
+
+    $('.division').click(function () {
+        lastValue = (+lastValue) + (+$('.value').val());
+        $('.value').val("0");
+    });
+
+    $('.multiply').click(function () {
+        lastValue = (+lastValue) + (+$('.value').val());
+        $('.value').val("0");
+    });
+
+
 
 
 </script>
