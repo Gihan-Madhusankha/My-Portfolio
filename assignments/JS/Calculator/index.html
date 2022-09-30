@@ -82,7 +82,7 @@
             background: #333333;
         }
 
-        .keys aside {
+        .keys button {
             font-size: 30px;
             display: flex;
             align-items: center;
@@ -92,8 +92,8 @@
             border-radius: 3px;
         }
 
-        .keys aside:hover, .keys aside div:hover {
-            background: deepskyblue;
+        .keys button:hover {
+            background: black;
             cursor: pointer;
             color: white;
         }
@@ -119,59 +119,27 @@
                 <div>C</div>
             </aside>
             <aside>
-                <input class="value" type="text" disabled>
+                <input class="value" disabled type="text">
             </aside>
         </section>
 
         <section class="keys">
-            <aside>
-                <div>7</div>
-            </aside>
-            <aside>
-                <div>8</div>
-            </aside>
-            <aside>
-                <div>9</div>
-            </aside>
-            <aside>
-                <div>+</div>
-            </aside>
-            <aside>
-                <div>4</div>
-            </aside>
-            <aside>
-                <div>5</div>
-            </aside>
-            <aside>
-                <div>6</div>
-            </aside>
-            <aside>
-                <div>-</div>
-            </aside>
-            <aside>
-                <div>1</div>
-            </aside>
-            <aside>
-                <div>2</div>
-            </aside>
-            <aside class="three">
-                <div>3</div>
-            </aside>
-            <aside>
-                <div>/</div>
-            </aside>
-            <aside class="zero">
-                <div>0</div>
-            </aside>
-            <aside>
-                <div>.</div>
-            </aside>
-            <aside>
-                <div>=</div>
-            </aside>
-            <aside>
-                <div>*</div>
-            </aside>
+            <button class="seven">7</button>
+            <button class="eight">8</button>
+            <button class="nine">9</button>
+            <button class="plus">+</button>
+            <button class="four">4</button>
+            <button class="five">5</button>
+            <button class="six">6</button>
+            <button class="min">-</button>
+            <button class="one">1</button>
+            <button class="two">2</button>
+            <button class="three">3</button>
+            <button class="division">/</button>
+            <button class="zero">0</button>
+            <button class="dot">.</button>
+            <button class="equal">=</button>
+            <button class="multiply">*</button>
         </section>
 
     </section>
@@ -180,12 +148,6 @@
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
-
-    // $('.zero').click(function () {
-    //     $('input').val($('.zero').text());
-    //     // console.log($('.zero').text());
-    // });
-
 
 </script>
 
