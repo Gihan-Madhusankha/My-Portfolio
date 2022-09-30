@@ -13,7 +13,7 @@
         }
 
         body {
-            background: lightcoral;
+            background: black;
         }
 
         main > section {
@@ -73,14 +73,13 @@
 
 
         .keys {
-            border: 1px solid greenyellow;
             height: 450px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(4, 1fr);
             gap: 10px;
             padding: 10px;
-            background: #191919;
+            background: #333333;
         }
 
         .keys aside {
@@ -88,7 +87,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: white;
+            background: #191919;
+            color: white;
             border-radius: 3px;
         }
 
@@ -119,7 +119,7 @@
                 <div>C</div>
             </aside>
             <aside>
-                <input type="text" class="value" disabled>
+                <input class="value" type="text" disabled>
             </aside>
         </section>
 
@@ -133,7 +133,7 @@
             <aside>
                 <div>9</div>
             </aside>
-            <aside style="background: lightskyblue">
+            <aside>
                 <div>+</div>
             </aside>
             <aside>
@@ -145,7 +145,7 @@
             <aside>
                 <div>6</div>
             </aside>
-            <aside style="background: lightskyblue">
+            <aside>
                 <div>-</div>
             </aside>
             <aside>
@@ -154,10 +154,10 @@
             <aside>
                 <div>2</div>
             </aside>
-            <aside>
+            <aside class="three">
                 <div>3</div>
             </aside>
-            <aside style="background: lightskyblue">
+            <aside>
                 <div>/</div>
             </aside>
             <aside class="zero">
@@ -169,7 +169,7 @@
             <aside>
                 <div>=</div>
             </aside>
-            <aside style="background: lightskyblue">
+            <aside>
                 <div>*</div>
             </aside>
         </section>
@@ -178,13 +178,14 @@
 
 </main>
 
-
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
-    $('.zero').click(function(){
-        $('.value').val('10');
-    });
+    // $('.zero').click(function () {
+    //     $('input').val($('.zero').text());
+    //     // console.log($('.zero').text());
+    // });
+
 
 </script>
 
