@@ -214,7 +214,7 @@
                     <th scope="col">Operate</th>
                 </tr>
                 </thead>
-                <tbody class="table table-hover table-striped sticky">
+                <tbody class="table table-hover table-striped sticky" id="tblCustomer">
                 <tr>
                     <td>C001</td>
                     <td>Amila</td>
@@ -695,8 +695,10 @@
 
     function loadAllCustomers(){
 
-
-
+        for (var i of cusArray) {
+            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td></tr>"
+            $('#tblCustomer').append(row);
+        }
     }
 
 
