@@ -669,11 +669,22 @@
     });
 
 
+    var cusArray = [];
+
     $('.save').click(function (){
         let id = $('#customerId').val();
         let name = $('#customerName').val();
         let address = $('#customerAddress').val();
         let salary = $('#customerSalary').val();
+
+        var customer = {
+            id:id,
+            name:name,
+            address:address,
+            salary:salary
+        }
+
+
     });
 
 
