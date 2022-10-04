@@ -694,13 +694,13 @@
 
 
     function loadAllCustomers(){
+        $('#tblCustomer').empty();
 
         for (var i of cusArray) {
             var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td></tr>"
             $('#tblCustomer').append(row);
         }
     }
-
 
 
 </script>
