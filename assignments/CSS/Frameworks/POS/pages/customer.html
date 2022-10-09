@@ -124,7 +124,7 @@
                     <th scope="col">Operate</th>
                 </tr>
                 </thead>
-                <tbody class="table table-hover table-striped sticky">
+                <tbody class="table table-hover table-striped sticky" id="tblCustomer">
                 <tr>
                     <td>C001</td>
                     <td>Amila</td>
@@ -254,20 +254,26 @@
         let customerSalary = $('#txtCustomerSalary').val();
 
         var customer = {
-            id:customerId,
-            name:customerName,
-            address:customerAddress,
-            salary:customerSalary
+            id: customerId,
+            name: customerName,
+            address: customerAddress,
+            salary: customerSalary
         }
 
         cusArray.push(customer);
         console.log(cusArray);
 
-
+        loadAllCustomers();
 
     });
 
-    function loadAllCustomers(){
+    function loadAllCustomers() {
+
+        for (var i of cusArray) {
+            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td></tr>"
+            $('#tblCustomer').append(row);
+            console.log(row);
+        }
 
     }
 
