@@ -32,7 +32,8 @@
         <div class="container-fluid">
             <!--            <a class="navbar-brand" href="#">Navbar</a>-->
             <a class="navbar-brand" href="#">
-                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="../assets/img/user.png" width="30">
+                <img alt="Logo" class="d-inline-block align-text-top" height="30" src="../assets/img/user.png"
+                     width="30">
                 POS SYSTEM
             </a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -93,8 +94,8 @@
             </div>
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
-                <button class="btn btn-warning w-25" style="margin: 5px" type="button" id="btnClear">Clear</button>
-                <button class="btn btn-success w-25" style="margin: 5px" type="button" id="btnSave">Save</button>
+                <button class="btn btn-warning w-25" id="btnClear" style="margin: 5px" type="button">Clear</button>
+                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save</button>
             </div>
         </div>
     </section>
@@ -241,6 +242,17 @@
 
 <script src="../assets/js/bootstrap.min.js"></script>
 <script>
+
+    $('#btnSave').click(function () {
+
+        let customerId = $('#txtCustomerId').val();
+        let customerName = $('#txtCustomerName').val();
+        let customerAddress = $('#txtCustomerAddress').val();
+        let customerSalary = $('#txtCustomerSalary').val();
+
+
+
+    });
 
 </script>
 
