@@ -241,7 +241,10 @@
 
 
 <script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
+
+    var cusArray = [];
 
     $('#btnSave').click(function () {
 
@@ -249,6 +252,15 @@
         let customerName = $('#txtCustomerName').val();
         let customerAddress = $('#txtCustomerAddress').val();
         let customerSalary = $('#txtCustomerSalary').val();
+
+        var customer = {
+            id:customerId,
+            name:customerName,
+            address:customerAddress,
+            salary:customerSalary
+        }
+
+        cusArray.push(customer);
 
 
 
