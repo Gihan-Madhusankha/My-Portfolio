@@ -669,46 +669,43 @@
     });
 
 
-    var cusArray = [];
-
-    $('.save').click(function (){
-        let id = $('#customerId').val();
-        let name = $('#customerName').val();
-        let address = $('#customerAddress').val();
-        let salary = $('#customerSalary').val();
-
-        var customer = {
-            id:id,
-            name:name,
-            address:address,
-            salary:salary
-        }
-
-        cusArray.push(customer);
-        console.log(cusArray);
-
-        loadAllCustomers();
-
-    });
-
-
-    function loadAllCustomers(){
-        $('#tblCustomer').empty();
-
-        for (var i of cusArray) {
-            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td><td><div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
-                "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
-                "                                 style=\"padding: 0\">\n" +
-                "                                <button class=\"btn btn-warning\" type=\"button\">Edit</button>\n" +
-                "                                <button class=\"btn btn-danger\" type=\"button\">Delete</button>\n" +
-                "                            </div>\n" +
-                "                        </div></td></tr>"
-            $('#tblCustomer').append(row);
-        }
-    }
-
-    // <button className="btn btn-warning" type="button">Edit</button>
-    // <button className="btn btn-danger" type="button">Delete</button>
+    // var cusArray = [];
+    //
+    // $('.save').click(function (){
+    //     let id = $('#customerId').val();
+    //     let name = $('#customerName').val();
+    //     let address = $('#customerAddress').val();
+    //     let salary = $('#customerSalary').val();
+    //
+    //     var customer = {
+    //         id:id,
+    //         name:name,
+    //         address:address,
+    //         salary:salary
+    //     }
+    //
+    //     cusArray.push(customer);
+    //     console.log(cusArray);
+    //
+    //     loadAllCustomers();
+    //
+    // });
+    //
+    //
+    // function loadAllCustomers(){
+    //     $('#tblCustomer').empty();
+    //
+    //     for (var i of cusArray) {
+    //         var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td><td><div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
+    //             "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
+    //             "                                 style=\"padding: 0\">\n" +
+    //             "                                <button class=\"btn btn-warning\" type=\"button\">Edit</button>\n" +
+    //             "                                <button class=\"btn btn-danger\" type=\"button\">Delete</button>\n" +
+    //             "                            </div>\n" +
+    //             "                        </div></td></tr>"
+    //         $('#tblCustomer').append(row);
+    //     }
+    // }
 
 </script>
 
