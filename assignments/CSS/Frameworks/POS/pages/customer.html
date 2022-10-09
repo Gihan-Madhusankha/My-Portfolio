@@ -292,6 +292,12 @@
         }
     });
 
+    $('#txtCustomerName').keydown(function (event){
+        if (event.key == 'Enter'){
+            $('#txtCustomerAddress').focus();
+        }
+    });
+
 
 
 </script>
