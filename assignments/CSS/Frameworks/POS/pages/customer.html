@@ -333,26 +333,20 @@
 
     // delete customer
     $('#tblCustomer').on('click', '#btnDelete', function () {
-        let abc = $(this).parents('tr').remove();
         let cusID = $(this).parents('tr').children(':first-child').text();
-
-        for (var i of cusArray) {
-            if (i.id == cusID) {
-                cusArray.splice(i, 1);
-            }
-        }
+        let indexNumber = cusArray.indexOf(cusID);
+        cusArray.splice(indexNumber, 1);
+        loadAllCustomers();
 
         clearTextFields();
         $('#btnSave').text('Save');
-        console.log(ab);
     });
 
-
+    // search customer
     function searchCustomer(cusId) {
         for (var i of cusArray) {
             if (i.id == cusId) {
                 setTextFieldValues(i.id, i.name, i.address, i.salary);
-                // console.log(i)
                 return i;
             }
         }
