@@ -78,19 +78,23 @@
             <div class="mb-3">
                 <label class="form-label" for="txtCustomerId">Customer ID</label>
                 <input class="form-control" id="txtCustomerId" placeholder="C001" type="text">
+                <span class="control-error" id="lblCusId"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCustomerName">Customer Name</label>
                 <input class="form-control" id="txtCustomerName" placeholder="Nimal Perera" type="text">
+                <span class="control-error" id="lblCusName"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCustomerAddress">Customer Address</label>
                 <input class="form-control" id="txtCustomerAddress" placeholder="22/6 Kandy RD, Negombo"
                        type="text">
+                <span class="control-error" id="lblCusAddress"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCustomerSalary">Customer Salary</label>
                 <input class="form-control" id="txtCustomerSalary" placeholder="25000.00" type="number">
+                <span class="control-error" id="lblCusSalary"></span>
             </div>
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
@@ -245,7 +249,6 @@
 <script>
 
     var cusArray = [];
-
     $('#btnSave').click(function () {
 
         let textOfButton = $('#btnSave').text();
