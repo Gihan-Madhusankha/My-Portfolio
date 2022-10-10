@@ -307,7 +307,7 @@
 
     $('#txtCustomerId').keydown(function (event) {
         if (event.key == 'Enter') {
-            var option = setCustomerDetails($('#txtCustomerId').val());
+            var option = searchCustomer($('#txtCustomerId').val());
             if (!option) {
                 $('#txtCustomerName').focus();
             }
@@ -335,15 +335,21 @@
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').val("");
     }
 
-     // update customer
+    // update customer
     $('#tblCustomer').on('click', '#btnEdit', function () {
         // console.log( $(this).parent().parent().parent().parent().children(':first-child').text());
         // console.log($(this).parents('tr').children(':first-child').text());
-        setCustomerDetails($(this).parents('tr').children(':first-child').text());
+        searchCustomer($(this).parents('tr').children(':first-child').text());
         $('#btnSave').text('Update');
     });
 
-    function setCustomerDetails(cusId) {
+    $('#tblCustomer').on('click', '#btnDelete', function () {
+
+    });
+
+
+
+    function searchCustomer(cusId) {
         for (var i of cusArray) {
             if (i.id == cusId) {
                 $('#txtCustomerId').val(i.id);
