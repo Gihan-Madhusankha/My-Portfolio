@@ -253,7 +253,7 @@
     });
 
     // customer regex
-    const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
+    const cusIDRegEx = /^(C00-)[0-9]{3}$/;
     const cusNameRegEx = /^[A-z ]{3,20}$/;
     const cusAddressRegEx = /^[0-9/A-z. ,]{5,}$/;
     const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
@@ -284,14 +284,28 @@
 
     function checkValidity() {
         for (let validation of customerValidations) {
-            if (check(validation.reg, validation.field)){
-
+            if (check(validation.reg, validation.field)) {
+                testSuccess(validation.field, "");
+            } else {
+                setError(validation.field, validation.error);
             }
         }
     }
 
-    function check(regex, textField){
+    function check(regex, textField) {
+        let inputValue = textField.val();
+        console.log(regex.test(inputValue));
+        return regex.test(inputValue);
+    }
 
+    function testSuccess(textField, msg) {
+        if (textField.val().length <= 0) {
+            textField.css('border', '1px solid #ced4da');
+            textField.parent().children('span').text(msg);
+        } else {
+            textField.css('border', '2px solid green');
+            textField.parent().children('span').text(msg);
+        }
     }
 
 
