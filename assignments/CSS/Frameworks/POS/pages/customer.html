@@ -248,7 +248,7 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
-    $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('keyup', function (){
+    $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('keyup', function () {
         checkValidity();
     });
 
@@ -283,12 +283,16 @@
 
 
     function checkValidity() {
-        for (let i of customerValidations) {
-            if (i.reg.test(i.field.val())){
+        for (let validation of customerValidations) {
+            if (check(validation.reg, validation.field)){
+
             }
         }
     }
 
+    function check(regex, textField){
+
+    }
 
 
     // customer array
