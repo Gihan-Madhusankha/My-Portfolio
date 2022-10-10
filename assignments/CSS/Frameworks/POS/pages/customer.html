@@ -338,7 +338,7 @@
         // console.log( $(this).parent().parent().parent().parent().children(':first-child').text());
         // console.log($(this).parents('tr').children(':first-child').text());
         setCustomerDetails($(this).parents('tr').children(':first-child').text());
-
+        $('#btnSave').text('Update');
     });
 
     function setCustomerDetails(cusId) {
