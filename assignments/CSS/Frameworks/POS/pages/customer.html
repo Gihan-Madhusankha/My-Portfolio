@@ -308,6 +308,16 @@
         }
     }
 
+    function setError(textField, msg){
+        if (textField.val().length <= 0) {
+            textField.css('border', '1px solid #ced4da');
+            textField.parent().children('span').text(msg);
+        } else {
+            textField.css('border', '5px solid red');
+            textField.parent().children('span').text(msg);
+        }
+    }
+
 
     // customer array
     var cusArray = [];
