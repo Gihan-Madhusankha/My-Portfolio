@@ -346,9 +346,11 @@
     // delete customer
     $('#tblCustomer').on('click', '#btnDelete', function () {
         let abc = $(this).parents('tr').remove();
+        let cusID = $(this).parents('tr').children(':first-child').text();
+
         clearTextFields();
         $('#btnSave').text('Save');
-        console.log(abc);
+        console.log(ab);
     });
 
 
