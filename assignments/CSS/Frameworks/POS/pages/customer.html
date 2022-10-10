@@ -328,12 +328,14 @@
 
     $('#btnClear').click(function () {
         clearTextFields();
+        $('#btnSave').text('Save');
     });
 
     function clearTextFields() {
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').val("");
     }
 
+     // update customer
     $('#tblCustomer').on('click', '#btnEdit', function () {
         // console.log( $(this).parent().parent().parent().parent().children(':first-child').text());
         // console.log($(this).parents('tr').children(':first-child').text());
