@@ -248,20 +248,33 @@
 
     $('#btnSave').click(function () {
 
-        let customerId = $('#txtCustomerId').val();
-        let customerName = $('#txtCustomerName').val();
-        let customerAddress = $('#txtCustomerAddress').val();
-        let customerSalary = $('#txtCustomerSalary').val();
+        let textOfButton = $('#btnSave').text();
+        if (textOfButton == 'Save') {
+            let customerId = $('#txtCustomerId').val();
+            let customerName = $('#txtCustomerName').val();
+            let customerAddress = $('#txtCustomerAddress').val();
+            let customerSalary = $('#txtCustomerSalary').val();
 
-        var customer = {
-            id: customerId,
-            name: customerName,
-            address: customerAddress,
-            salary: customerSalary
+            var customer = {
+                id: customerId,
+                name: customerName,
+                address: customerAddress,
+                salary: customerSalary
+            }
+
+            cusArray.push(customer);
+            console.log(textOfButton);
+
+        } else {
+            // update customer
+
+            var name = $('#txtCustomerName').val();
+            console.log(name);
+            console.log();
+
         }
 
-        cusArray.push(customer);
-        console.log(cusArray);
+        // console.log(cusArray);
 
         loadAllCustomers();
         clearTextFields();
@@ -323,15 +336,22 @@
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').val("");
     }
 
-    // update customer
+    // edit button
     $('#tblCustomer').on('click', '#btnEdit', function () {
         // console.log( $(this).parent().parent().parent().parent().children(':first-child').text());
         // console.log($(this).parents('tr').children(':first-child').text());
-        searchCustomer($(this).parents('tr').children(':first-child').text());
+        var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
         $('#btnSave').text('Update');
+        findIndexNumber(cusID);
     });
 
-    // delete customer
+    let indexNo = "";
+    function findIndexNumber(cusID) {
+        console.log(cusArray.indexOf(cusID));
+        indexNo = cusArray.indexOf(cusID);
+    }
+
+    // delete customer using delete button
     $('#tblCustomer').on('click', '#btnDelete', function () {
         let cusID = $(this).parents('tr').children(':first-child').text();
         let indexNumber = cusArray.indexOf(cusID);
