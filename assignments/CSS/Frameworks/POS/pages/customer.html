@@ -272,17 +272,16 @@
         $('#tblCustomer').empty();
 
         for (var i of cusArray) {
-            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td><td>\n" +
+            var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td><td class='operate'>\n" +
                 "                        <div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
                 "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
                 "                                 style=\"padding: 0\">\n" +
-                "                                <button class=\"btn btn-warning\" type=\"button\" id='btnEdit'>Edit</button>\n" +
+                "                                <button class=\"btn btn-warning btnEdit\" type=\"button\" id='btnEdit'>Edit</button>\n" +
                 "                                <button class=\"btn btn-danger\" type=\"button\" id='btnDelete'>Delete</button>\n" +
                 "                            </div>\n" +
                 "                        </div>\n" +
                 "                    </td></tr>"
             $('#tblCustomer').append(row);
-            console.log(row);
         }
 
     }
@@ -334,6 +333,25 @@
     function clearTextFields() {
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').val("");
     }
+
+    $('#tblCustomer').on('click', '#btnEdit', function () {
+        // console.log( $(this).parent().parent().parent().parent().children(':first-child').text());
+        // console.log($(this).parents('tr').children(':first-child').text());
+        setCustomerDetails($(this).parents('tr').children(':first-child').text());
+
+    });
+
+    function setCustomerDetails(cusId) {
+        for (var i of cusArray) {
+            if (i.id == cusId) {
+                $('#txtCustomerId').val(i.id);
+                $('#txtCustomerName').val(i.name);
+                $('#txtCustomerAddress').val(i.address);
+                $('#txtCustomerSalary').val(i.salary);
+            }
+        }
+    }
+
 
 </script>
 
