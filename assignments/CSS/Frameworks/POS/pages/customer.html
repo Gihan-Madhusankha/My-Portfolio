@@ -252,6 +252,10 @@
         checkValidity();
     });
 
+    $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('blur', function () {
+        checkValidity();
+    });
+
     // customer regex
     const cusIDRegEx = /^(C00-)[0-9]{3}$/;
     const cusNameRegEx = /^[A-z ]{3,20}$/;
@@ -301,19 +305,19 @@
     function testSuccess(textField, msg) {
         if (textField.val().length <= 0) {
             textField.css('border', '1px solid #ced4da');
-            textField.parent().children('span').text(msg);
+            textField.parent().children('span').text("");
         } else {
             textField.css('border', '2px solid green');
             textField.parent().children('span').text(msg);
         }
     }
 
-    function setError(textField, msg){
+    function setError(textField, msg) {
         if (textField.val().length <= 0) {
             textField.css('border', '1px solid #ced4da');
-            textField.parent().children('span').text(msg);
+            textField.parent().children('span').text("");
         } else {
-            textField.css('border', '5px solid red');
+            textField.css('border', '3px solid red');
             textField.parent().children('span').text(msg);
         }
     }
