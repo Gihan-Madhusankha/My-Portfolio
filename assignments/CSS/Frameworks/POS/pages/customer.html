@@ -255,7 +255,7 @@
     const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
     let customerValidations = [];
-
+    customerValidations.push({reg:cusIDRegEx, field:$('#txtCustomerId'), error:'CustomerId pattern is wrong! ex: C00-001'});
 
 
     var cusArray = [];
