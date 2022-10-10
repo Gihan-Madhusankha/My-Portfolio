@@ -248,6 +248,10 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
+    $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('keyup', function (){
+        checkValidity();
+    });
+
     // customer regex
     const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
     const cusNameRegEx = /^[A-z ]{3,20}$/;
@@ -255,12 +259,39 @@
     const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
     let customerValidations = [];
-    customerValidations.push({reg:cusIDRegEx, field:$('#txtCustomerId'), error:'CustomerId pattern is wrong! ex: C00-001'});
-    customerValidations.push({reg:cusNameRegEx, field:$('#txtCustomerName'), error:'CustomerName pattern is wrong! ex: A-z (3-20)'});
-    customerValidations.push({reg:cusAddressRegEx, field:$('#txtCustomerAddress'), error:'CustomerAddress pattern is wrong! ex: A-z (0-9., /)'});
-    customerValidations.push({reg:cusSalaryRegEx, field:$('#txtCustomerSalary'), error:'CustomerSalary pattern is wrong! ex: 100 or 100.00'});
+    let c = {
+        reg: cusIDRegEx,
+        field: $('#txtCustomerId'),
+        error: 'CustomerId pattern is wrong! ex: C00-001'
+    }
+    customerValidations.push(c);
+    customerValidations.push({
+        reg: cusNameRegEx,
+        field: $('#txtCustomerName'),
+        error: 'CustomerName pattern is wrong! ex: A-z (3-20)'
+    });
+    customerValidations.push({
+        reg: cusAddressRegEx,
+        field: $('#txtCustomerAddress'),
+        error: 'CustomerAddress pattern is wrong! ex: A-z (0-9., /)'
+    });
+    customerValidations.push({
+        reg: cusSalaryRegEx,
+        field: $('#txtCustomerSalary'),
+        error: 'CustomerSalary pattern is wrong! ex: 100 or 100.00'
+    });
 
 
+    function checkValidity() {
+        for (let i of customerValidations) {
+            if (i.reg.test(i.field.val())){
+            }
+        }
+    }
+
+
+
+    // customer array
     var cusArray = [];
     $('#btnSave').click(function () {
 
