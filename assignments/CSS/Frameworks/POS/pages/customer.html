@@ -256,6 +256,9 @@
 
     let customerValidations = [];
     customerValidations.push({reg:cusIDRegEx, field:$('#txtCustomerId'), error:'CustomerId pattern is wrong! ex: C00-001'});
+    customerValidations.push({reg:cusNameRegEx, field:$('#txtCustomerName'), error:'CustomerName pattern is wrong! ex: A-z (3-20)'});
+    customerValidations.push({reg:cusAddressRegEx, field:$('#txtCustomerAddress'), error:'CustomerAddress pattern is wrong! ex: A-z (0-9., /)'});
+    customerValidations.push({reg:cusSalaryRegEx, field:$('#txtCustomerSalary'), error:'CustomerSalary pattern is wrong! ex: 100 or 100.00'});
 
 
     var cusArray = [];
