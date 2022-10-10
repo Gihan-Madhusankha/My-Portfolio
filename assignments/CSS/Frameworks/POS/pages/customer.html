@@ -343,9 +343,15 @@
         $('#btnSave').text('Update');
     });
 
+    // delete customer
     $('#tblCustomer').on('click', '#btnDelete', function () {
-
+        let abc = $(this).parents('tr').remove();
+        clearTextFields();
+        $('#btnSave').text('Save');
+        console.log(abc);
     });
+
+
 
 
 
@@ -356,6 +362,7 @@
                 $('#txtCustomerName').val(i.name);
                 $('#txtCustomerAddress').val(i.address);
                 $('#txtCustomerSalary').val(i.salary);
+                // console.log(i)
                 return true;
             }
         }
