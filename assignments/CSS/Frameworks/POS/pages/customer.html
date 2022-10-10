@@ -292,23 +292,11 @@
         }
     });
 
-    // function searchCustomer(cusId) {
-    //     for (var i of cusArray) {
-    //         if (i.id == cusId) {
-    //             $('#txtCustomerId').val(i.id);
-    //             $('#txtCustomerName').val(i.name);
-    //             $('#txtCustomerAddress').val(i.address);
-    //             $('#txtCustomerSalary').val(i.salary);
-    //             return true;
-    //         }
-    //     }
-    // }
-
 
     $('#txtCustomerId').keydown(function (event) {
         if (event.key == 'Enter') {
             var option = searchCustomer($('#txtCustomerId').val());
-            if (!option) {
+            if (option == null) {
                 $('#txtCustomerName').focus();
             }
         }
@@ -349,7 +337,7 @@
         let cusID = $(this).parents('tr').children(':first-child').text();
 
         for (var i of cusArray) {
-            if (i.id == cusID){
+            if (i.id == cusID) {
                 cusArray.splice(i, 1);
             }
         }
@@ -365,12 +353,13 @@
             if (i.id == cusId) {
                 setTextFieldValues(i.id, i.name, i.address, i.salary);
                 // console.log(i)
-                return true;
+                return i;
             }
         }
+        return null;
     }
 
-    function setTextFieldValues(id, name, address, salary){
+    function setTextFieldValues(id, name, address, salary) {
         $('#txtCustomerId').val(id);
         $('#txtCustomerName').val(name);
         $('#txtCustomerAddress').val(address);
