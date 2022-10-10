@@ -266,16 +266,16 @@
             console.log(textOfButton);
 
         } else {
-            // update customer
 
-            var name = $('#txtCustomerName').val();
-            console.log(name);
-            console.log();
+            // update customer
+            cusArray[indexNo].id = $('#txtCustomerId').val();
+            cusArray[indexNo].name = $('#txtCustomerName').val();
+            cusArray[indexNo].address = $('#txtCustomerAddress').val();
+            cusArray[indexNo].salary = $('#txtCustomerSalary').val();
 
         }
 
         // console.log(cusArray);
-
         loadAllCustomers();
         clearTextFields();
 
@@ -346,6 +346,7 @@
     });
 
     let indexNo = "";
+
     function findIndexNumber(cusID) {
         console.log(cusArray.indexOf(cusID));
         indexNo = cusArray.indexOf(cusID);
