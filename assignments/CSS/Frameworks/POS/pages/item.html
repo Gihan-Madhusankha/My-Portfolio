@@ -278,6 +278,12 @@
 
     }
 
+    // clear button
+    $('#btnClear').click(function () {
+        clearTextFields();
+        $('#btnSave').text('Save');
+    });
+
     // click edit button
     $('#tblItem').on('click', '#btnEdit', function () {
         var itmCode = searchItem($(this).parents('tr').children(':first-child').text());
