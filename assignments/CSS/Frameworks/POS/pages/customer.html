@@ -345,10 +345,27 @@
 
     // edit button
     $('#tblCustomer').on('click', '#btnEdit', function () {
-        var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
-        $('#btnSave').text('Update');
-        findIndexNumber(cusID);
-        getDefault();
+
+        swal({
+            title: "Are you sure?",
+            text: "Do you really want to update this customer!",
+            icon: "warning",
+            buttons: true,
+            // dangerMode: true,
+        })
+            .then((willAdd) => {
+                if (willAdd) {
+                    var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
+                    $('#btnSave').text('Update');
+                    findIndexNumber(cusID);
+                    getDefault();
+
+                    swal("Poof! Your imaginary file has been updated!", {
+                        icon: "success",
+                    });
+                }
+            });
+
     });
 
     // hide span text and get default border color
