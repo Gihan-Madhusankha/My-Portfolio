@@ -314,8 +314,7 @@
 
     function clearTextFields() {
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').val("");
-        $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').css('border', '1px solid #CED4DA');
-        $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').parent().children('span').text("");
+        getDefault();
     }
 
     // edit button
@@ -323,12 +322,18 @@
         var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
         $('#btnSave').text('Update');
         findIndexNumber(cusID);
+        getDefault();
+    });
+
+    // hide span text and get default border color
+    function getDefault() {
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').parent().children('span').text("");
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').css('border', '1px solid #CED4DA');
-    });
+    }
 
 
     let indexNo = "";
+
     function findIndexNumber(cusID) {
         console.log(cusArray.indexOf(cusID));
         indexNo = cusArray.indexOf(cusID);
