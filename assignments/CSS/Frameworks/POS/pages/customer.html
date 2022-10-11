@@ -99,7 +99,8 @@
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
                 <button class="btn btn-warning w-25" id="btnClear" style="margin: 5px" type="button">Clear</button>
-                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save</button>
+                <button class="btn btn-success w-25" disabled id="btnSave" style="margin: 5px" type="button">Save
+                </button>
             </div>
         </div>
     </section>
@@ -248,13 +249,14 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
+
     $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('keyup', function () {
         checkValidity();
     });
 
-    $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('blur', function () {
-        checkValidity();
-    });
+    // $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').on('blur', function () {
+    //     checkValidity();
+    // });
 
     // customer regex
     const cusIDRegEx = /^(C00-)[0-9]{3}$/;
@@ -312,12 +314,19 @@
         }
     }
 
+    $(function () {
+        console.log('id', $('#txtCustomerId').val().length);
+        console.log('name', $('#txtCustomerName').val().length);
+        console.log('address', $('#txtCustomerAddress').val().length);
+        console.log('salary', $('#txtCustomerSalary').val().length);
+    });
+
     function setError(textField, msg) {
         if (textField.val().length <= 0) {
             textField.css('border', '1px solid #ced4da');
             textField.parent().children('span').text("");
         } else {
-            textField.css('border', '2px solid red');
+            textField.css('border', '3px solid red');
             textField.parent().children('span').text(msg);
         }
     }
