@@ -78,22 +78,22 @@
             <div class="mb-3">
                 <label class="form-label" for="txtItemCode">Item Code</label>
                 <input class="form-control" id="txtItemCode" placeholder="I00-001" type="text">
-                <span></span>
+                <span style="font-size: 12px; color: red"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemName">Item Name</label>
                 <input class="form-control" id="txtItemName" placeholder="item-name" type="text">
-                <span></span>
+                <span style="font-size: 12px; color: red"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemPrice">Price</label>
                 <input class="form-control" id="txtItemPrice" placeholder="100.00" type="number">
-                <span></span>
+                <span style="font-size: 12px; color: red"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtQtyOnHand">Qry on Hand</label>
                 <input class="form-control" id="txtQtyOnHand" placeholder="650" type="number">
-                <span></span>
+                <span style="font-size: 12px; color: red"></span>
             </div>
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
@@ -129,21 +129,6 @@
                 </tr>
                 </thead>
                 <tbody class="table table-hover table-striped sticky" id="tblItem">
-                <tr>
-                    <td>I001</td>
-                    <td>Brand-T</td>
-                    <td>1590</td>
-                    <td>90</td>
-                    <td>
-                        <div class="d-flex justify-content-center" style="padding: 0; margin: 0;">
-                            <div aria-label="Basic mixed styles example" class="btn-group btn-group-sm" role="group"
-                                 style="padding: 0">
-                                <button class="btn btn-warning" type="button">Edit</button>
-                                <button class="btn btn-danger" type="button">Delete</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </aside>
@@ -341,7 +326,7 @@
 
     // search item
     function searchItem(itmCode) {
-        for (var i of cusArray) {
+        for (var i of itmArray) {
             if (i.code == itmCode) {
                 setTextFieldValues(i.code, i.name, i.price, i.qtyOnHand);
                 return i;
@@ -350,6 +335,7 @@
         return null;
     }
 
+    // set values
     function setTextFieldValues(code, name, price, qtyOnHand) {
         $('#txtItemCode').val(code);
         $('#txtItemName').val(name);
@@ -357,12 +343,13 @@
         $('#txtQtyOnHand').val(qtyOnHand);
     }
 
+
     // delete item using delete button
     $('#tblItem').on('click', '#btnDelete', function () {
         let itmID = $(this).parents('tr').children(':first-child').text();
         let indexNumber = itmArray.indexOf(itmID);
         itmArray.splice(indexNumber, 1);
-        loadAllCustomers();
+        loadAllItems();
 
         clearTextFields();
         $('#btnSave').text('Save');
