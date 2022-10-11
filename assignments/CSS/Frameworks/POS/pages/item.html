@@ -167,14 +167,13 @@
             let qtyOnHand = $('#txtQtyOnHand').val();
 
             var item = {
-                id: itemCode,
+                code: itemCode,
                 name: itemName,
-                address: itemPrice,
-                salary: qtyOnHand
+                price: itemPrice,
+                qtyOnHand: qtyOnHand
             }
 
-            cusArray.push(item);
-            console.log(textOfButton);
+            itmArray.push(item);
 
         }
 
