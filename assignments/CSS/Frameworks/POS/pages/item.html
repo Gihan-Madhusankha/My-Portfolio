@@ -177,7 +177,29 @@
 
         }
 
+        loadAllItems();
+
+
     });
+
+    // loadAllItems
+    function loadAllItems() {
+        $('#tblItem').empty();
+
+        for (var i of itmArray) {
+            var row = "<tr><td>" + i.code + "</td><td>" + i.name + "</td><td>" + i.price + "</td><td>" + i.qtyOnHand + "</td><td class='operate'>\n" +
+                "                        <div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
+                "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
+                "                                 style=\"padding: 0\">\n" +
+                "                                <button class=\"btn btn-warning btnEdit\" type=\"button\" id='btnEdit'>Edit</button>\n" +
+                "                                <button class=\"btn btn-danger\" type=\"button\" id='btnDelete'>Delete</button>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                    </td></tr>"
+            $('#tblItem').append(row);
+        }
+
+    }
 
 
 </script>
