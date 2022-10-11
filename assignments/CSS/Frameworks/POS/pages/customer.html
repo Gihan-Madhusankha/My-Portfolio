@@ -83,7 +83,7 @@
 
             <div class="mb-3">
                 <label class="form-label" for="txtCustomerId">Customer ID</label>
-                <input class="form-control" id="txtCustomerId" placeholder="C001" type="text">
+                <input class="form-control" id="txtCustomerId" placeholder="C00-001" type="text">
                 <span style="font-size: 12px; color: red"></span>
             </div>
             <div class="mb-3">
@@ -99,7 +99,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCustomerSalary">Customer Salary</label>
-                <input class="form-control" id="txtCustomerSalary" placeholder="25000.00" type="number">
+                <input class="form-control" id="txtCustomerSalary" placeholder="100000.00" type="number">
                 <span style="font-size: 12px; color: red"></span>
             </div>
 
@@ -307,6 +307,7 @@
         }
     });
 
+    // clear button
     $('#btnClear').click(function () {
         clearTextFields();
         $('#btnSave').text('Save');
