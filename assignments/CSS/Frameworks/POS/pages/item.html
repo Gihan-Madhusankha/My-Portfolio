@@ -156,7 +156,21 @@
 
     // item array
     var itmArray = [];
+    $('#btnSave').on('click', function () {
 
+        let textOfButton = $('#btnSave').text();
+
+        if (textOfButton == 'Save') {
+            let itemCode = $('#txtItemCode').val();
+            let itemName = $('#txtItemName').val();
+            let itemPrice = $('#txtItemPrice').val();
+            let qtyOnHand = $('#txtQtyOnHand').val();
+
+
+
+        }
+
+    });
 
 
 </script>
