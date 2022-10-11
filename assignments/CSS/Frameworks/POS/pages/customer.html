@@ -323,10 +323,12 @@
         var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
         $('#btnSave').text('Update');
         findIndexNumber(cusID);
+        $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').parent().children('span').text("");
+        $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').css('border', '1px solid #CED4DA');
     });
 
-    let indexNo = "";
 
+    let indexNo = "";
     function findIndexNumber(cusID) {
         console.log(cusArray.indexOf(cusID));
         indexNo = cusArray.indexOf(cusID);
