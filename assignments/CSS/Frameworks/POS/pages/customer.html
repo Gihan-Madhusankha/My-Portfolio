@@ -147,6 +147,7 @@
 
 <script src="../assets/js/bootstrap.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
 
 
@@ -227,7 +228,7 @@
     $('#btnSave').on('click', function () {
 
         let textOfButton = $('#btnSave').text();
-        console.log(textOfButton)
+        // save customer
         if (textOfButton == 'Save') {
             let customerId = $('#txtCustomerId').val();
             let customerName = $('#txtCustomerName').val();
@@ -241,8 +242,30 @@
                 salary: customerSalary
             }
 
-            cusArray.push(customer);
-            console.log(textOfButton);
+            // let ok = confirm('Do you want to add this customer!');
+            // if (ok){
+            //     cusArray.push(customer);
+            // }
+
+            ///////
+
+            swal({
+                title: "Are you sure?",
+                text: "Do you really want to add this customer!",
+                icon: "warning",
+                buttons: true,
+                // dangerMode: true,
+            })
+                .then((willAdd) => {
+                    if (willAdd) {
+                        cusArray.push(customer);
+                        loadAllCustomers();
+                        swal("Poof! Your imaginary file has been added!", {
+                            icon: "success",
+                        });
+                    }
+                });
+
 
         } else {
 
@@ -254,7 +277,6 @@
             $('#btnSave').text('Save');
         }
 
-        // console.log(cusArray);
         loadAllCustomers();
         clearTextFields();
 
