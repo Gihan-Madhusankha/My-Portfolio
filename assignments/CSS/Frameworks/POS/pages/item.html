@@ -179,7 +179,6 @@
 
         loadAllItems();
 
-
     });
 
     // loadAllItems
@@ -197,6 +196,24 @@
                 "                        </div>\n" +
                 "                    </td></tr>"
             $('#tblItem').append(row);
+        }
+
+    }
+
+    // click edit button
+    $('#tblItem').on('click', '#btnEdit', function () {
+        var itmCode = searchItem($(this).parents('tr').children(':first-child').text());
+        $('#btnSave').text('Update');
+        findIndexNumber(itmCode);
+        getDefault();
+    });
+
+    // search item
+    function searchItem(itmCode) {
+        for (var i of cusArray) {
+            if (i.code == itmCode) {
+
+            }
         }
 
     }
