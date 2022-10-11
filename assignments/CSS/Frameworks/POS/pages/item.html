@@ -178,6 +178,7 @@
         }
 
         loadAllItems();
+        clearTextFields();
 
     });
 
@@ -208,6 +209,13 @@
         getDefault();
     });
 
+    let indexNo = "";
+
+    function findIndexNumber(itmID) {
+        // console.log(itmArray.indexOf(itmID));
+        indexNo = itmArray.indexOf(itmID);
+    }
+
     // search item
     function searchItem(itmCode) {
         for (var i of cusArray) {
@@ -233,6 +241,7 @@
         itmArray.splice(indexNumber, 1);
         loadAllCustomers();
 
+        clearTextFields();
         $('#btnSave').text('Save');
     });
 
