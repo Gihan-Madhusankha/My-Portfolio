@@ -278,6 +278,36 @@
 
     }
 
+    $('#txtItemCode').keydown(function (event) {
+        if (event.key == 'Enter' && check(itmCodeRegEx, $('#txtItemCode'))) {
+            var option = searchItem($('#txtItemCode').val());
+            if (option == null) {
+                $('#txtItemName').focus();
+            }
+        } else {
+            $('#txtItemCode').focus();
+        }
+    });
+
+    $('#txtItemName').keydown(function (event) {
+        if (event.key == 'Enter' && check(itmNameRegEx, $('#txtItemName'))) {
+            $('#txtItemPrice').focus();
+        }
+    });
+
+    $('#txtItemPrice').keydown(function (event) {
+        if (event.key == 'Enter' && check(itmPriceRegEx, $('#txtItemPrice'))) {
+            $('#txtQtyOnHand').focus();
+        }
+    });
+
+
+    function check(regex, textField) {
+        let inputValue = textField.val();
+        return regex.test(inputValue);
+    }
+
+
     // clear button
     $('#btnClear').click(function () {
         clearTextFields();
