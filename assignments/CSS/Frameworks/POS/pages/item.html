@@ -179,7 +179,6 @@
 
         loadAllItems();
 
-
     });
 
     // loadAllItems
@@ -226,6 +225,16 @@
         $('#txtItemPrice').val(price);
         $('#txtQtyOnHand').val(qtyOnHand);
     }
+
+    // delete item using delete button
+    $('#tblItem').on('click', '#btnDelete', function () {
+        let itmID = $(this).parents('tr').children(':first-child').text();
+        let indexNumber = itmArray.indexOf(itmID);
+        itmArray.splice(indexNumber, 1);
+        loadAllCustomers();
+
+        $('#btnSave').text('Save');
+    });
 
 
 </script>
