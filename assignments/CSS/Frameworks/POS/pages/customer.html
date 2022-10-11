@@ -17,7 +17,13 @@
 
     <link href="../assets/css/style.css" rel="stylesheet">
 
-    <style></style>
+    <style>
+
+        /*.btn-success {*/
+        /*    border: none;*/
+        /*}*/
+
+    </style>
 
 </head>
 
@@ -99,8 +105,7 @@
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
                 <button class="btn btn-warning w-25" id="btnClear" style="margin: 5px" type="button">Clear</button>
-                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save
-                </button>
+                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save</button>
             </div>
         </div>
     </section>
@@ -192,7 +197,7 @@
 
     function check(regex, textField) {
         let inputValue = textField.val();
-        console.log(regex.test(inputValue));
+        // console.log(regex.test(inputValue));
         return regex.test(inputValue);
     }
 
@@ -205,13 +210,6 @@
             textField.parent().children('span').text(msg);
         }
     }
-
-    $(function () {
-        console.log('id', $('#txtCustomerId').val().length);
-        console.log('name', $('#txtCustomerName').val().length);
-        console.log('address', $('#txtCustomerAddress').val().length);
-        console.log('salary', $('#txtCustomerSalary').val().length);
-    });
 
     function setError(textField, msg) {
         if (textField.val().length <= 0) {
@@ -226,9 +224,10 @@
 
     // customer array
     var cusArray = [];
-    $('#btnSave').click(function () {
+    $('#btnSave').on('click', function () {
 
         let textOfButton = $('#btnSave').text();
+        console.log(textOfButton)
         if (textOfButton == 'Save') {
             let customerId = $('#txtCustomerId').val();
             let customerName = $('#txtCustomerName').val();
@@ -252,7 +251,7 @@
             cusArray[indexNo].name = $('#txtCustomerName').val();
             cusArray[indexNo].address = $('#txtCustomerAddress').val();
             cusArray[indexNo].salary = $('#txtCustomerSalary').val();
-            $('#btnSave').text('Save')
+            $('#btnSave').text('Save');
         }
 
         // console.log(cusArray);
@@ -315,6 +314,8 @@
 
     function clearTextFields() {
         $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').val("");
+        $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').css('border', '1px solid #CED4DA');
+        $('#txtCustomerId, #txtCustomerName, #txtCustomerAddress, #txtCustomerSalary').parent().children('span').text("");
     }
 
     // edit button
@@ -359,6 +360,7 @@
         $('#txtCustomerAddress').val(address);
         $('#txtCustomerSalary').val(salary);
     }
+
 
 </script>
 
