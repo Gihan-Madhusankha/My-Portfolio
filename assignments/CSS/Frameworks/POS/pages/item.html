@@ -193,7 +193,32 @@
 
     function checkValidity() {
         for (let validation of itemValidations) {
-            if (check(validation.reg, validation.field)) {}
+            if (check(validation.reg, validation.field)) {
+                testSuccess(validation.field, "");
+            } else {
+                setError(validation.field, validation.error);
+            }
+        }
+    }
+
+    function testSuccess(textField, msg) {
+        if (textField.val().length <= 0) {
+            textField.css('border', '1px solid #CED4DA');
+            textField.parent().children('span').text("");
+        } else {
+            textField.css('border', '3px solid lightgreen');
+            textField.parent().children('span').text(msg);
+        }
+    }
+
+
+    function setError(textField, msg) {
+        if (textField.val().length <= 0) {
+            textField.css('border', '1px solid #CED4DA');
+            textField.parent().children('span').text("");
+        } else {
+            textField.css('border', '3px solid red');
+            textField.parent().children('span').text(msg);
         }
     }
 
