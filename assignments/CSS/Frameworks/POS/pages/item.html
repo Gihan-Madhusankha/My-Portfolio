@@ -157,6 +157,11 @@
 
 <script>
 
+    $('#txtItemCode, #txtItemName, #txtItemPrice, #txtQtyOnHand').on('keyup', function () {
+        checkValidity();
+    });
+
+
     // item regex
     const itmCodeRegEx = /^(I00-)[0-9]{3}$/;
     const itmNameRegEx = /^[A-z ]{3,20}$/;
@@ -185,6 +190,12 @@
         field: $('#txtQtyOnHand'),
         error: 'QtyOnHand pattern is wrong! ex: (0-9)'
     });
+
+    function checkValidity() {
+        for (let validation of itemValidations) {
+            if (check(validation.reg, validation.field)) {}
+        }
+    }
 
 
     // item array
