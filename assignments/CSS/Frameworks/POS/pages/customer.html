@@ -276,7 +276,7 @@
             cusArray[indexNo].salary = $('#txtCustomerSalary').val();
             $('#btnSave').text('Save');
             loadAllCustomers();
-
+            alert('Updated!');
         }
 
 
@@ -367,13 +367,29 @@
 
     // delete customer using delete button
     $('#tblCustomer').on('click', '#btnDelete', function () {
-        let cusID = $(this).parents('tr').children(':first-child').text();
-        let indexNumber = cusArray.indexOf(cusID);
-        cusArray.splice(indexNumber, 1);
-        loadAllCustomers();
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    let cusID = $(this).parents('tr').children(':first-child').text();
+                    let indexNumber = cusArray.indexOf(cusID);
+                    cusArray.splice(indexNumber, 1);
+                    loadAllCustomers();
 
-        clearTextFields();
-        $('#btnSave').text('Save');
+                    clearTextFields();
+                    $('#btnSave').text('Save');
+
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                }
+            });
+
     });
 
     // search customer
