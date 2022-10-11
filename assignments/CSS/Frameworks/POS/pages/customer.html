@@ -275,9 +275,11 @@
             cusArray[indexNo].address = $('#txtCustomerAddress').val();
             cusArray[indexNo].salary = $('#txtCustomerSalary').val();
             $('#btnSave').text('Save');
+            loadAllCustomers();
+
         }
 
-        loadAllCustomers();
+
         clearTextFields();
 
     });
