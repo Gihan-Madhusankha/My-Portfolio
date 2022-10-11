@@ -179,6 +179,7 @@
 
         loadAllItems();
 
+
     });
 
     // loadAllItems
@@ -212,10 +213,18 @@
     function searchItem(itmCode) {
         for (var i of cusArray) {
             if (i.code == itmCode) {
-
+                setTextFieldValues(i.code, i.name, i.price, i.qtyOnHand);
+                return i;
             }
         }
+        return null;
+    }
 
+    function setTextFieldValues(code, name, price, qtyOnHand) {
+        $('#txtItemCode').val(code);
+        $('#txtItemName').val(name);
+        $('#txtItemPrice').val(price);
+        $('#txtQtyOnHand').val(qtyOnHand);
     }
 
 
