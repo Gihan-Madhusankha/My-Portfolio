@@ -77,20 +77,23 @@
 
             <div class="mb-3">
                 <label class="form-label" for="txtItemCode">Item Code</label>
-                <input class="form-control" id="txtItemCode" placeholder="I001" type="text">
+                <input class="form-control" id="txtItemCode" placeholder="I00-001" type="text">
+                <span></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemName">Item Name</label>
                 <input class="form-control" id="txtItemName" placeholder="item-name" type="text">
+                <span></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemPrice">Price</label>
-                <input class="form-control" id="txtItemPrice" placeholder="100.00"
-                       type="text">
+                <input class="form-control" id="txtItemPrice" placeholder="100.00" type="number">
+                <span></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtQtyOnHand">Qry on Hand</label>
                 <input class="form-control" id="txtQtyOnHand" placeholder="650" type="number">
+                <span></span>
             </div>
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
@@ -175,6 +178,14 @@
 
             itmArray.push(item);
 
+        } else {
+
+            // update item
+            itmArray[indexNo].code = $('#txtItemCode').val();
+            itmArray[indexNo].name = $('#txtItemName').val();
+            itmArray[indexNo].price = $('#txtItemPrice').val();
+            itmArray[indexNo].qtyOnHand = $('#txtQtyOnHand').val();
+            $('#btnSave').text('Save');
         }
 
         loadAllItems();
