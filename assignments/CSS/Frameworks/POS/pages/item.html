@@ -346,13 +346,31 @@
 
     // delete item using delete button
     $('#tblItem').on('click', '#btnDelete', function () {
-        let itmID = $(this).parents('tr').children(':first-child').text();
-        let indexNumber = itmArray.indexOf(itmID);
-        itmArray.splice(indexNumber, 1);
-        loadAllItems();
 
-        clearTextFields();
-        $('#btnSave').text('Save');
+
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    let itmID = $(this).parents('tr').children(':first-child').text();
+                    let indexNumber = itmArray.indexOf(itmID);
+                    itmArray.splice(indexNumber, 1);
+                    loadAllItems();
+
+                    clearTextFields();
+                    $('#btnSave').text('Save');
+
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                }
+            });
+
     });
 
     function clearTextFields() {
