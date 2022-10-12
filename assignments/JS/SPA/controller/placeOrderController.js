@@ -35,3 +35,23 @@ function setCustomerDetails(cusObj) {
     $('#cusAddress').val(cusObj.address);
     $('#cusSalary').val(cusObj.salary);
 }
+
+$('#selectItmCode').change(function () {
+    let selectedVal1 = $(this).val();
+    for (let itm of itmArray) {
+        if (itm.code == selectedVal1) {
+            setItemDetails(itm);
+        } else if ('select' == selectedVal1) {
+            $('#itmCode, #itmName, #itmPrice, #itmQty').val("");
+        }
+    }
+
+});
+
+function setItemDetails(itmObj) {
+    $('#itmCode').val(itmObj.code);
+    $('#itmName').val(itmObj.name);
+    $('#itmPrice').val(itmObj.price);
+    $('#itmQty').val(itmObj.qtyOnHand);
+}
+
