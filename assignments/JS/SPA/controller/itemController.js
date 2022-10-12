@@ -1,5 +1,5 @@
 $('#txtItemCode, #txtItemName, #txtItemPrice, #txtQtyOnHand').on('keyup', function () {
-    checkValidity();
+    check1Validity1();
 });
 
 
@@ -32,17 +32,17 @@ itemValidations.push({
     error: 'QtyOnHand pattern is wrong! ex: (0-9)'
 });
 
-function checkValidity() {
+function check1Validity1() {
     for (let validation of itemValidations) {
-        if (check(validation.reg, validation.field)) {
-            testSuccess(validation.field, "");
+        if (check1(validation.reg, validation.field)) {
+            testSuccess1(validation.field, "");
         } else {
-            setError(validation.field, validation.error);
+            setError1(validation.field, validation.error);
         }
     }
 }
 
-function testSuccess(textField, msg) {
+function testSuccess1(textField, msg) {
     if (textField.val().length <= 0) {
         textField.css('border', '1px solid #CED4DA');
         textField.parent().children('span').text("");
@@ -53,7 +53,7 @@ function testSuccess(textField, msg) {
 }
 
 
-function setError(textField, msg) {
+function setError1(textField, msg) {
     if (textField.val().length <= 0) {
         textField.css('border', '1px solid #CED4DA');
         textField.parent().children('span').text("");
@@ -153,7 +153,7 @@ $('#txtItemCode, #txtItemName, #txtItemPrice, #txtQtyOnHand').on('keydown', func
 
 
 $('#txtItemCode').keydown(function (event) {
-    if (event.key == 'Enter' && check(itmCodeRegEx, $('#txtItemCode'))) {
+    if (event.key == 'Enter' && check1(itmCodeRegEx, $('#txtItemCode'))) {
         var option = searchItem($('#txtItemCode').val());
         if (option == null) {
             $('#txtItemName').focus();
@@ -164,19 +164,19 @@ $('#txtItemCode').keydown(function (event) {
 });
 
 $('#txtItemName').keydown(function (event) {
-    if (event.key == 'Enter' && check(itmNameRegEx, $('#txtItemName'))) {
+    if (event.key == 'Enter' && check1(itmNameRegEx, $('#txtItemName'))) {
         $('#txtItemPrice').focus();
     }
 });
 
 $('#txtItemPrice').keydown(function (event) {
-    if (event.key == 'Enter' && check(itmPriceRegEx, $('#txtItemPrice'))) {
+    if (event.key == 'Enter' && check1(itmPriceRegEx, $('#txtItemPrice'))) {
         $('#txtQtyOnHand').focus();
     }
 });
 
 
-function check(regex, textField) {
+function check1(regex, textField) {
     let inputValue = textField.val();
     return regex.test(inputValue);
 }
