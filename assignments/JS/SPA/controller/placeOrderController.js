@@ -56,12 +56,23 @@ function setItemDetails(itmObj) {
 }
 
 
-$('#addToCart').on('click', function (){
+$('#addToCart').on('click', function () {
 
     let validate1 = ($('#orderQty').val().length != 0);
     let validate2 = ($('#itmQty').val() >= $('#orderQty').val());
 
-    if (validate1 && validate2){
+    if (validate1 && validate2) {
+
+            var itemRow = "<tr><td>"+$('#itmCode').val()+"</td><td>"+$('#itmName').val()+"</td><td>"+$('#itmPrice').val()+"</td><td>"+$('#orderQty').val()+"</td><td>"+143100+"</td><td>\n" +
+                "                        <div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
+                "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
+                "                                 style=\"padding: 0\">\n" +
+                "                                <button class=\"btn btn-danger\" type=\"button\">Remove</button>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                    </td></tr>"
+
+        $('#tblPurchaseItem').append(itemRow);
 
     } else {
         alert('Something went wrong...!!!');
