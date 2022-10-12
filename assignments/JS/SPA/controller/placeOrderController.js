@@ -55,3 +55,17 @@ function setItemDetails(itmObj) {
     $('#itmQty').val(itmObj.qtyOnHand);
 }
 
+
+$('#addToCart').on('click', function (){
+
+    let validate1 = ($('#orderQty').val().length != 0);
+    let validate2 = ($('#itmQty').val() >= $('#orderQty').val());
+
+    if (validate1 && validate2){
+
+    } else {
+        alert('Something went wrong...!!!');
+    }
+
+});
+
