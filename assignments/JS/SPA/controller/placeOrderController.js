@@ -58,8 +58,9 @@ function setItemDetails(itmObj) {
 
 $('#addToCart').on('click', function () {
 
-    let validate1 = ($('#orderQty').val().length != 0);
-    let validate2 = ($('#itmQty').val() >= $('#orderQty').val());
+    let validate1 = $('#orderQty').val().length != 0;
+    let validate2 = $('#itmQty').val() >= $('#orderQty').val();
+    console.log(validate1,validate2);
 
     if (validate1 && validate2) {
 
