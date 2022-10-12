@@ -140,6 +140,7 @@ function loadAllItems() {
             "                    </td></tr>"
         $('#tblItem').append(row);
     }
+    loadAllItemCodes();
 
 }
 
