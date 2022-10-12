@@ -242,13 +242,6 @@
                 salary: customerSalary
             }
 
-            // let ok = confirm('Do you want to add this customer!');
-            // if (ok){
-            //     cusArray.push(customer);
-            // }
-
-            ///////
-
             swal({
                 title: "Are you sure?",
                 text: "Do you really want to add this customer!",
@@ -256,16 +249,17 @@
                 buttons: true,
                 // dangerMode: true,
             })
-                .then((willAdd) => {
-                    if (willAdd) {
+                .then((willDelete) => {
+
+                    if (willDelete) {
                         cusArray.push(customer);
                         loadAllCustomers();
-                        swal("Poof! Your imaginary file has been added!", {
+
+                        swal("Poof! Your imaginary customer has been added!", {
                             icon: "success",
                         });
                     }
                 });
-
 
         } else {
 
@@ -276,9 +270,14 @@
             cusArray[indexNo].salary = $('#txtCustomerSalary').val();
             $('#btnSave').text('Save');
             loadAllCustomers();
-            alert('Updated!');
-        }
 
+            swal({
+                title: "Updated!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: "OK",
+            });
+        }
 
         clearTextFields();
 
@@ -345,26 +344,10 @@
 
     // edit button
     $('#tblCustomer').on('click', '#btnEdit', function () {
-
-        swal({
-            title: "Are you sure?",
-            text: "Do you really want to update this customer!",
-            icon: "warning",
-            buttons: true,
-            // dangerMode: true,
-        })
-            .then((willAdd) => {
-                if (willAdd) {
-                    var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
-                    $('#btnSave').text('Update');
-                    findIndexNumber(cusID);
-                    getDefault();
-
-                    swal("Poof! Your imaginary file has been updated!", {
-                        icon: "success",
-                    });
-                }
-            });
+        var cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
+        $('#btnSave').text('Update');
+        findIndexNumber(cusID);
+        getDefault();
 
     });
 
@@ -378,8 +361,9 @@
     let indexNo = "";
 
     function findIndexNumber(cusID) {
-        console.log(cusArray.indexOf(cusID));
+        // console.log(cusArray.indexOf(cusID));
         indexNo = cusArray.indexOf(cusID);
+        return indexNo;
     }
 
     // delete customer using delete button
@@ -393,19 +377,20 @@
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    let cusID = $(this).parents('tr').children(':first-child').text();
-                    let indexNumber = cusArray.indexOf(cusID);
+                    let cusID = searchCustomer($(this).parents('tr').children(':first-child').text());
+                    let indexNumber = findIndexNumber(cusID);
                     cusArray.splice(indexNumber, 1);
                     loadAllCustomers();
 
                     clearTextFields();
                     $('#btnSave').text('Save');
 
-                    swal("Poof! Your imaginary file has been deleted!", {
+                    swal("Poof! Your imaginary customer has been deleted!", {
                         icon: "success",
                     });
                 }
             });
+
 
     });
 

@@ -139,6 +139,7 @@
 
 <script src="../assets/js/bootstrap.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
 
@@ -227,7 +228,24 @@
                 qtyOnHand: qtyOnHand
             }
 
-            itmArray.push(item);
+            swal({
+                title: "Are you sure?",
+                text: "Do you really want to add this item!",
+                icon: "warning",
+                buttons: true,
+                // dangerMode: true,
+            })
+                .then((willDelete) => {
+
+                    if (willDelete) {
+                        itmArray.push(item);
+                        loadAllItems();
+
+                        swal("Poof! Your imaginary item has been added!", {
+                            icon: "success",
+                        });
+                    }
+                });
 
         } else {
 
@@ -237,9 +255,15 @@
             itmArray[indexNo].price = $('#txtItemPrice').val();
             itmArray[indexNo].qtyOnHand = $('#txtQtyOnHand').val();
             $('#btnSave').text('Save');
+            loadAllItems();
+
+            swal({
+                title: "Updated!",
+                icon: "success",
+                button: "OK",
+            });
         }
 
-        loadAllItems();
         clearTextFields();
 
     });
@@ -322,6 +346,7 @@
     function findIndexNumber(itmID) {
         // console.log(itmArray.indexOf(itmID));
         indexNo = itmArray.indexOf(itmID);
+        return indexNo;
     }
 
     // search item
@@ -346,8 +371,6 @@
 
     // delete item using delete button
     $('#tblItem').on('click', '#btnDelete', function () {
-
-
         swal({
             title: "Are you sure?",
             text: "Once deleted, you will not be able to recover this imaginary file!",
@@ -357,15 +380,15 @@
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    let itmID = $(this).parents('tr').children(':first-child').text();
-                    let indexNumber = itmArray.indexOf(itmID);
+                    let itmID = searchItem($(this).parents('tr').children(':first-child').text());
+                    let indexNumber = findIndexNumber(itmID);
                     itmArray.splice(indexNumber, 1);
                     loadAllItems();
 
                     clearTextFields();
                     $('#btnSave').text('Save');
 
-                    swal("Poof! Your imaginary file has been deleted!", {
+                    swal("Poof! Your imaginary item has been deleted!", {
                         icon: "success",
                     });
                 }
