@@ -68,9 +68,9 @@ function setError1(textField, msg) {
 var itmArray = [];
 $('#btn_Save').on('click', function () {
 
-    let textOfButton = $('#btn_Save').text();
+    let textOfButton1 = $('#btn_Save').text();
 
-    if (textOfButton == 'Save') {
+    if (textOfButton1 == 'Save') {
         let itemCode = $('#txtItemCode').val();
         let itemName = $('#txtItemName').val();
         let itemPrice = $('#txtItemPrice').val();
@@ -119,7 +119,7 @@ $('#btn_Save').on('click', function () {
         });
     }
 
-    clearTextFields();
+    clearTextFields1();
 
 });
 
@@ -133,8 +133,8 @@ function loadAllItems() {
             "                        <div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
             "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
             "                                 style=\"padding: 0\">\n" +
-            "                                <button class=\"btn btn-warning btnEdit\" type=\"button\" id='btnEdit'>Edit</button>\n" +
-            "                                <button class=\"btn btn-danger\" type=\"button\" id='btnDelete'>Delete</button>\n" +
+            "                                <button class=\"btn btn-warning\" type=\"button\" id='btn_Edit'>Edit</button>\n" +
+            "                                <button class=\"btn btn-danger\" type=\"button\" id='btn_Delete'>Delete</button>\n" +
             "                            </div>\n" +
             "                        </div>\n" +
             "                    </td></tr>"
@@ -184,21 +184,21 @@ function check1(regex, textField) {
 
 // clear button
 $('#btn_Clear').click(function () {
-    clearTextFields();
+    clearTextFields1();
     $('#btn_Save').text('Save');
 });
 
 // click edit button
-$('#tblItem').on('click', '#btnEdit', function () {
+$('#tblItem').on('click', '#btn_Edit', function () {
     var itmCode = searchItem($(this).parents('tr').children(':first-child').text());
     $('#btn_Save').text('Update');
-    findIndexNumber(itmCode);
-    getDefault();
+    findIndexNumber1(itmCode);
+    getDefault1();
 });
 
 let indexNo1 = "";
 
-function findIndexNumber(itmID) {
+function findIndexNumber1(itmID) {
     // console.log(itmArray.indexOf(itmID));
     indexNo1 = itmArray.indexOf(itmID);
     return indexNo1;
@@ -208,7 +208,7 @@ function findIndexNumber(itmID) {
 function searchItem(itmCode) {
     for (var i of itmArray) {
         if (i.code == itmCode) {
-            setTextFieldValues(i.code, i.name, i.price, i.qtyOnHand);
+            setTextFieldValues1(i.code, i.name, i.price, i.qtyOnHand);
             return i;
         }
     }
@@ -216,7 +216,7 @@ function searchItem(itmCode) {
 }
 
 // set values
-function setTextFieldValues(code, name, price, qtyOnHand) {
+function setTextFieldValues1(code, name, price, qtyOnHand) {
     $('#txtItemCode').val(code);
     $('#txtItemName').val(name);
     $('#txtItemPrice').val(price);
@@ -225,7 +225,7 @@ function setTextFieldValues(code, name, price, qtyOnHand) {
 
 
 // delete item using delete button
-$('#tblItem').on('click', '#btnDelete', function () {
+$('#tblItem').on('click', '#btn_Delete', function () {
     swal({
         title: "Are you sure?",
         text: "Once deleted, you will not be able to recover this imaginary file!",
@@ -236,11 +236,11 @@ $('#tblItem').on('click', '#btnDelete', function () {
         .then((willDelete) => {
             if (willDelete) {
                 let itmID = searchItem($(this).parents('tr').children(':first-child').text());
-                let indexNumber = findIndexNumber(itmID);
+                let indexNumber = findIndexNumber1(itmID);
                 itmArray.splice(indexNumber, 1);
                 loadAllItems();
 
-                clearTextFields();
+                clearTextFields1();
                 $('#btn_Save').text('Save');
 
                 swal("Poof! Your imaginary item has been deleted!", {
@@ -251,13 +251,13 @@ $('#tblItem').on('click', '#btnDelete', function () {
 
 });
 
-function clearTextFields() {
+function clearTextFields1() {
     $('#txtItemCode, #txtItemName, #txtItemPrice, #txtQtyOnHand').val("");
-    getDefault();
+    getDefault1();
 }
 
 // hide span text and get default border color
-function getDefault() {
+function getDefault1() {
     $('#txtItemCode, #txtItemName, #txtItemPrice, #txtQtyOnHand').parent().children('span').text("");
     $('#txtItemCode, #txtItemName, #txtItemPrice, #txtQtyOnHand').css('border', '1px solid #CED4DA');
 }
