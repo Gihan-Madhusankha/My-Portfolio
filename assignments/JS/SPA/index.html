@@ -158,7 +158,7 @@
 </section>
 
 <!--customer content-->
-<section class="customerContent row bg-light">
+<!--<section class="customerContent row bg-light">
     <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
 
         <div class="w-75">
@@ -328,10 +328,81 @@
         </aside>
 
     </section>
+</section>-->
+<section class="customerContent row bg-light">
+    <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
+
+        <div class="w-75">
+            <div style="background: darkgoldenrod; height: 50px; margin-bottom: 30px">
+                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">
+                    Add New Customer</h5>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="txtCustomerId">Customer ID</label>
+                <input class="form-control" id="txtCustomerId" placeholder="C00-001" type="text">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCustomerName">Customer Name</label>
+                <input class="form-control" id="txtCustomerName" placeholder="Nimal Perera" type="text">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCustomerAddress">Customer Address</label>
+                <input class="form-control" id="txtCustomerAddress" placeholder="22/6 Kandy RD, Negombo"
+                       type="text">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCustomerSalary">Customer Salary</label>
+                <input class="form-control" id="txtCustomerSalary" placeholder="100000.00" type="number">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+
+            <div style="display: flex; align-items: flex-end; justify-content: right">
+                <button class="btn btn-warning w-25" id="btnClear" style="margin: 5px" type="button">Clear</button>
+                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="col-12 col-lg-8">
+
+        <form class="row g-3">
+            <div class="col-auto w-50" style="margin-top: 70px">
+                <label class="visually-hidden" for="inputPassword2">Password</label>
+                <input class="form-control" id="inputPassword2" placeholder="search" type="text">
+            </div>
+            <div class="col-auto" style="margin-top: 70px">
+                <button class="btn btn-primary mb-3" type="submit">Search</button>
+            </div>
+        </form>
+
+        <aside class="scrollable">
+
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky" id="tblCustomer">
+                </tbody>
+            </table>
+
+
+        </aside>
+
+    </section>
 </section>
 
 <!--item content-->
-<section class="itemContent row bg-light">
+<!--<section class="itemContent row bg-light">
     <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
 
         <div class="w-75">
@@ -367,7 +438,7 @@
 
     <section class="col-12 col-lg-8">
 
-        <!--        search model-->
+        &lt;!&ndash;        search model&ndash;&gt;
         <form class="row g-3">
             <div class="col-auto w-50" style="margin-top: 70px;">
                 <input class="form-control" id="searchItem" placeholder="search" type="text">
@@ -377,7 +448,7 @@
             </div>
         </form>
 
-        <!--        table-->
+        &lt;!&ndash;        table&ndash;&gt;
         <aside class="scrollable">
             <table class="table table-hover table-striped">
                 <thead class="table-dark sticky-top">
@@ -405,6 +476,75 @@
                         </div>
                     </td>
                 </tr>
+                </tbody>
+            </table>
+        </aside>
+
+    </section>
+</section>-->
+<section class="itemContent row bg-light">
+    <section class=" col-12 col-lg-4 d-flex align-items-center justify-content-center" style="margin-top: 50px">
+
+        <div class="w-75">
+            <div style="background: darkgoldenrod; height: 50px; margin-bottom: 30px">
+                <h5 style="text-align: center; font-weight: bold; border-radius: 5px; color: black; padding-top: 10px ">
+                    Add New Item</h5>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="txtItemCode">Item Code</label>
+                <input class="form-control" id="txtItemCode" placeholder="I00-001" type="text">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtItemName">Item Name</label>
+                <input class="form-control" id="txtItemName" placeholder="item-name" type="text">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtItemPrice">Price</label>
+                <input class="form-control" id="txtItemPrice" placeholder="100.00" type="number">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtQtyOnHand">Qry on Hand</label>
+                <input class="form-control" id="txtQtyOnHand" placeholder="650" type="number">
+                <span style="font-size: 12px; color: red"></span>
+            </div>
+
+            <div style="display: flex; align-items: flex-end; justify-content: right">
+                <button class="btn btn-warning w-25" id="btnClear" style="margin: 5px" type="button">Clear</button>
+                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="col-12 col-lg-8">
+
+        <!--        search model-->
+        <form class="row g-3">
+            <div class="col-auto w-50" style="margin-top: 70px;">
+                <label class="visually-hidden" for="inputPassword2">Password</label>
+                <input class="form-control" id="inputPassword2" placeholder="search" type="text">
+            </div>
+            <div class="col-auto" style="margin-top: 70px;">
+                <button class="btn btn-primary mb-3" type="submit">Search</button>
+            </div>
+        </form>
+
+        <!--        table-->
+        <aside class="scrollable">
+            <table class="table table-hover table-striped">
+                <thead class="table-dark sticky-top">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty on Hand</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody class="table table-hover table-striped sticky" id="tblItem">
                 </tbody>
             </table>
         </aside>
@@ -598,12 +738,6 @@
 
 <script>
 
-    /*$("#btnCustomer").click(function () {
-        // $('#btnCustomer').classList.add('active');
-        this.classList.add('active');
-        $('#dash').classList.remove('active');
-    });*/
-
     $('.customerUL').css('display', 'none');
     $('.itemUL').css('display', 'none');
     $('.placeOrderUL').css('display', 'none');
@@ -669,44 +803,6 @@
         $('.placeOrderContent').css('display', 'none');
     });
 
-
-    // var cusArray = [];
-    //
-    // $('.save').click(function (){
-    //     let id = $('#customerId').val();
-    //     let name = $('#customerName').val();
-    //     let address = $('#customerAddress').val();
-    //     let salary = $('#customerSalary').val();
-    //
-    //     var customer = {
-    //         id:id,
-    //         name:name,
-    //         address:address,
-    //         salary:salary
-    //     }
-    //
-    //     cusArray.push(customer);
-    //     console.log(cusArray);
-    //
-    //     loadAllCustomers();
-    //
-    // });
-    //
-    //
-    // function loadAllCustomers(){
-    //     $('#tblCustomer').empty();
-    //
-    //     for (var i of cusArray) {
-    //         var row = "<tr><td>" + i.id + "</td><td>" + i.name + "</td><td>" + i.address + "</td><td>" + i.salary + "</td><td><div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
-    //             "                            <div aria-label=\"Basic mixed styles example\" class=\"btn-group btn-group-sm\" role=\"group\"\n" +
-    //             "                                 style=\"padding: 0\">\n" +
-    //             "                                <button class=\"btn btn-warning\" type=\"button\">Edit</button>\n" +
-    //             "                                <button class=\"btn btn-danger\" type=\"button\">Delete</button>\n" +
-    //             "                            </div>\n" +
-    //             "                        </div></td></tr>"
-    //         $('#tblCustomer').append(row);
-    //     }
-    // }
 
 </script>
 

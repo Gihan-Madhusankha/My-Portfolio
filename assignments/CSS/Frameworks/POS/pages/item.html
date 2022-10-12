@@ -98,7 +98,7 @@
 
             <div style="display: flex; align-items: flex-end; justify-content: right">
                 <button class="btn btn-warning w-25" id="btnClear" style="margin: 5px" type="button">Clear</button>
-                <button class="btn btn-success w-25" id="btnSave" style="margin: 5px" type="button">Save</button>
+                <button class="btn btn-success w-25" id="btn_Save" style="margin: 5px" type="button">Save</button>
             </div>
         </div>
     </section>
@@ -211,9 +211,9 @@
 
     // item array
     var itmArray = [];
-    $('#btnSave').on('click', function () {
+    $('#btn_Save').on('click', function () {
 
-        let textOfButton = $('#btnSave').text();
+        let textOfButton = $('#btn_Save').text();
 
         if (textOfButton == 'Save') {
             let itemCode = $('#txtItemCode').val();
@@ -254,7 +254,7 @@
             itmArray[indexNo].name = $('#txtItemName').val();
             itmArray[indexNo].price = $('#txtItemPrice').val();
             itmArray[indexNo].qtyOnHand = $('#txtQtyOnHand').val();
-            $('#btnSave').text('Save');
+            $('#btn_Save').text('Save');
             loadAllItems();
 
             swal({
@@ -330,13 +330,13 @@
     // clear button
     $('#btnClear').click(function () {
         clearTextFields();
-        $('#btnSave').text('Save');
+        $('#btn_Save').text('Save');
     });
 
     // click edit button
     $('#tblItem').on('click', '#btnEdit', function () {
         var itmCode = searchItem($(this).parents('tr').children(':first-child').text());
-        $('#btnSave').text('Update');
+        $('#btn_Save').text('Update');
         findIndexNumber(itmCode);
         getDefault();
     });
@@ -386,7 +386,7 @@
                     loadAllItems();
 
                     clearTextFields();
-                    $('#btnSave').text('Save');
+                    $('#btn_Save').text('Save');
 
                     swal("Poof! Your imaginary item has been deleted!", {
                         icon: "success",
