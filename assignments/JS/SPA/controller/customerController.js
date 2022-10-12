@@ -145,6 +145,7 @@ function loadAllCustomers() {
             "                    </td></tr>"
         $('#tblCustomer').append(row);
     }
+    loadAllCustomerIds();
 
 }
 
