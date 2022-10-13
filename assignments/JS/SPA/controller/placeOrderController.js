@@ -1,5 +1,5 @@
-$('#cash, #discount, #balance').on('keydown',function (event){
-    if (event.key == 'Tab'){
+$('#cash, #discount, #balance').on('keydown', function (event) {
+    if (event.key == 'Tab') {
         event.preventDefault();
     }
 });
@@ -153,4 +153,8 @@ function searchPurchase(itemCode) {
     return null;
 }
 
+
+function inputDiscount(discount){
+    console.log(discount.value);
+}
 
