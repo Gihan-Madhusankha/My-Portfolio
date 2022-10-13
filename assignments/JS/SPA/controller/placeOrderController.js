@@ -154,10 +154,12 @@ function searchPurchase(itemCode) {
 }
 
 
-function inputDiscount(discount){
+function inputDiscount(discount) {
     console.log(discount.value);
-    let sub = $('#cash').val() - discount.value;
+    let sub = $('#total-val').text() - discount.value;
     $('#subtotal-val').text(sub);
+    let balance = $('#cash').val() - $('#subtotal-val').text();
+    $('#balance').val(balance);
 }
 
 
