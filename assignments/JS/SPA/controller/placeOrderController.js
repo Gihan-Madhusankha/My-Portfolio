@@ -79,6 +79,7 @@ $('#addToCart').on('click', function () {
         }
         purchaseItemsArray.push(purchaseItem);
         loadAllPurchaseItems();
+        clearItemDetailsTextFields();
 
     } else {
         alert('Something went wrong...!!!');
@@ -87,10 +88,10 @@ $('#addToCart').on('click', function () {
 });
 
 function loadAllPurchaseItems() {
+    $('#tblPurchaseItem').empty();
 
     for (let i of purchaseItemsArray) {
         // console.log(i.iCode, i.iName, i.iPrice, i.iQty, i.iTotal)
-        $('#tblPurchaseItem').empty();
 
         var purchaseRow = "<tr><td>" + i.iCode + "</td><td>" + i.iName + "</td><td>" + i.iPrice + "</td><td>" + i.iQty + "</td><td>" + i.iTotal + "</td><td>\n" +
             "                        <div class=\"d-flex justify-content-center\" style=\"padding: 0; margin: 0;\">\n" +
@@ -104,4 +105,34 @@ function loadAllPurchaseItems() {
     }
 
 }
+
+function clearItemDetailsTextFields(){
+    $('#itmCode').val("");
+    $('#itmName').val("");
+    $('#itmPrice').val("");
+    $('#itmQty').val("");
+    $('#orderQty').val("");
+}
+
+
+
+$('#tblPurchaseItem').on('click', '#btnRemove', function () {
+
+    let p = searchPurchase($(this).parents('tr').children(':first-child').text());
+    console.log(p);
+    let indexNum = purchaseItemsArray.indexOf(p);
+    purchaseItemsArray.splice(indexNum, 1);
+    loadAllPurchaseItems();
+
+});
+
+function searchPurchase(itemCode) {
+    for (var i of purchaseItemsArray) {
+        if (i.iCode == itemCode) {
+            return i;
+        }
+    }
+    return null;
+}
+
 
