@@ -156,5 +156,9 @@ function searchPurchase(itemCode) {
 
 function inputDiscount(discount){
     console.log(discount.value);
+    let sub = $('#cash').val() - discount.value;
+    $('#subtotal-val').text(sub);
 }
+
+
 
