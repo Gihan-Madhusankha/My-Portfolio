@@ -55,15 +55,12 @@ function setItemDetails(itmObj) {
     $('#itmQty').val(itmObj.qtyOnHand);
 }
 
-
 var purchaseItemsArray = [];
 $('#addToCart').on('click', function () {
 
-    let validate1 = $('#orderQty').val().length != 0;
-    let validate2 = $('#itmQty').val() >= $('#orderQty').val();
-    console.log(validate1, validate2);
+    let validate1 = $('#orderQty').val() != 0;
 
-    if (validate1 && validate2) {
+    if (validate1) {
         let iCode = $('#itmCode').val();
         let iName = $('#itmName').val();
         let iPrice = $('#itmPrice').val();
@@ -79,10 +76,15 @@ $('#addToCart').on('click', function () {
         }
         purchaseItemsArray.push(purchaseItem);
         loadAllPurchaseItems();
+        totalValue();
         clearItemDetailsTextFields();
 
     } else {
         alert('Something went wrong...!!!');
+        console.log('QtyOnHand', $('#itmQty').val());
+        console.log('OrderQty', $('#orderQty').val());
+        console.log('result', $('#itmQty').val() >= $('#orderQty').val());
+        clearItemDetailsTextFields();
     }
 
 });
@@ -106,14 +108,22 @@ function loadAllPurchaseItems() {
 
 }
 
-function clearItemDetailsTextFields(){
-    $('#itmCode').val("");
-    $('#itmName').val("");
-    $('#itmPrice').val("");
-    $('#itmQty').val("");
-    $('#orderQty').val("");
+function totalValue() {
+    let tot = 0;
+    for (let i of purchaseItemsArray) {
+        tot += i.iTotal;
+    }
+    $('#total-val').text(tot);
 }
 
+function clearItemDetailsTextFields() {
+    $('#selectItmCode').val('select');
+    $('#itmCode').val("");
+    $('#itmName').val("");
+    $('#itmPrice').val(0);
+    $('#itmQty').val(0);
+    $('#orderQty').val(0);
+}
 
 
 $('#tblPurchaseItem').on('click', '#btnRemove', function () {
@@ -123,6 +133,7 @@ $('#tblPurchaseItem').on('click', '#btnRemove', function () {
     let indexNum = purchaseItemsArray.indexOf(p);
     purchaseItemsArray.splice(indexNum, 1);
     loadAllPurchaseItems();
+    totalValue();
 
 });
 
