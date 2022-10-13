@@ -1,3 +1,10 @@
+$('#cash, #discount, #balance').on('keydown',function (event){
+    if (event.key == 'Tab'){
+        event.preventDefault();
+    }
+});
+
+
 function loadAllCustomerIds() {
     $('#selectCusId').empty();
     $('#selectCusId').append(`<option>select</option>`);
