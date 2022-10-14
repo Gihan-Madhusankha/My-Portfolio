@@ -14,6 +14,12 @@ InfinityFree URL : http://gmadusanka.epizy.com/
 <br><br><br><br>
 
 
-
+POS
+===
+Site Map URL    : https://www.gloomaps.com/rDbeEdrXJN
+<br><br>
+Wire Frame URL  : https://wireframe.cc/oy23DM
+<br><br>
+Mockup URL : https://www.figma.com/file/2CkhJGo5oaQeFAQr5f2zyJ/POS-System?node-id=0%3A1
 
 
