@@ -316,7 +316,7 @@
             <form class="row g-3">
                 <div class="col-md-6">
                     <label class="form-label" for="inputOrderID">Order ID:</label>
-                    <input class="form-control" id="inputOrderID" type="text">
+                    <input class="form-control" id="inputOrderID" type="text" value="ORD-1" disabled>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="inputDate">Date:</label>
@@ -432,9 +432,8 @@
                 </div>
 
                 <div class="col-12">
-                    <button class="btn w-100" style="font-weight: bold; margin-top: 30px; background: forestgreen; color: white;
-                    " type="submit">Purchase
-                    </button>
+                    <button class="btn w-100" id="btnPurchase" style="font-weight: bold; margin-top: 30px; background: forestgreen; color: white;
+                    " type="button">Purchase</button>
                 </div>
             </form>
         </section>

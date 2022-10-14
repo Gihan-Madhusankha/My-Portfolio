@@ -162,5 +162,23 @@ function inputDiscount(discount) {
     $('#balance').val(balance);
 }
 
+$('#btnPurchase').on('click', function () {
+    generateOrderId();
+    swal({
+        title: "Successfully",
+        // text: "You clicked the button!",
+        icon: "success",
+        button: "OK",
+    });
+});
+
+function generateOrderId() {
+    let ordId = $('#inputOrderID').val();
+    let type = ordId.split('-')[1];
+    let orNo = +type+1;
+    $('#inputOrderID').val('ORD-'+orNo);
+
+}
+
 
 
