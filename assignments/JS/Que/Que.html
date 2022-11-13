@@ -11,11 +11,13 @@
             height: 100vh;
             background: #33454D;
             display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #display > div {
             width: 100px;
-            height: 35px;
+            height: 40px;
         }
 
     </style>
@@ -40,6 +42,8 @@
         var a = colors.pop();
         colors.unshift(a);
     }
+
+    setInterval(changeColor, 500);
 
 </script>
 </body>
