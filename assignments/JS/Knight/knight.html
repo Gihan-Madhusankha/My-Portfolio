@@ -7,11 +7,34 @@
 <body>
 
 
-
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
-
+    var knightRider = {
+        count: 0,
+        tempArray: [],
+        leftToRight: ['white', 'white', 'white', 'white', 'white', '#FF1800', '#D23525', '#9E4137', '#B96961', '#DEBBB9'],
+        rightToLeft: ['white', 'white', 'white', 'white', 'white', '#DEBBB9', '#B96961', '#9E4137', '#D23525', '#FF1800'],
+        animateLeft: function () {
+            this.tempArray.unshift(this.tempArray.pop());
+        },
+        animateRight: function () {
+            this.tempArray.push(this.tempArray.shift());
+        },
+        animate: function () {
+            this.count++;
+            if (this.count <= this.leftToRight.length) {
+                this.tempArray = this.leftToRight;
+                this.animateLeft();
+            } else {
+                if (this.count >= (this.rightToLeft.length * 2)) {
+                    this.count = 0;
+                }
+                this.tempArray = this.rightToLeft;
+                this.animateRight();
+            }
+        }
+    }
 
 </script>
 </body>
