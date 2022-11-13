@@ -316,7 +316,7 @@
             <form class="row g-3">
                 <div class="col-md-6">
                     <label class="form-label" for="inputOrderID">Order ID:</label>
-                    <input class="form-control" id="inputOrderID" type="text" value="ORD-1" disabled>
+                    <input class="form-control" disabled id="inputOrderID" type="text" value="ORD-1">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="inputDate">Date:</label>
@@ -325,25 +325,25 @@
                 <div class="col-md-6">
                     <label class="form-label">Customer:</label>
                     <select class="form-select" id="selectCusId">
-<!--                        <option selected></option>-->
+                        <!--                        <option selected></option>-->
                         <option>select</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="cusID">Customer ID:</label>
-                    <input class="form-control" id="cusID" type="text" disabled>
+                    <input class="form-control" disabled id="cusID" type="text">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="cusName">Name:</label>
-                    <input class="form-control" id="cusName" type="text" disabled>
+                    <input class="form-control" disabled id="cusName" type="text">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="cusSalary">Salary:</label>
-                    <input class="form-control" id="cusSalary" type="text" disabled>
+                    <input class="form-control" disabled id="cusSalary" type="text">
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="cusAddress">Address</label>
-                    <input class="form-control" id="cusAddress" type="text" disabled>
+                    <input class="form-control" disabled id="cusAddress" type="text">
                 </div>
             </form>
         </section>
@@ -361,25 +361,25 @@
                 <div class="col-md-6">
                     <label class="form-label">Item:</label>
                     <select class="form-select" id="selectItmCode">
-<!--                        <option selected></option>-->
+                        <!--                        <option selected></option>-->
                         <option>select</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="itmCode">Item Code:</label>
-                    <input class="form-control" id="itmCode" type="text" disabled>
+                    <input class="form-control" disabled id="itmCode" type="text">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="itmName">Item Name:</label>
-                    <input class="form-control" id="itmName" type="text" disabled>
+                    <input class="form-control" disabled id="itmName" type="text">
                 </div>
                 <div class="col-md-4">
                     <label class="form-label" for="itmPrice">Price</label>
-                    <input class="form-control" id="itmPrice" type="number" disabled>
+                    <input class="form-control" disabled id="itmPrice" type="number">
                 </div>
                 <div class="col-md-2">
                     <label class="form-label" for="itmQty">QtyonH:</label>
-                    <input class="form-control" id="itmQty" type="number" disabled>
+                    <input class="form-control" disabled id="itmQty" type="number">
                 </div>
                 <div class="col-12">
                     <label class="form-label" for="orderQty">Order Qty:</label>
@@ -387,8 +387,9 @@
                 </div>
 
                 <div class="col-12 d-flex justify-content-end">
-                    <button class="btn bg-warning" style="font-weight: bold; margin-top: 30px;
-                    " type="submit" id="addToCart">Add to Cart</button>
+                    <button class="btn bg-warning" id="addToCart" style="font-weight: bold; margin-top: 30px;
+                    " type="submit">Add to Cart
+                    </button>
                 </div>
             </form>
 
@@ -420,20 +421,22 @@
 
                 <div class="col-md-12">
                     <label class="form-label" for="cash">Cash (Rs)</label>
-                    <input class="form-control" id="cash" type="number" placeholder="0.00" required>
+                    <input class="form-control" id="cash" placeholder="0.00" required type="number">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="discount">Discount (Rs)</label>
-                    <input class="form-control" id="discount" type="number" value="0" required oninput="inputDiscount(this)">
+                    <input class="form-control" id="discount" oninput="inputDiscount(this)" required type="number"
+                           value="0">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label" for="balance">Balance (Rs)</label>
-                    <input class="form-control" id="balance" type="number" placeholder="0.00" disabled>
+                    <input class="form-control" disabled id="balance" placeholder="0.00" type="number">
                 </div>
 
                 <div class="col-12">
                     <button class="btn w-100" id="btnPurchase" style="font-weight: bold; margin-top: 30px; background: forestgreen; color: white;
-                    " type="button">Purchase</button>
+                    " type="button">Purchase
+                    </button>
                 </div>
             </form>
         </section>
