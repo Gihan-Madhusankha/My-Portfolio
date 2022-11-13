@@ -6,9 +6,17 @@
     <title>Que process with JS</title>
 
     <style>
-        main > section {
+        main {
+            background: #33454D;
             width: 100%;
             height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        main > section {
+            width: 100%;
+            height: 40vh;
             background: #33454D;
             display: flex;
             align-items: center;
@@ -18,6 +26,16 @@
         #display > div {
             width: 100px;
             height: 40px;
+        }
+
+        #display > div:first-child {
+            align-self: flex-start;
+            margin-right: 100px;
+        }
+
+        #display > div:last-child {
+            align-self: flex-end;
+            margin-left: 100px;
         }
 
     </style>
