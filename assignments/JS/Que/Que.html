@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../../assets/css/normalize.css">
+    <link href="../../../assets/css/normalize.css" rel="stylesheet">
     <title>Que process with JS</title>
 
     <style>
@@ -10,6 +10,12 @@
             width: 100%;
             height: 100vh;
             background: #33454D;
+            display: flex;
+        }
+
+        #display > div {
+            width: 100px;
+            height: 35px;
         }
 
     </style>
@@ -18,15 +24,22 @@
 
 <main>
     <section id="display">
-
     </section>
 </main>
 
+<script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
     var colors = ['blue', 'yellow', 'pink', 'violet', 'red', 'green'];
 
-
+    function changeColor() {
+        $('#display').empty();
+        for (var i = 0; i < colors.length; i++) {
+            $('#display').append(`<div style="background: ${colors[i]}"></div>`);
+        }
+        var a = colors.pop();
+        colors.unshift(a);
+    }
 
 </script>
 </body>
