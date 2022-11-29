@@ -9,3 +9,10 @@
     background-image: url("../img/bg.jpeg");
     background-size: cover;
 }
+
+#character {
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
