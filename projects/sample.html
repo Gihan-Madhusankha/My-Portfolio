@@ -2,9 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="../assignments/CSS/Frameworks/POS/assets/css/bootstrap.min.css" rel="stylesheet">
     <title>Title</title>
+
+    <style>
+        #selectColor {
+            width: 100px;
+            height: 40px;
+        }
+
+        #display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #display > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 40px;
+            border: 1px solid black;
+        }
+
+    </style>
+
 </head>
 <body>
 
+<main>
+
+    <section>
+        <form>
+            <div class="mb-3">
+                <label class="form-label" for="txtName">Name</label>
+                <input aria-describedby="emailHelp" class="form-control" id="txtName" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="selectColor">Select Color</label>
+                <input class="form-control" id="selectColor" type="color">
+            </div>
+            <button class="btn btn-primary" type="button">Add Person</button>
+            <button class="btn btn-success" type="button">Start</button>
+            <button class="btn btn-danger" type="button">Stop</button>
+        </form>
+    </section>
+    <br>
+    <section id="display"></section>
+
+</main>
+
+<link href="../assignments/CSS/Frameworks/POS/assets/js/bootstrap.min.js" rel="stylesheet">
+<script src="../assignments/JS/Que/assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+    var queObject = {
+        personAndColor: [
+            {name: 'Amal', color: 'red'},
+            {name: 'Nimal', color: 'green'},
+            {name: 'Kamal', color: 'blue'}
+        ]
+    }
+
+    function changeColor() {
+        $('#display').empty();
+        for (var i = 0; i < queObject.personAndColor.length; i++) {
+            $('#display').append(`<div style="background: ${queObject.personAndColor[i].color}">
+            <h5>${queObject.personAndColor[i].name}</h5></div>`);
+        }
+        var a = queObject.personAndColor.pop();
+        queObject.personAndColor.unshift(a);
+    }
+
+    var id;
+
+    function startBtn() {
+        var name = $('#txtName').val();
+        var color = $('#selectColor').val();
+        queObject.personAndColor.push({name, color});
+    }
+
+    $('.btn-primary').click(function () {
+        startBtn();
+    });
+
+    $('.btn-success').click(function (){
+        id=setInterval(changeColor, 500);
+    });
+
+    $('.btn-danger').click(function (){
+        clearInterval(id);
+    });
+
+
+
+</script>
 </body>
 </html>

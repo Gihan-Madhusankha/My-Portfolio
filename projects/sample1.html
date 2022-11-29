@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../assignments/CSS/Frameworks/POS/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/jquery-ui.min.css" rel="stylesheet">
+
+    <title>Title</title>
+
+    <style>
+        div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        div:nth-child(2) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            /*border: 1px solid black;*/
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="draggable">
+    <h6>DRAG ME</h6>
+</div>
+<div id="droppable">
+    <h6>DROP HERE</h6>
+</div>
+
+<script src="assets/jquery-3.6.1.min.js"></script>
+<script src="assets/jquery-ui.min.js"></script>
+<script>
+
+    $(function () {
+        $("#draggable").draggable();
+        $("#droppable").droppable({
+            drop: function (event, ui) {
+                alert("Droppable")
+                $('#droppable').css('background', 'blue');
+            }
+        });
+        $('#droppable').resizable();
+
+    });
+
+</script>
+</body>
+</html>
