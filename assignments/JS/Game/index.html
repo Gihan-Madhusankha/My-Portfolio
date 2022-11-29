@@ -2,23 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta content="width=device-width initial-scale=1" name="viewport">
     <title>Game</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+
+
+<body onload="AnimationStart()">
 
 <section class="bg">
 
-    <img src="assets/img/Idle__000.png" alt="character" id="character">
+    <img alt="character" id="ninja" src="assets/img/Idle__000.png">
 
 </section>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
+    var num = 0;
 
+    function idleAnimation() {
+        num = num + 1;
+        $('#ninja').attr("src", "assets/img/Idle__00" + num + ".png");
+
+        if (num == 9) {
+            num = 0;
+        }
+
+    }
+
+    function AnimationStart() {
+        setInterval(idleAnimation, 100);
+    }
 
 </script>
 </body>
