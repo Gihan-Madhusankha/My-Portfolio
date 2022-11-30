@@ -8,6 +8,7 @@
     height: 100vh;
     background-image: url("../img/bg.jpeg");
     background-size: cover;
+    background-repeat: repeat-x;
 }
 
 #ninja {
