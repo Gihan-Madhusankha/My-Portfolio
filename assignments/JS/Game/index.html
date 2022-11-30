@@ -9,7 +9,7 @@
 </head>
 
 
-<body onload="AnimationStart()">
+<body onload="AnimationStart()" onkeydown="keyCheck(event)">
 
 <section class="bg">
 
@@ -31,18 +31,32 @@
         }
     }
 
+    var i;
     function AnimationStart() {
-        setInterval(idleAnimation, 100);
+        i = setInterval(idleAnimation, 100);
     }
 
     var runNum = 0;
-
     function runAnimation() {
-
+        $('#ninja').css('width', '180px');
         $('#ninja').attr('src', 'assets/img/Run__00' + runNum + '.png');
         runNum += 1;
         if (runNum == 10) {
             runNum = 0;
+        }
+    }
+
+    function runAnimationStart() {
+        setInterval(runAnimation, 200);
+        clearInterval(i);
+    }
+
+    function keyCheck(event) {
+        // alert(event.which);
+
+        var runCode = event.which;
+        if (runCode == 39) {
+            runAnimationStart();
         }
     }
 
