@@ -29,11 +29,21 @@
         if (num == 9) {
             num = 0;
         }
-
     }
 
     function AnimationStart() {
         setInterval(idleAnimation, 100);
+    }
+
+    var runNum = 0;
+
+    function runAnimation() {
+
+        $('#ninja').attr('src', 'assets/img/Run__00' + runNum + '.png');
+        runNum += 1;
+        if (runNum == 10) {
+            runNum = 0;
+        }
     }
 
 </script>
