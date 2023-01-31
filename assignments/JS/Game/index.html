@@ -104,7 +104,7 @@
     var runNum = 0;
 
     function runAnimation() {
-        $('#ninja').attr("src", "assets/img/Run__00" + runNum + ".png").css("width","13%");
+        $('#ninja').attr("src", "assets/img/Run__00" + runNum + ".png").css("width", "13%");
         runNum += 1;
 
         if (runNum == 10) {
@@ -115,6 +115,7 @@
     function runAnimationStart() {
         clearInterval(idle);
         setInterval(runAnimation, 100);
+        setInterval(moveBackground, 100);
     }
 
     function keyCheck(event) {
@@ -123,6 +124,13 @@
             runAnimationStart();
         }
 
+    }
+
+    var bgImagePosition = 0;
+
+    function moveBackground() {
+        bgImagePosition -= 20;
+        $('.bg').css("backgroundPositionX", bgImagePosition + "px");
     }
 
 </script>
