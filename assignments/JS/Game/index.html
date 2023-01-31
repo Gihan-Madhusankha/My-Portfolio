@@ -9,7 +9,7 @@
 </head>
 
 
-<body onkeydown="keyCheck(event)" onload="AnimationStart()">
+<body onload="animationStart();">
 
 <section class="bg">
 
@@ -18,7 +18,8 @@
 </section>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
-<script>
+
+<!--<script>
 
     var num = 0;
 
@@ -71,6 +72,31 @@
     function moveBg() {
         moveBackground -= 20;
         $('.bg').css('backgroundPositionX', moveBackground + 'px');
+        check();
+    }
+
+
+    function check(event) {
+        alert(event.which);
+    }
+
+</script>-->
+
+<script>
+
+    var idleNum = 0;
+
+    function idleAnimation() {
+        $('#ninja').attr("src", "assets/img/Idle__00" + idleNum + ".png");
+        idleNum += 1;
+
+        if (idleNum == 9) {
+            idleNum = 0;
+        }
+    }
+
+    function animationStart() {
+        setInterval(idleAnimation, 100);
     }
 
 </script>
