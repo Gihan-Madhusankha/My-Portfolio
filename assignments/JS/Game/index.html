@@ -84,46 +84,59 @@
 
 <script>
 
-    var idleNum = 0;
+    var idleImageNum = 0;
 
     function idleAnimation() {
-        $('#ninja').attr("src", "assets/img/Idle__00" + idleNum + ".png");
-        idleNum += 1;
+        $('#ninja').attr("src", "assets/img/Idle__00" + idleImageNum + ".png");
+        idleImageNum += 1;
 
-        if (idleNum == 10) {
-            idleNum = 0;
+        if (idleImageNum == 10) {
+            idleImageNum = 0;
         }
     }
 
-    var idle;
+    var idleAnimationNum = 0;
 
     function animationStart() {
-        idle = setInterval(idleAnimation, 100);
+        idleAnimationNum = setInterval(idleAnimation, 100);
     }
 
-    var runNum = 0;
+    var runImageNum = 0;
 
     function runAnimation() {
-        $('#ninja').attr("src", "assets/img/Run__00" + runNum + ".png").css("width", "13%");
-        runNum += 1;
+        $('#ninja').attr("src", "assets/img/Run__00" + runImageNum + ".png").css("width", "13%");
+        runImageNum += 1;
 
-        if (runNum == 10) {
-            runNum = 0;
+        if (runImageNum == 10) {
+            runImageNum = 0;
         }
     }
 
+    var runAnimationNum = 0;
+    var backgroundAnimationNum = 0;
+
     function runAnimationStart() {
-        clearInterval(idle);
-        setInterval(runAnimation, 100);
-        setInterval(moveBackground, 100);
+        clearInterval(idleAnimationNum);
+        runAnimationNum = setInterval(runAnimation, 100);
+        if (backgroundAnimationNum == 0) {
+            backgroundAnimationNum = setInterval(moveBackground, 100);
+        }
     }
 
     function keyCheck(event) {
         var keyCode = event.which;
+        // alert(keyCode);
         if (keyCode == 39) {
-            runAnimationStart();
+            if (runAnimationNum == 0) {
+                runAnimationStart();
+            }
         }
 
+        if (keyCode == 38) {
+            if (jumpAnimationNum == 0) {
+                jumpAnimationStart();
+            }
+        }
     }
 
     var bgImagePosition = 0;
@@ -131,6 +144,30 @@
     function moveBackground() {
         bgImagePosition -= 20;
         $('.bg').css("backgroundPositionX", bgImagePosition + "px");
+    }
+
+    var jumpImageNum = 0;
+
+    function jumpAnimation() {
+        $('#ninja').attr("src", "assets/img/Jump__00" + jumpImageNum + ".png");
+        jumpImageNum += 1;
+
+        if (jumpImageNum == 10) {
+            jumpImageNum = 0;
+            clearInterval(jumpAnimationNum);
+            jumpAnimationNum = 0;
+            runImageNum = 0;
+            runAnimationStart();
+        }
+    }
+
+    var jumpAnimationNum = 0;
+
+    function jumpAnimationStart() {
+        clearInterval(idleAnimationNum);
+        runImageNum = 0;
+        clearInterval(runAnimationNum);
+        jumpAnimationNum = setInterval(jumpAnimation, 100);
     }
 
 </script>
