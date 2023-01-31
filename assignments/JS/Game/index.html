@@ -104,7 +104,8 @@
     var runImageNum = 0;
 
     function runAnimation() {
-        $('#ninja').attr("src", "assets/img/Run__00" + runImageNum + ".png").css("width", "13%");
+        // $('#ninja').css("bottom", "0");
+        $('#ninja').attr("src", "assets/img/Run__00" + runImageNum + ".png").css({width:"13%", bottom:"0px"});
         runImageNum += 1;
 
         if (runImageNum == 10) {
@@ -149,7 +150,7 @@
     var jumpImageNum = 0;
 
     function jumpAnimation() {
-        $('#ninja').attr("src", "assets/img/Jump__00" + jumpImageNum + ".png");
+        $('#ninja').attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css("bottom", "100px");
         jumpImageNum += 1;
 
         if (jumpImageNum == 10) {
