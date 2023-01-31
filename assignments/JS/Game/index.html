@@ -9,7 +9,7 @@
 </head>
 
 
-<body onload="animationStart();">
+<body onkeydown="keyCheck(event)" onload="animationStart();">
 
 <section class="bg">
 
@@ -90,15 +90,40 @@
         $('#ninja').attr("src", "assets/img/Idle__00" + idleNum + ".png");
         idleNum += 1;
 
-        if (idleNum == 9) {
+        if (idleNum == 10) {
             idleNum = 0;
         }
     }
 
+    var idle;
+
     function animationStart() {
-        setInterval(idleAnimation, 100);
+        idle = setInterval(idleAnimation, 100);
     }
 
+    var runNum = 0;
+
+    function runAnimation() {
+        $('#ninja').attr("src", "assets/img/Run__00" + runNum + ".png").css("width","13%");
+        runNum += 1;
+
+        if (runNum == 10) {
+            runNum = 0;
+        }
+    }
+
+    function runAnimationStart() {
+        clearInterval(idle);
+        setInterval(runAnimation, 100);
+    }
+
+    function keyCheck(event) {
+        var keyCode = event.which;
+        if (keyCode == 39) {
+            runAnimationStart();
+        }
+
+    }
 
 </script>
 </body>
