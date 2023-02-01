@@ -8,11 +8,9 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
+<body onkeydown="keyCheck(event)" onload="animationStart(); createBarrier();">
 
-<body onkeydown="keyCheck(event)" onload="animationStart();">
-
-<section class="bg">
-
+<section id="bg">
     <img alt="character" id="ninja" src="assets/img/Idle__000.png">
 
 </section>
@@ -105,7 +103,7 @@
 
     function runAnimation() {
         // $('#ninja').css("bottom", "0");
-        $('#ninja').attr("src", "assets/img/Run__00" + runImageNum + ".png").css({width:"13%", bottom:"0px"});
+        $('#ninja').attr("src", "assets/img/Run__00" + runImageNum + ".png").css({width: "13%", bottom: "0px"});
         runImageNum += 1;
 
         if (runImageNum == 10) {
@@ -144,7 +142,7 @@
 
     function moveBackground() {
         bgImagePosition -= 20;
-        $('.bg').css("backgroundPositionX", bgImagePosition + "px");
+        $('#bg').css("backgroundPositionX", bgImagePosition + "px");
     }
 
     var jumpImageNum = 0;
@@ -170,6 +168,21 @@
         clearInterval(runAnimationNum);
         jumpAnimationNum = setInterval(jumpAnimation, 100);
     }
+
+    var barrier = 500;
+
+    function createBarrier() {
+        for (var i = 0; i < 10; i++) {
+
+            var box = document.createElement("div");
+            box.className = "box";
+            document.getElementById("bg").appendChild(box);
+            box.style.marginLeft = barrier+"px";
+
+            barrier = barrier +500;
+        }
+    }
+
 
 </script>
 </body>
