@@ -136,6 +136,10 @@
                 jumpAnimationStart();
             }
         }
+
+        if (boxAnimationId == 0) {
+            boxAnimationId = setInterval(boxAnimation, 100);
+        }
     }
 
     var bgImagePosition = 0;
@@ -148,7 +152,7 @@
     var jumpImageNum = 0;
 
     function jumpAnimation() {
-        $('#ninja').attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css("bottom", "100px");
+        $('#ninja').attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css("bottom", "180px");
         jumpImageNum += 1;
 
         if (jumpImageNum == 10) {
@@ -169,17 +173,35 @@
         jumpAnimationNum = setInterval(jumpAnimation, 100);
     }
 
-    var barrier = 500;
+    var barrier = 1500;
 
     function createBarrier() {
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 50; i++) {
 
             var box = document.createElement("div");
             box.className = "box";
             document.getElementById("bg").appendChild(box);
             box.style.marginLeft = barrier + "px";
+            box.id = "box" + i;
 
-            barrier = barrier + 500;
+            if (i < 10) {
+                barrier += 1500;
+            } else if (i > 10 && i < 30) {
+                barrier += 1000;
+            } else {
+                barrier += 500;
+            }
+        }
+    }
+
+    var boxAnimationId = 0;
+
+    function boxAnimation() {
+        for (var i = 0; i < 50; i++) {
+            var box = document.getElementById('box' + i);
+            var currentMarginLeft = getComputedStyle(box).marginLeft;
+            var newMarginLeft = parseInt(currentMarginLeft) - 35;
+            box.style.marginLeft = newMarginLeft + "px";
         }
     }
 
