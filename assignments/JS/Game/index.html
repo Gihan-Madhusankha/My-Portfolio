@@ -2,69 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width initial-scale=1" name="viewport">
-    <title>Game</title>
+    <title>NINJA</title>
 
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body onkeydown="keyCheck(event)" onload="animationStart(); createBarrier();">
+<body class="body" onkeydown="keyCheck(event)" onload="idleAnimationStart();">
+<div class="background">
 
-<section id="bg">
-    <img alt="character" id="ninja" src="assets/img/Idle__000.png">
+    <img alt="character" class="ninja" id="ninja" src="assets/img/Idle__000.png">
 
-</section>
+</div>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
-
 <script>
 
-    var idleImageNum = 0;
+    var ninja = $('.ninja');
+
+    var idleImageNum = 1;
+    var idleAnimationNum = 0;
 
     function idleAnimation() {
-        $('#ninja').attr("src", "assets/img/Idle__00" + idleImageNum + ".png");
+        ninja.attr("src", "assets/img/Idle__00" + idleImageNum + ".png");
         idleImageNum += 1;
 
         if (idleImageNum == 10) {
-            idleImageNum = 0;
+            idleImageNum = 1;
         }
     }
 
-    var idleAnimationNum = 0;
-
-    function animationStart() {
+    function idleAnimationStart() {
         idleAnimationNum = setInterval(idleAnimation, 100);
     }
 
-    var runImageNum = 0;
+
+    var runImageNum = 1;
+    var runAnimationNum = 0;
 
     function runAnimation() {
-        // $('#ninja').css("bottom", "0");
-        $('#ninja').attr("src", "assets/img/Run__00" + runImageNum + ".png").css({width: "13%", bottom: "0px"});
+        ninja.attr("src", "assets/img/Run__00" + runImageNum + ".png").css({width: "13%", bottom: "0px"});
         runImageNum += 1;
 
         if (runImageNum == 10) {
-            runImageNum = 0;
+            runImageNum = 1;
         }
     }
 
-    var runAnimationNum = 0;
-    var backgroundAnimationNum = 0;
-
     function runAnimationStart() {
-        clearInterval(idleAnimationNum);
         runAnimationNum = setInterval(runAnimation, 100);
-        if (backgroundAnimationNum == 0) {
-            backgroundAnimationNum = setInterval(moveBackground, 100);
-        }
+        clearInterval(idleAnimationNum);
     }
 
     function keyCheck(event) {
         var keyCode = event.which;
-        // alert(keyCode);
+
         if (keyCode == 39) {
             if (runAnimationNum == 0) {
                 runAnimationStart();
+            }
+
+            if (moveBackgroundAnimationId == 0) {
+                moveBackgroundAnimationId = setInterval(moveBackground, 100);
             }
         }
 
@@ -72,47 +70,41 @@
             if (jumpAnimationNum == 0) {
                 jumpAnimationStart();
             }
+
+            if (moveBackgroundAnimationId == 0) {
+                moveBackgroundAnimationId = setInterval(moveBackground, 100);
+            }
         }
 
-        if (boxAnimationId == 0) {
-            boxAnimationId = setInterval(boxAnimation, 100);
-        }
     }
 
-    var bgImagePosition = 0;
+
+    var backgroundImagePositionX = 0;
+    var moveBackgroundAnimationId = 0;
 
     function moveBackground() {
-        bgImagePosition -= 20;
-        $('#bg').css("backgroundPositionX", bgImagePosition + "px");
+        backgroundImagePositionX -= 20;
+
+        $('.background').css("backgroundPositionX", backgroundImagePositionX + "px");
     }
 
-    var jumpImageNum = 0;
-    var ninjaMarginBottom = 0;
+    var jumpImageNum = -1;
+    var jumpAnimationNum = 0;
+    var ninjaMarginTop = -200;
 
     function jumpAnimation() {
-        $('#ninja').attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css("bottom", "180px");
-        jumpImageNum += 1;
-
-        // if (jumpImageNum <= 6) {
-        //     ninjaMarginBottom-=20;
-        //     $('#ninja').style("marginBottom", ninjaMarginBottom+"px");
-        // }
-        //
-        // if (jumpImageNum >= 7 && jumpImageNum<9) {
-        //     ninjaMarginBottom-=20;
-        //     $('#ninja').style("marginBottom", ninjaMarginBottom+"px");
-        // }
+        ninja.attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css({width: "13%", top: "-200px"});
+        jumpImageNum = jumpImageNum + 1;
 
         if (jumpImageNum == 10) {
-            jumpImageNum = 0;
+            jumpImageNum = 1;
             clearInterval(jumpAnimationNum);
             jumpAnimationNum = 0;
             runImageNum = 0;
             runAnimationStart();
+            ninja.css("top","-2px");
         }
     }
-
-    var jumpAnimationNum = 0;
 
     function jumpAnimationStart() {
         clearInterval(idleAnimationNum);
@@ -120,62 +112,6 @@
         clearInterval(runAnimationNum);
         jumpAnimationNum = setInterval(jumpAnimation, 100);
     }
-
-    var barrier = 1500;
-
-    function createBarrier() {
-        for (var i = 0; i < 50; i++) {
-
-            var box = document.createElement("div");
-            box.className = "box";
-            document.getElementById("bg").appendChild(box);
-            box.style.marginLeft = barrier + "px";
-            box.id = "box" + i;
-
-            if (i < 10) {
-                barrier += 2000;
-            } else if (i > 10 && i < 30) {
-                barrier += 1500;
-            } else {
-                barrier += 1000;
-            }
-        }
-    }
-
-    var boxAnimationId = 0;
-    var checkBtnNo = 0;
-    function boxAnimation() {
-        for (var i = 0; i < 50; i++) {
-            var box = document.getElementById('box' + i);
-            var currentMarginLeft = getComputedStyle(box).marginLeft;
-            var newMarginLeft = parseInt(currentMarginLeft) - 30;
-            box.style.marginLeft = newMarginLeft + "px";
-
-            if (newMarginLeft <= 140 && newMarginLeft >= 120) {
-                checkBtn();
-                if (checkBtnNo==38) {
-                    clearInterval(boxAnimationId);
-                    clearInterval(runAnimationNum);
-                    runAnimationNum = -1;
-                    clearInterval(jumpAnimationNum);
-                    jumpAnimationNum = -1;
-                    clearInterval(backgroundAnimationNum);
-                    backgroundAnimationNum = -1;
-                }
-            }
-        }
-    }
-
-    function checkBtn(event){
-        checkBtnNo = event.which;
-    }
-
-    var deathImageNum = 0;
-
-    function deathAnimation() {
-        $();
-    }
-
 
 </script>
 </body>
