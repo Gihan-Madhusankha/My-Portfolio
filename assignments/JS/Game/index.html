@@ -7,8 +7,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="body" onkeydown="keyCheck(event)" onload="idleAnimationStart();">
-<div class="background">
+<body class="body" onkeydown="keyCheck(event)" onload="idleAnimationStart(); createBarrier();">
+<div id="background">
 
     <img alt="character" class="ninja" id="ninja" src="assets/img/Idle__000.png">
 
@@ -85,7 +85,7 @@
     function moveBackground() {
         backgroundImagePositionX -= 20;
 
-        $('.background').css("backgroundPositionX", backgroundImagePositionX + "px");
+        $('#background').css("backgroundPositionX", backgroundImagePositionX + "px");
     }
 
     var jumpImageNum = -1;
@@ -102,7 +102,7 @@
             jumpAnimationNum = 0;
             runImageNum = 0;
             runAnimationStart();
-            ninja.css("top","-2px");
+            ninja.css("top", "-2px");
         }
     }
 
@@ -111,6 +111,25 @@
         runImageNum = 0;
         clearInterval(runAnimationNum);
         jumpAnimationNum = setInterval(jumpAnimation, 100);
+    }
+
+    var barrierMarginLeft = 800;
+
+    function createBarrier() {
+
+        for (var i = 0; i < 50; i++) {
+            var box = document.createElement("div");
+            box.className = "barrier";
+            document.getElementById("background").appendChild(box);
+            box.style.marginLeft = barrierMarginLeft + "px";
+
+            if (i < 25) {
+                barrierMarginLeft = barrierMarginLeft + 1500;
+            } else {
+                barrierMarginLeft = barrierMarginLeft + 1000;
+            }
+
+        }
     }
 
 </script>
