@@ -69,3 +69,7 @@
     position: absolute;
 }
 
+#restart:hover{
+    cursor: pointer;
+}
+
