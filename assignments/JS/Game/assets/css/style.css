@@ -21,9 +21,9 @@
     /*bottom: 0;*/
 }
 
-.barrier{
-    width:200px;
-    height:200px;
+.barrier {
+    width: 200px;
+    height: 200px;
     background-image: url("../img/dragon1.gif");
     position: absolute;
     background-size: contain;
@@ -58,5 +58,14 @@
     position: absolute;
     color: #0dcaf0;
     /*visibility: hidden;*/
+}
+
+#restart {
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 30px;
+    visibility: hidden;
+    position: absolute;
 }
 
