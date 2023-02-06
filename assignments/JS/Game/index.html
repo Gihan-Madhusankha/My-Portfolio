@@ -14,6 +14,11 @@
 
     <div id="score">0</div>
 
+    <div id="gameOver">
+        <img alt="game over" id="gameOverImage" src="assets/img/gameOver.avif">
+        <div id="yourScore"></div>
+    </div>
+
 </div>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
@@ -92,6 +97,7 @@
     var backgroundImagePositionX = 0;
     var moveBackgroundAnimationId = 0;
     var score = 0;
+
     function moveBackground() {
         backgroundImagePositionX -= 20;
 
@@ -141,6 +147,7 @@
             if (i <= 25) {
                 barrierMarginLeft = barrierMarginLeft + 1500;
             }
+
             if (i > 25) {
                 barrierMarginLeft = barrierMarginLeft + 1000;
             }
@@ -184,6 +191,9 @@
 
         if (deadImageNum == 10) {
             deadImageNum = 9;
+            $('#gameOverImage').css('visibility', 'visible');
+            $('#yourScore').text("YOUR SCORE : " + score);
+            $('.barrier').css('visibility', 'hidden');
         }
     }
 
