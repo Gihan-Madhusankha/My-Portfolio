@@ -64,6 +64,10 @@
             if (moveBackgroundAnimationId == 0) {
                 moveBackgroundAnimationId = setInterval(moveBackground, 100);
             }
+
+            if (barrierAnimationId == 0) {
+                barrierAnimationId = setInterval(barrierAnimation, 100);
+            }
         }
 
         if (keyCode == 38) {
@@ -73,6 +77,10 @@
 
             if (moveBackgroundAnimationId == 0) {
                 moveBackgroundAnimationId = setInterval(moveBackground, 100);
+            }
+
+            if (barrierAnimationId == 0) {
+                barrierAnimationId = setInterval(barrierAnimation, 100);
             }
         }
 
@@ -122,13 +130,26 @@
             box.className = "barrier";
             document.getElementById("background").appendChild(box);
             box.style.marginLeft = barrierMarginLeft + "px";
+            box.id = "box" + i;
 
-            if (i < 25) {
+            if (i <= 25) {
                 barrierMarginLeft = barrierMarginLeft + 1500;
-            } else {
+            }
+            if (i > 25) {
                 barrierMarginLeft = barrierMarginLeft + 1000;
             }
 
+        }
+    }
+
+    var barrierAnimationId = 0;
+
+    function barrierAnimation() {
+        for (var i = 0; i < 50; i++) {
+            var box = document.getElementById("box" + i);
+            var currentMarginLeft = getComputedStyle(box).marginLeft;
+            var newMarginLeft = parseInt(currentMarginLeft) - 25;
+            box.style.marginLeft = newMarginLeft + "px";
         }
     }
 
