@@ -98,11 +98,12 @@
 
     var jumpImageNum = -1;
     var jumpAnimationNum = 0;
-    var ninjaMarginTop = -200;
+    var ninjaMarginTop = 0;
 
     function jumpAnimation() {
         ninja.attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css({width: "13%", top: "-200px"});
         jumpImageNum = jumpImageNum + 1;
+        ninjaMarginTop+=10;
 
         if (jumpImageNum == 10) {
             jumpImageNum = 1;
@@ -111,6 +112,7 @@
             runImageNum = 0;
             runAnimationStart();
             ninja.css("top", "-2px");
+            ninjaMarginTop = 0;
         }
     }
 
@@ -121,7 +123,7 @@
         jumpAnimationNum = setInterval(jumpAnimation, 100);
     }
 
-    var barrierMarginLeft = 800;
+    var barrierMarginLeft = 2000;
 
     function createBarrier() {
 
@@ -143,15 +145,31 @@
     }
 
     var barrierAnimationId = 0;
-
     function barrierAnimation() {
         for (var i = 0; i < 50; i++) {
             var box = document.getElementById("box" + i);
             var currentMarginLeft = getComputedStyle(box).marginLeft;
-            var newMarginLeft = parseInt(currentMarginLeft) - 25;
+            var newMarginLeft = parseInt(currentMarginLeft) - 35;
             box.style.marginLeft = newMarginLeft + "px";
+
+
+            if (newMarginLeft >= 0 & newMarginLeft <=122){
+                if (ninjaMarginTop == 0){
+                    clearInterval(barrierAnimationId);
+
+                    clearInterval(runAnimationNum);
+                    runAnimationNum = -1;
+                    clearInterval(jumpAnimationNum);
+                    jumpAnimationNum = -1;
+                    clearInterval(moveBackgroundAnimationId);
+                    moveBackgroundAnimationId =-1;
+                }
+            }
+
+
         }
     }
+
 
 </script>
 </body>
