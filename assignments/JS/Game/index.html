@@ -103,7 +103,7 @@
     function jumpAnimation() {
         ninja.attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css({width: "13%", top: "-200px"});
         jumpImageNum = jumpImageNum + 1;
-        ninjaMarginTop+=10;
+        ninjaMarginTop += 10;
 
         if (jumpImageNum == 10) {
             jumpImageNum = 1;
@@ -145,6 +145,7 @@
     }
 
     var barrierAnimationId = 0;
+
     function barrierAnimation() {
         for (var i = 0; i < 50; i++) {
             var box = document.getElementById("box" + i);
@@ -153,8 +154,8 @@
             box.style.marginLeft = newMarginLeft + "px";
 
 
-            if (newMarginLeft >= 0 & newMarginLeft <=122){
-                if (ninjaMarginTop == 0){
+            if (newMarginLeft >= 0 & newMarginLeft <= 122) {
+                if (ninjaMarginTop == 0) {
                     clearInterval(barrierAnimationId);
 
                     clearInterval(runAnimationNum);
@@ -162,13 +163,25 @@
                     clearInterval(jumpAnimationNum);
                     jumpAnimationNum = -1;
                     clearInterval(moveBackgroundAnimationId);
-                    moveBackgroundAnimationId =-1;
+                    moveBackgroundAnimationId = -1;
+
+                    deadAnimationNum = setInterval(deadAnimation, 100);
                 }
             }
         }
     }
 
+    var deadImageNum = 0;
+    var deadAnimationNum = 0;
 
+    function deadAnimation() {
+        $('.ninja').attr("src", "assets/img/Dead__00" + deadImageNum + ".png");
+        deadImageNum += 1;
+
+        if (deadImageNum == 10) {
+            deadImageNum = 9;
+        }
+    }
 
 
 </script>
