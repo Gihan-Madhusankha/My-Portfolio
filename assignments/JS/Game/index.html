@@ -12,6 +12,8 @@
 
     <img alt="character" class="ninja" id="ninja" src="assets/img/Idle__000.png">
 
+    <div id="score">0</div>
+
 </div>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>
@@ -89,11 +91,13 @@
 
     var backgroundImagePositionX = 0;
     var moveBackgroundAnimationId = 0;
-
+    var score = 0;
     function moveBackground() {
         backgroundImagePositionX -= 20;
 
         $('#background').css("backgroundPositionX", backgroundImagePositionX + "px");
+        score += 1;
+        $('#score').text(score);
     }
 
     var jumpImageNum = -1;
