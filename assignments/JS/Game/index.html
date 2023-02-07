@@ -15,9 +15,6 @@
     <div id="score">0</div>
 
     <div id="gameOver">
-        <img alt="game over" id="gameOverImage" src="assets/img/gameOver.avif">
-        <div id="yourScore"></div>
-        <img id="restart" src="assets/img/refresh.png" alt="restart">
     </div>
 
 </div>
@@ -192,10 +189,10 @@
 
         if (deadImageNum == 10) {
             deadImageNum = 9;
-            $('#gameOverImage').css('visibility', 'visible');
-            $('#yourScore').text("YOUR SCORE : " + score);
-            $('.barrier').css('visibility', 'hidden');
-            $('#restart').css('visibility', 'visible');
+            ninja.style.bottom = 0;
+            // $('#gameOverImage').css('visibility', 'visible');
+            // $('#yourScore').text("YOUR SCORE : " + score);
+            // $('.barrier').css('visibility', 'hidden');
         }
     }
 
