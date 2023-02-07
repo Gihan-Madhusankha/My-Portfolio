@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    width: max-content;
+    border-bottom: 3px solid white;
+    padding-bottom: 9px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    display: flex;
+    position: absolute;
+    width: 95vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 200px;
+
+}
+
+#container > div {
+    width: 200px;
+    height: 70px;
+    border: 1px solid crimson;
+}
+
+#btnContainer > button {
+    font-family: Roboto;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+#btnContainer {
+    position: absolute;
+    display: flex;
+    width: 95vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 290px;
+    justify-content: center;
+}
