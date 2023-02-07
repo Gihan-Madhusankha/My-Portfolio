@@ -42,14 +42,45 @@
     position: absolute;
 }
 
-#yourScore {
-    font-size: 30px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    margin-left: 30px;
-    margin-top: 30px;
+/*#yourScore {*/
+/*    font-size: 30px;*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*    font-weight: bold;*/
+/*    margin-left: 30px;*/
+/*    margin-top: 30px;*/
+/*    position: absolute;*/
+/*    color: #0dcaf0;*/
+/*    !*visibility: hidden;*!*/
+/*}*/
+
+#gameOver {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/gameOver.jpg");
     position: absolute;
-    color: #0dcaf0;
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 
+.endScore {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#endScore {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 30px;
+}
+
+#btnTryAgain {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    cursor: pointer;
+}
