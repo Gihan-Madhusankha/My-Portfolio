@@ -50,6 +50,7 @@
     function runAnimation() {
         ninja.attr("src", "assets/img/Run__00" + runImageNum + ".png").css({width: "13%", bottom: "0px"});
         runImageNum += 1;
+        runSound.play();
 
         if (runImageNum == 10) {
             runImageNum = 1;
@@ -67,7 +68,6 @@
         if (keyCode == 39) {
             if (runAnimationNum == 0) {
                 runAnimationStart();
-                runSound.play();
             }
 
             if (moveBackgroundAnimationId == 0) {
@@ -116,6 +116,8 @@
         ninja.attr("src", "assets/img/Jump__00" + jumpImageNum + ".png").css({width: "13%", top: "-200px"});
         jumpImageNum = jumpImageNum + 1;
         ninjaMarginTop += 10;
+        jumpSound.play();
+        runSound.pause();
 
         if (jumpImageNum == 10) {
             jumpImageNum = 1;
@@ -190,6 +192,8 @@
     function deadAnimation() {
         $('.ninja').attr("src", "assets/img/Dead__00" + deadImageNum + ".png");
         deadImageNum += 1;
+        runSound.pause();
+        jumpSound.pause();
 
         if (deadImageNum == 10) {
             deadImageNum = 9;
@@ -197,6 +201,7 @@
             $('#gameOver').css('visibility', 'visible');
             $('#endScore').text(score);
             $('.barrier').css('visibility', 'hidden');
+
         }
     }
 
@@ -209,6 +214,8 @@
     }
 
     var runSound = new Audio("assets/audio/run.wav");
+    var jumpSound = new Audio("assets/audio/jump.mp3");
+
     runSound.loop = true;
     runSound.playbackRate = 0.7;
     // runSound.currentTime = 0.1;
