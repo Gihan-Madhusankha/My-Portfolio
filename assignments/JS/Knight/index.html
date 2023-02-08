@@ -60,7 +60,16 @@
         knightRider.animate();
     }
 
-    setInterval(changeColor, 70);
+    var id;
+
+    $('#btnStart').click(function () {
+        clearInterval(id);
+        id = setInterval(changeColor, 70);
+    });
+
+    $('#btnEnd').click(function () {
+        clearInterval(id);
+    });
 
 </script>
 
