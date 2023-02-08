@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -978,12 +981,16 @@ header > section {
     font-size: 16px;
 }
 
+.assignment {
+    position: absolute;
+}
+
 .assignment h6 {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: white;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 5px 20px;
 }
 
 .assignment > div {
@@ -1023,6 +1030,7 @@ header > section {
     top: 50px;
 }
 
+/*assignments*/
 .assignment-section {
     height: 40vh;
     width: 80%;
@@ -1054,6 +1062,201 @@ header > section {
     background-size: cover;
 }
 
+/*================================================================================*/
+
+
+/*body {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    background-color: #232533;*/
+/*    overflow-x: hidden;*/
+/*    height: 100vh;*/
+/*    font-family: 'Urbanist', sans-serif;*/
+/*}*/
+
+input {
+    display: none;
+}
+
+.container {
+
+    height: 40vh;
+    width: 80%;
+    margin: auto;
+    /*border: 1px solid cyan;*/
+    position: relative;
+    top: 10px;
+    display: flex;
+
+    /*width: 100%;*/
+    /*height: 100%;*/
+    max-width: 600px;
+    max-height: 600px;
+    /*display: flex;*/
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+
+    position: relative;
+    height: 500px;
+    width: 430px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.cards label {
+
+    position: absolute;
+    width: 430px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+.cards .cardX {
+
+    position: relative;
+    height: 100%;
+    /*background-color: #323444;*/
+    background-color: #323444;
+    border-radius: 10px;
+    padding: 30px 35px;
+}
+
+.cardX .image {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardX .image img {
+
+    border-radius: 5px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 50);
+    /*margin-top: 23px;*/
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cardX .socials {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.socials i {
+
+    font-size: 25px;
+    transition: all .7s ease;
+    color: var(--current-color2);
+}
+
+
+#s1:checked ~ .cards #slide5,
+#s2:checked ~ .cards #slide6,
+#s3:checked ~ .cards #slide7,
+#s4:checked ~ .cards #slide1,
+#s5:checked ~ .cards #slide2,
+#s6:checked ~ .cards #slide3,
+#s7:checked ~ .cards #slide4 {
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 45);
+    transform: translate3d(-105%, 0, -320px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked ~ .cards #slide6,
+#s2:checked ~ .cards #slide7,
+#s3:checked ~ .cards #slide1,
+#s4:checked ~ .cards #slide2,
+#s5:checked ~ .cards #slide3,
+#s6:checked ~ .cards #slide4,
+#s7:checked ~ .cards #slide5 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked ~ .cards #slide7,
+#s2:checked ~ .cards #slide1,
+#s3:checked ~ .cards #slide2,
+#s4:checked ~ .cards #slide3,
+#s5:checked ~ .cards #slide4,
+#s6:checked ~ .cards #slide5,
+#s7:checked ~ .cards #slide6 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45);
+    transform: translate3d(-35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+/*middle*/
+#s1:checked ~ .cards #slide1,
+#s2:checked ~ .cards #slide2,
+#s3:checked ~ .cards #slide3,
+#s4:checked ~ .cards #slide4,
+#s5:checked ~ .cards #slide5,
+#s6:checked ~ .cards #slide6,
+#s7:checked ~ .cards #slide7 {
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50);
+    transform: translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --current-color2: #ECEAED;
+}
+
+#s1:checked ~ .cards #slide2,
+#s2:checked ~ .cards #slide3,
+#s3:checked ~ .cards #slide4,
+#s4:checked ~ .cards #slide5,
+#s5:checked ~ .cards #slide6,
+#s6:checked ~ .cards #slide7,
+#s7:checked ~ .cards #slide1 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45);
+    transform: translate3d(35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked ~ .cards #slide3,
+#s2:checked ~ .cards #slide4,
+#s3:checked ~ .cards #slide5,
+#s4:checked ~ .cards #slide6,
+#s5:checked ~ .cards #slide7,
+#s6:checked ~ .cards #slide1,
+#s7:checked ~ .cards #slide2 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45);
+    transform: translate3d(70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked ~ .cards #slide4,
+#s2:checked ~ .cards #slide5,
+#s3:checked ~ .cards #slide6,
+#s4:checked ~ .cards #slide7,
+#s5:checked ~ .cards #slide1,
+#s6:checked ~ .cards #slide2,
+#s7:checked ~ .cards #slide3 {
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 45);
+    transform: translate3d(105%, 0, -320px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+
+/*================================================================================*/
+
 
 /*Services*/
 
@@ -1074,6 +1277,8 @@ header > section {
     margin: 0;
     color: white;
     font-size: 2.4em;
+    position: relative;
+    top: 50px;
     text-align: center;
     z-index: 1;
 }
@@ -1083,7 +1288,7 @@ header > section {
     color: #1A1A1A;
     font-size: 5.2em;
     position: relative;
-    top: -50px;
+    top: 0;
     text-align: center;
     z-index: 0;
 }
@@ -1349,7 +1554,7 @@ header > section {
 }
 
 .contact-me > section > aside:last-child {
-    background: url("../image/contactMe.webp") no-repeat center;
+    background: url("../image/headphone1.jpg") no-repeat center;
     background-size: 200%;
     margin-right: 70px;
     z-index: 0;
@@ -3054,7 +3259,7 @@ header > section {
         height: 150px;
         line-height: 25px;
         width: 330px;
-         font-size: 10px;
+        font-size: 10px;
     }
 
     .contact-me > section > aside:first-child > address {
