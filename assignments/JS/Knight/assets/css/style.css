@@ -45,9 +45,14 @@ h1 {
 }
 
 #display {
+    position: absolute;
     width: 90%;
-    height: 50vh;
+    height: 22vh;
     border: 1px solid red;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 205px;
 }
 
 #container {
