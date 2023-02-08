@@ -26,9 +26,9 @@
     var knightRider = {
         count: 0,
         tempArray: [],
-        leftToRight: ['white', 'white', 'white', 'white', 'white', 'white', '#FBE5DA','#F4C6B1','#ED9074','#E55E42','#DF031D','#B5192A'],
-        rightToLeft: ['white', 'white', 'white', 'white', 'white', 'white', '#B5192A', '#DF031D', '#E55E42', '#ED9074', '#F4C6B1', '#FBE5DA'],
-        // rightToLeft: ['white', 'white', 'white', 'white', 'white', 'white', '#FBE5DA', '#F4C6B1', '#ED9074', '#E55E42', '#DF031D', '#B5192A'],
+        leftToRight: [/*'white', 'white', */'white', 'white', 'white', 'white', '#FBE5DA', '#F4C6B1', '#ED9074', '#E55E42', '#DF031D', '#B5192A'],
+        rightToLeft: [/*'white', 'white', */'white', 'white', 'white', 'white', '#B5192A', '#DF031D', '#E55E42', '#ED9074', '#F4C6B1', '#FBE5DA'],
+
         animateLeft: function () {
             var a = this.tempArray.pop();
             this.tempArray.unshift(a);
@@ -54,13 +54,13 @@
 
     function changeColor() {
         $('#display').empty();
-        for (var i = 0; i < knightRider.tempArray.length/2; i++) {
+        for (var i = 0; i < knightRider.tempArray.length / 2; i++) {
             $('#display').append(`<div style="background: ${knightRider.tempArray[i]}"></div>`);
         }
         knightRider.animate();
     }
 
-    setInterval(changeColor, 100);
+    setInterval(changeColor, 70);
 
 </script>
 
