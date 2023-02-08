@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: black;
 }
@@ -37,4 +42,28 @@ h1 {
     margin: auto;
     top: 350px;
     justify-content: center;
+}
+
+#display {
+    width: 90%;
+    height: 50vh;
+    border: 1px solid red;
+}
+
+#container {
+    display: flex;
+    width: 90vw;
+    /*height: 30px;*/
+    border: 1px solid red;
+    margin: auto;
+    top: 250px;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+#container > div {
+    width: 200px;
+    height: 30px;
+
 }
